@@ -92,8 +92,10 @@ class LinkedList:
         self.tail = None
         self.categories = ["MEMOP", "LOADI", "ARITHOP", "OUTPUT", "NOP", "CONST", "REG", "COMMA", "INTO", "ENDFILE", "NEWLINE"]
         self.opcodes = ["load", "store", "loadI", "add", "sub", "mult", "lshift", "rshift", "output", "nop"]
+        self.length = 0
 
     def append(self, node: Node):
+        self.length += 1
         if self.head == None and self.tail == None: # empty
             self.head = node
             self.tail = node
@@ -107,6 +109,7 @@ class LinkedList:
         temp_string = ""
         while (start != None):
             # print(start)
+            
             temp_string += str(start)
             start = start.next
         print(temp_string)

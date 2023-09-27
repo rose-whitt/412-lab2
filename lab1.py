@@ -393,6 +393,7 @@ def demand_parse_start(input_file, flag):
       print("Parse succeeded, finding " + str(scan.num_iloc_ops) + " ILOC operations.")
     else:
       sys.stderr.write("Found " + str(scan.num_parser_errors + scan.num_scanner_errors) + " errors on " + str(scan.num_error_lines) + " lines\n")
+      
     # print(str(scan.num_iloc_ops) + " valid ILOC operations")
   #   print(str(scan.num_parser_errors) + " parser errors.")
   # print(str(scan.num_scanner_errors) + " scanner errors.")
@@ -409,7 +410,11 @@ def demand_parse_start(input_file, flag):
   
 
 
-def main():
+def main(LAB2_FLAG, PRINT_BEFORE):
+  """
+  - LAB2_FLAG: true if we are wanting to run lab2 flag
+  - PRINT_BEFORE: true if we want to print the IR representation before renaming, for debugging
+  """
 
   # call scan function  
   #   make scanner object by calling class with input fileand then my start scanning func in scanner.py
@@ -460,7 +465,8 @@ def main():
       # f = open(__file__, 'r')
 
       demand_parse_start(f, '-r')
-      ir_list.print_list()
+      if (PARSE_SUCCESS):
+        ir_list.print_list()
       f.close()
   elif (sys.argv[1] == '-p'):
     # print("TODO: read the file, scan it and parse it, build the intermediate representation (IR) and report either success or report all the errors that it finds in the input file.")
@@ -506,7 +512,14 @@ def main():
       #   poo += 1
       f.close()
   else: # p is default if no flag
-    __file__ = sys.argv[1]  # no flag, so second arg should be a filename
+    if (LAB2_FLAG):
+      if (sys.argv[1] == '-x'):
+        __file__ = sys.argv[2]
+        print(__file__)
+         
+    else:
+      __file__ = sys.argv[1]  # no flag, so second arg should be a filename
+      print(__file__)
 
     # open file
     try:
@@ -519,6 +532,9 @@ def main():
     # f = open(__file__, 'r')
     # start(f, '-p')
     demand_parse_start(f, '-p')
+    if (PRINT_BEFORE):
+        ir_list.print_list()
+       
     f.close()
 
 
