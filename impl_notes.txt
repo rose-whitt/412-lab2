@@ -1,5 +1,7 @@
 **** put // on my print debugging prints tatements so code check sees them as comments and ignores them
 
+
+*** TODO: need to add output funcitonality 
 - page 10 says to keep track of number of SRs during parsing
     - im currently incrementing number of SR variable in lab1.py only when the opcode is valid (i.e. before appending the opcode)
     - im counting constant as being a use of special register since we put it in there

@@ -97,6 +97,7 @@ class Lab2:
       # MEMOP: arg1 and arg3
       # LOADI: arg3
       # ARTIHOP: arg1, arg2, arg3
+      # OUTPUT: none, constant only
       if (OP.opcode >= 0 and OP.opcode <= 7):
         #-------------
         # For each Operand (O) that OPCODE (OP) defines- third operand
@@ -128,6 +129,32 @@ class Lab2:
     self.IR_LIST.print_table(self.IR_LIST)
 
     
+  def print_renamed_block(self):
+    start = self.IR_LIST.head
+    print("//HERE")
+    while (start != None):
+      # print(start)
+      lh = ""
+      rh = ""
+      
+      if (start.opcode == 0 or start.opcode == 1): # MEMOP
+        lh = "r" + str(start.arg1.vr)
+      elif (start.opcode == 2): # LOADI
+        lh = str(start.arg1.sr)
+      elif (start.opcode >= 3 and start.opcode <= 7):  # ARITHOP
+        lh = "r" + str(start.arg1.vr) + ",r" + str(start.arg2.vr) 
+      elif (start.opcode == 8): # OUTPUT
+        lh = str(start.arg1.sr)
+      
+      if (start.opcode != 8):
+        rh = "=> r" + str(start.arg3.vr)
+
+      opcode = opcodes_list[start.opcode] + " "
+
+
+      print(opcode + lh + " " + rh)
+
+      start = start.next
 
   
     
@@ -137,6 +164,7 @@ def main():
   print("//in main")
   lab2 = Lab2()
   lab2.rename()
+  lab2.print_renamed_block()
 
 if __name__ == "__main__":
   main()
