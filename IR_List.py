@@ -1,3 +1,6 @@
+import math
+
+
 MEMOP = 0   # load, store
 LOADI = 1   # loadI
 ARITHOP = 2 # add, sub, mult, lshift, rshift
@@ -23,7 +26,7 @@ class Operand:
         self.sr = None
         self.vr = None
         self.pr = None
-        self.nu = None
+        self.nu = math.inf
     def __str__(self):
         return "[ SR: " + str(self.sr) + " , VR: " + str(self.vr) + " , PR: " + str(self.pr) + " , NU: " + str(self.nu) + " ]"
 

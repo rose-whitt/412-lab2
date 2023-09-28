@@ -68,6 +68,14 @@ class Lab2:
     self.LU[operand.sr] = INF
     return operand
   
+  def op_uses(self, operand):
+    if (self.SR_to_VR[operand.sr] == INVALID):  # Last use
+      self.SR_to_VR[operand.sr] = self.VR_name
+      self.VR_name += 1
+    operand.vr = self.SR_to_VR[operand.sr]
+    operand.nu = self.LU[operand.sr]
+
+  
   def rename(self):
     print("in rename")
     print("num srs filled: " + str(self.num_srs_filled))
@@ -103,9 +111,17 @@ class Lab2:
           OP.arg3 = self.op_defines(OP.arg3)
         #-------------
         # For each Operand (O) that OPCODE (OP) uses- first and second operand
+        
+        if (OP.arg1.sr != None and OP.opcode != 2): # LOADI stores constant at first sr
+          self.op_uses(OP.arg1)
+          self.LU[OP.arg1.sr] = index
+        if (OP.arg2.sr != None and OP.opcode != 0 and OP.opcode != 1 and OP.opcode != 2): # only ARITHOPs populate sr2
+          self.op_uses(OP.arg2)
+          self.LU[OP.arg2.sr] = index
+        if (OP.arg3.sr != None and OP.opcode == 1): # third operand is a use for store
+          self.op_uses(OP.arg3)
+          self.LU[OP.arg3.sr] = index
 
-        #-------------
-        # For each Operand (O) that OPCODE (OP) uses- first and second operand
       
       index -= 1
       OP = OP.prev
