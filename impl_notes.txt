@@ -1,3 +1,35 @@
 - page 10 says to keep track of number of SRs during parsing
     - im currently incrementing number of SR variable in lab1.py only when the opcode is valid (i.e. before appending the opcode)
     - im counting constant as being a use of special register since we put it in there
+
+
+t2 before defines (op_defines):
+index    line     OPCODE     | SR    VR    PR    NU    | SR    VR    PR    NU    | SR    VR    PR    NU    | NEXT OP         
+0        6        loadI      | 27    None  None  None  | None  None  None  None  | 1     None  None  None  | 0               
+1        7        loadI      | 27    None  None  None  | None  None  None  None  | 1     None  None  None  | 1               
+2        8        load       | 1     None  None  None  | None  None  None  None  | 2     None  None  None  | 2               
+3        9        load       | 1     None  None  None  | None  None  None  None  | 2     None  None  None  | 3               
+4        10       load       | 1     None  None  None  | None  None  None  None  | 2     None  None  None  | 4               
+5        11       store      | 2     None  None  None  | None  None  None  None  | 4     None  None  None  | 5               
+6        12       add        | 1     None  None  None  | 2     None  None  None  | 3     None  None  None  | 6               
+7        13       sub        | 3     None  None  None  | 4     None  None  None  | 5     None  None  None  | 7               
+8        14       mult       | 5     None  None  None  | 6     None  None  None  | 10    None  None  None  | 8               
+9        15       lshift     | 0     None  None  None  | 3     None  None  None  | 2     None  None  None  | 9               
+10       16       rshift     | 2     None  None  None  | 3     None  None  None  | 2     None  None  None  | 10              
+11       17       output     | 1024  None  None  None  | None  None  None  None  | None  None  None  None  | 11
+
+
+t2 after defines (op_defines):
+index    line     OPCODE     | SR    VR    PR    NU    | SR    VR    PR    NU    | SR    VR    PR    NU    | NEXT OP         
+0        6        loadI      | 27    None  None  None  | None  None  None  None  | 1     24    None  inf   | 0               
+1        7        loadI      | 27    None  None  None  | None  None  None  None  | 1     23    None  inf   | 1               
+2        8        load       | 1     21    None  inf   | None  None  None  None  | 2     22    None  inf   | 2               
+3        9        load       | 1     19    None  inf   | None  None  None  None  | 2     20    None  inf   | 3               
+4        10       load       | 1     17    None  inf   | None  None  None  None  | 2     18    None  inf   | 4               
+5        11       store      | 2     15    None  inf   | None  None  None  None  | 4     16    None  inf   | 5               
+6        12       add        | 1     12    None  inf   | 2     13    None  inf   | 3     14    None  inf   | 6               
+7        13       sub        | 3     9     None  inf   | 4     10    None  inf   | 5     11    None  inf   | 7               
+8        14       mult       | 5     6     None  inf   | 6     7     None  inf   | 10    8     None  inf   | 8               
+9        15       lshift     | 0     3     None  inf   | 3     4     None  inf   | 2     5     None  inf   | 9               
+10       16       rshift     | 2     0     None  inf   | 3     1     None  inf   | 2     2     None  inf   | 10              
+11       17       output     | 1024  None  None  None  | None  None  None  None  | None  None  None  None  | 11
