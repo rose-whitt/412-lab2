@@ -92,18 +92,20 @@ class Lab2:
       # ARTIHOP: arg1, arg2, arg3
       if (OP.opcode >= 0 and OP.opcode <= 7):
         #-------------
-        # For each Operand (O) that OPCODE (OP) defines
-        if (OP.arg1.sr != None and OP.opcode != 2): # LOADI stores constant at first sr
-          OP.arg1 = self.op_defines(OP.arg1)
-        if (OP.arg2.sr != None and OP.opcode != 0 and OP.opcode != 1 and OP.opcode != 2): # only ARITHOPs populate sr2
-          OP.arg2 = self.op_defines(OP.arg2)
-        if (OP.arg3.sr != None):  # all of them populate sr3
+        # For each Operand (O) that OPCODE (OP) defines- third operand
+        # if (OP.arg1.sr != None and OP.opcode != 2): # LOADI stores constant at first sr
+        #   OP.arg1 = self.op_defines(OP.arg1)
+        # if (OP.arg2.sr != None and OP.opcode != 0 and OP.opcode != 1 and OP.opcode != 2): # only ARITHOPs populate sr2
+        #   OP.arg2 = self.op_defines(OP.arg2)
+
+        
+        if (OP.arg3.sr != None and OP.opcode != 1):  # all of them populate sr3, store's arg3 is a use, so dont define
           OP.arg3 = self.op_defines(OP.arg3)
         #-------------
-        # For each Operand (O) that OPCODE (OP) uses
+        # For each Operand (O) that OPCODE (OP) uses- first and second operand
 
         #-------------
-        # For each Operand (O) that OPCODE (OP) uses
+        # For each Operand (O) that OPCODE (OP) uses- first and second operand
       
       index -= 1
       OP = OP.prev
