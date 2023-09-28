@@ -120,14 +120,14 @@ class LinkedList:
     
     def print_table(self, list):
 
-        print("{:<8} {:<8} {:<10} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<15} ".format("index", "line", "OPCODE", "SR", "VR", "PR", "NU", "SR", "VR", "PR", "NU", "SR", "VR", "PR", "NU", "NEXT OP"))
+        print('//' + "{:<8} {:<8} {:<10} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<15} ".format("index", "line", "OPCODE", "SR", "VR", "PR", "NU", "SR", "VR", "PR", "NU", "SR", "VR", "PR", "NU", "NEXT OP"))
 
         start = list.head
 
         i = 0
         while (start != None):
             
-            print("{:<8} {:<8} {:<10} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<15} ".format(i, start.line, self.opcodes[start.opcode], str(start.arg1.sr), str(start.arg1.vr), str(start.arg1.pr), str(start.arg1.nu), str(start.arg2.sr), str(start.arg2.vr), str(start.arg2.pr), str(start.arg2.nu),  str(start.arg3.sr), str(start.arg3.vr), str(start.arg3.pr), str(start.arg3.nu), i))
+            print('//' + "{:<8} {:<8} {:<10} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<15} ".format(i, start.line, self.opcodes[start.opcode], str(start.arg1.sr), str(start.arg1.vr), str(start.arg1.pr), str(start.arg1.nu), str(start.arg2.sr), str(start.arg2.vr), str(start.arg2.pr), str(start.arg2.nu),  str(start.arg3.sr), str(start.arg3.vr), str(start.arg3.pr), str(start.arg3.nu), i))
 
             start = start.next
             i += 1

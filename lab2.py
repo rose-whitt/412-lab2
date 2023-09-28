@@ -34,24 +34,24 @@ class Lab2:
   def __init__(self):
     # Get IR
     self.Lab_1 = lab1.Lab1()  # init
-    print("done with lab 1 init")
+    print("//done with lab 1 init")
 
     self.Lab_1.main(True, False)
-    print("done with lab 1 main")
+    print("//done with lab 1 main")
 
     self.IR_LIST = self.Lab_1.ir_list
     self.IR_LIST.print_table(self.IR_LIST)
     # self.IR_LIST.print_list()
 
     self.max_sr_num = self.Lab_1.max_reg
-    print("max reg num: " + str(self.max_sr_num))
+    print("//max reg num: " + str(self.max_sr_num))
     self.num_srs_filled = self.Lab_1.num_srs
-    print("num srs filled: " + str(self.num_srs_filled))
+    print("//num srs filled: " + str(self.num_srs_filled))
 
     self.VR_name = 0
     self.SR_to_VR = []
     self.LU = []
-    print("done with lab 2 init")
+    print("//done with lab 2 init")
     
 
    
@@ -77,14 +77,13 @@ class Lab2:
 
   
   def rename(self):
-    print("in rename")
-    print("num srs filled: " + str(self.num_srs_filled))
+    print("//in rename")
+    print("//num srs filled: " + str(self.num_srs_filled))
 
 
     self.SR_to_VR = [INVALID for i in range(self.max_sr_num + 1)] # register numbers start at 0 so must be plus one the max register
     self.LU = [INF for i in range(self.max_sr_num + 1)]
 
-    print(self.SR_to_VR)
 
 
     index = self.IR_LIST.length - 1
@@ -135,7 +134,7 @@ class Lab2:
 
 
 def main():
-  print("in main")
+  print("//in main")
   lab2 = Lab2()
   lab2.rename()
 

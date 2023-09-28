@@ -359,7 +359,7 @@ class Lab1:
       
       # print(str(len(scan.OPS)) + " valid ILOC operations: " + str(scan.OPS))
       if ((scan.num_parser_errors + scan.num_scanner_errors) == 0):
-        print("Parse succeeded, finding " + str(scan.num_iloc_ops) + " ILOC operations.")
+        print("//Parse succeeded, finding " + str(scan.num_iloc_ops) + " ILOC operations.")
       else:
         sys.stderr.write("Found " + str(scan.num_parser_errors + scan.num_scanner_errors) + " errors on " + str(scan.num_error_lines) + " lines\n")
         
@@ -474,11 +474,11 @@ class Lab1:
       if (LAB2_FLAG):
         if (sys.argv[1] == '-x'):
           __file__ = sys.argv[2]
-          print(__file__)
+          print('//' + str(__file__))
           
       else:
         __file__ = sys.argv[1]  # no flag, so second arg should be a filename
-        print(__file__)
+        print('//' + str(__file__))
 
       # open file
       try:
