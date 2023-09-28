@@ -1,7 +1,7 @@
 **** put // on my print debugging prints tatements so code check sees them as comments and ignores them
 
 
-*** TODO: need to add output funcitonality 
+
 - page 10 says to keep track of number of SRs during parsing
     - im currently incrementing number of SR variable in lab1.py only when the opcode is valid (i.e. before appending the opcode)
     - im counting constant as being a use of special register since we put it in there
@@ -31,3 +31,45 @@ index    line     OPCODE     | SR    VR    PR    NU    | SR    VR    PR    NU   
 6        7        mult       | 3     4     None  inf   | 5     5     None  inf   | 3     3     None  7     | 6               
 7        8        add        | 1     2     None  inf   | 3     3     None  inf   | 1     0     None  8     | 7               
 8        9        store      | 1     0     None  inf   | None  None  None  inf   | 0     1     None  inf   | 8 
+
+
+
+
+code check passed:
+[rew9@opal 412-lab2]$ ./code_check_1/CodeCheck1 ./412alloc
+ 
+Running COMP 412, Lab 1 Code Check #1
+in /storage-home/r/rew9/comp412/412-lab2
+on opal.clear.rice.edu / Wed Sep 27 21:57:58 CDT 2023
+ 
+Invoked on allocator ./412alloc
+ 
+--------------------
+Checking '/clear/courses/comp412/students/lab2/code_check_1/cc1.i'
+Program '/clear/courses/comp412/students/lab2/code_check_1/cc1.i'       correctly executed in 20 cycles
+
+--> Code Check: passed.
+--------------------
+--------------------
+Checking '/clear/courses/comp412/students/lab2/code_check_1/cc2.i'
+Program '/clear/courses/comp412/students/lab2/code_check_1/cc2.i'       correctly executed in 35 cycles
+
+--> Code Check: passed.
+--------------------
+--------------------
+Checking '/clear/courses/comp412/students/lab2/code_check_1/cc3.i'
+Program '/clear/courses/comp412/students/lab2/code_check_1/cc3.i'       correctly executed in 37 cycles
+
+--> Code Check: passed.
+--------------------
+--------------------
+Checking '/clear/courses/comp412/students/lab2/code_check_1/cc4.i'
+Program '/clear/courses/comp412/students/lab2/code_check_1/cc4.i'       correctly executed in 1002 cycles
+
+--> Code Check: passed.
+--------------------
+--------------------
+Checking '/clear/courses/comp412/students/lab2/code_check_1/cc5.i'
+Program '/clear/courses/comp412/students/lab2/code_check_1/cc5.i'       correctly executed in 68 cycles
+
+--> Code Check: passed.
