@@ -11,6 +11,16 @@ CATEGORIES = ["MEMOP", "LOADI", "ARITHOP", "OUTPUT", "NOP", "CONST", "REG", "COM
 # only want to process opcodes with registers, which is index 0 through 7
 opcodes_list = ["load", "store", "loadI", "add", "sub", "mult", "lshift", "rshift", "output", "nop"]
 
+LOAD_OP = 0
+STORE_OP = 1
+LOADI_OP = 2
+ADD_OP = 3
+SUB_OP = 4
+MULT_OP = 5
+LSHIFT_OP = 6
+RSHIFT_OP = 7
+OUTPUT_OP = 8
+NOP_OP = 9
 
 # MACROS
 INVALID = -1
@@ -51,6 +61,19 @@ class Lab2:
     self.VR_name = 0
     self.SR_to_VR = []
     self.LU = []
+
+
+    # ALLOCATION STUFF
+    self.max_vr_num = self.max_sr_num;
+    # Allocator maps
+    self.VRToPR = {}
+    self.PRToVR = {}
+    self.VRToSpillLoc = {}
+    self.PRNU = {}
+
+    self.PRStack = [] # for spilling- (push and pop in algo)
+    self.PRMark = {}  # make sure you're not reusing a pr in the current line
+    
     print("//done with lab 2 init")
     
 
@@ -155,16 +178,186 @@ class Lab2:
       print(opcode + lh + " " + rh)
 
       start = start.next
+  
+
+  """
+    Allocation helper that resets the mark in each pr to zero
+  """
+  def reset_marks(self):
+    for pr in self.PRMark.keys():
+      self.PRMark[pr] = 0
+  
+  """
+    Allocation helper that gets the uses of the given OPCODE
+  """
+  def get_uses(self, line):
+    if (line.opcode == LOAD_OP):
+      uses = [line.arg1]
+      print("//[get uses] load uses: " + str(line.arg1))
+      
+      return uses
+    elif (line.opcode == ADD_OP or line.opcode == SUB_OP or line.opcode == MULT_OP or line.opcode == LSHIFT_OP or line.opcode == RSHIFT_OP):
+      uses = [line.arg1, line.arg2]
+      print("//[get uses] " + opcodes_list[line.opcode] + " uses: [" + str(line.arg1) + ", " + str(line.arg2) + "]")
+      return uses
+    elif (line.opcode == OUTPUT_OP):
+      uses = []
+      print("//[get uses] output uses: " + str(uses))
+      return uses
+    elif (line.opcode == NOP_OP):
+      uses = []
+      print("//[get uses] nop uses: " + str(uses))
+      return uses
+    elif (line.opcode == LOADI_OP):
+      uses = []
+      print("//[get uses] loadI uses: " + str(uses))
+      return uses
+    elif (line.opcode == STORE_OP):
+      uses = [line.arg1, line.arg3]
+      print("//[get uses] store uses: [" + str(line.arg1) + ", " + str(line.arg3) + "]")
+      return uses
+    else:
+      uses = []
+      print("//[get uses] couldnt find opcode for opcode: " + str(line.opcode))
+      return uses
+
+      
+    
+  """
+    Allocation helper that gets the defs of the given OPCODE
+  """
+  def get_defs(self, line):
+    if (line.opcode == LOAD_OP):
+      defs = [line.arg3]
+      print("//[get defs] load defs: [" + str(line.arg3) + "]")
+      
+      return defs
+    elif (line.opcode == ADD_OP or line.opcode == SUB_OP or line.opcode == MULT_OP or line.opcode == LSHIFT_OP or line.opcode == RSHIFT_OP):
+      defs = [line.arg3]
+      print("//[get defs] " + opcodes_list[line.opcode] + " defs: [" + str(line.arg3) + "]")
+      return defs
+    elif (line.opcode == OUTPUT_OP):
+      defs = []
+      print("//[get defs] output defs: " + str(defs))
+      return defs
+    elif (line.opcode == NOP_OP):
+      defs = []
+      print("//[get defs] nop defs: " + str(defs))
+      return defs
+    elif (line.opcode == LOADI_OP):
+      defs = [line.arg3]
+      print("//[get defs] loadI defs: [" + str(line.arg3) + "]")
+      return defs
+    elif (line.opcode == STORE_OP):
+      defs = []
+      print("//[get defs] store defs: " + str(defs))
+      return defs
+    else:
+      defs = []
+      print("//[get defs] couldnt find opcode for opcode: " + str(line.opcode))
+      return defs
+    
+  
+  def get_pr(self, vr, nu):
+    print("get_pr")
+  
+  def restore(self, vr, pr):
+    print("restore")
+  
+  def free_pr(self, pr):
+    print("free_pr")
+
+  def check_maps(self):
+    print("check_maps")
+
+
 
   
+  """
+    Main allocation funciton. Take the IR and allocate k registers to the code.
+
+    Input:
+        - k: maximum number of physical registers on this machine
+
+  """
+  def allocate(self, k):
+    print("in allocate")
+    vr = 0
+    while (vr < self.max_vr_num):
+      self.VRToPR[vr] = INVALID
+      self.VRToSpillLoc[vr] = INVALID
+      vr += 1
+    
+    pr = 0
+    while (pr < k):
+      self.PRToVR[pr] = INVALID
+      self.PRNU[pr] = INF
+      self.PRMark[pr] = 0
+      self.PRStack.insert(0, pr)  # push(pr) in algo
+      pr += 1
+    
+    line = self.IR_LIST.head
+    # iterate over block
+    while (line != None):
+      # clear the mark in each pr
+      self.reset_marks()
+      
+
+      
+      print(line)
+      defs = self.get_defs(line)
+      uses = self.get_uses(line)
+
+      # allocate uses
+      for use in uses:
+        pr = self.VRToPR[use.vr]
+        print("pr: " + pr)
+        if (pr == INVALID):
+          print("gettin a pr")
+          use.pr = self.get_PR(use.vr, use.nu)  # TODO: implement func
+          # TODO: implement restore
+          self.restore(use.vr, use.pr)  # TODO: implement func
+        else:
+          use.pr = pr
+        
+        self.PRMark[use.pr] = 1
+
+      # check if last use
+      for use in uses:
+        if (use.nu == INF and not self.PRToVR[use.pr] == INVALID):
+          self.free_PR(use.pr)  # TODO: implement func
+      
+      # clear mark in each pr
+      self.reset_marks()
+
+      # allocate defs
+      for d in defs:
+        d.pr = self.get_pr(d.vr, d.nu)  # TODO: implement func
+        self.PRMark[d.pr] = 1
+      
+      print(line)
+      self.check_maps() # TODO: implement func
+      
+      line = line.next
+      
+
+      
+
     
 
 
 def main():
   print("//in main")
   lab2 = Lab2()
+  # TODO: -h flag
+
   lab2.rename()
-  lab2.print_renamed_block()
+  if (sys.argv[1] == '-x'):
+    lab2.print_renamed_block()
+  elif (int(sys.argv[1]) >= 3 and int(sys.argv[1]) <= 64):
+    lab2.allocate(int(sys.argv[1]))
+    # lab2.print_renamed_block()
+
 
 if __name__ == "__main__":
   main()

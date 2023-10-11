@@ -470,6 +470,28 @@ class Lab1:
         #   scan_func(f)
         #   poo += 1
         f.close()
+    elif (int(sys.argv[1]) >= 3 and int(sys.argv[1]) <= 64):
+      if (arg_len <= 2):
+        print("Must specify a file name after k.")
+      else:
+        __file__ = sys.argv[2]
+
+        # open file
+        try:
+            f = open(__file__, 'r')
+        except FileNotFoundError:  # FileNotFoundError in Python 3
+            print(f"ERROR input file not found", file=sys.stderr)
+            sys.exit()
+        # __file__ = sys.argv[2]
+        # # Reading a file
+        # poo = 0
+        # f = open(__file__, 'r')
+        self.run(f, '-p')
+        # while (token != ["ENDFILE", ""]): # NOTE: should i read the line by line here?
+        #   scan_func(f)
+        #   poo += 1
+        f.close()
+       
     else: # p is default if no flag
       if (LAB2_FLAG):
         if (sys.argv[1] == '-x'):
@@ -482,6 +504,7 @@ class Lab1:
 
       # open file
       try:
+          __file__ = sys.argv[1]
           f = open(__file__, 'r')
       except FileNotFoundError:  # FileNotFoundError in Python 3
           print(f"ERROR input file not found", file=sys.stderr)

@@ -20,7 +20,7 @@ PR = 2
 NU = 3
 opcodes_list = ["load", "store", "loadI", "add", "sub", "mult", "lshift", "rshift", "output", "nop"]
 
-
+# TODO: classes slow it down so make these not classes later
 class Operand:
     def __init__(self):
         self.sr = None
@@ -57,6 +57,7 @@ class Node:
     def __str__(self):
         l0 = self.arg1.sr   # SR slot in first record list
         opcode = self.opcode  # value[1] = (category, opcode)- we want the opcode
+        print("opcode: " + str(opcode))
         if (opcode == 0 or opcode == 1 or (opcode >= 3 and opcode <= 7)):
             l0 = "sr" + str(l0)
         elif (opcode == 2 or opcode == 8):
