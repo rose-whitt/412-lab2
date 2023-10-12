@@ -4,3 +4,11 @@
 
 
 CHECKPOINT: Code Check 1 passes at git id: 25745d0 , wed 9/27 10pm
+
+flags:
+lab1:
+    -h: help
+    -s: read file and print to stdout a list of tokens that the scanner found. for each, print line number, tokens type (or syntactic category) and its spelling (or lexeme)
+    -p: read the file, scan it and parse it, build the intermediate representation (IR) and report either success or report all the errors that it finds in the input file.
+    -r: read the file, parse it, build the intermediate representation (IR), and print out the information in the intermediate representaiton (in an appropriately human readable format)
+    

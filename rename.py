@@ -26,27 +26,35 @@ BLANK = 11     # not an opcode, but used to signal blank space or tab
 SCANNER_ERROR = 12
 
 class Rename:
-    def __init__(self):
+    """
+        debug: true if want to print debugging things (like table)
+    """
+    def __init__(self, DEBUG, ir_list, max_reg, num_srs):
         # Get IR
-        self.Lab_1 = lab1.Lab1()  # init
-        print("//done with lab 1 init")
-
-        self.Lab_1.main(True, False)
-        print("//done with lab 1 main")
-
-        self.IR_LIST = self.Lab_1.ir_list
-        self.IR_LIST.print_table(self.IR_LIST)
+        self.DEBUG = DEBUG
+        print("debug: " + str(self.DEBUG))
+        self.IR_LIST = ir_list
+        if (self.DEBUG):
+            self.IR_LIST.print_table(self.IR_LIST)
         # self.IR_LIST.print_list()
 
-        self.max_sr_num = self.Lab_1.max_reg
-        print("//max reg num: " + str(self.max_sr_num))
-        self.num_srs_filled = self.Lab_1.num_srs
-        print("//num srs filled: " + str(self.num_srs_filled))
+        self.max_sr_num = max_reg
+        if (self.DEBUG):
+            print("//max reg num: " + str(self.max_sr_num))
+        self.num_srs_filled = num_srs
+        if (self.DEBUG):
+            print("//num srs filled: " + str(self.num_srs_filled))
 
         self.VR_name = 0
         self.SR_to_VR = []
         self.LU = []
-        print("//done with lab 2 init")
+
+        self.count_live = 0
+        self.max_live = 0
+
+        if (self.DEBUG):
+            print("//done with lab 2 init")
+            
         
 
    
@@ -61,19 +69,33 @@ class Rename:
         operand.nu = self.LU[operand.sr]
         self.SR_to_VR[operand.sr] = INVALID # kill OP3
         self.LU[operand.sr] = INF
+        # update maxlive counter
+        self.count_live -= 1
+        if (self.DEBUG):
+            print("op_defines: " + str(self.count_live))
         return operand
   
     def op_uses(self, operand):
         if (self.SR_to_VR[operand.sr] == INVALID):  # Last use
             self.SR_to_VR[operand.sr] = self.VR_name
             self.VR_name += 1
+            # update maxlive counter
+            self.count_live += 1
+            if (self.DEBUG):
+                print("op_uses: " + str(self.count_live))
+            if self.count_live > self.max_live:
+                if (self.DEBUG):
+                    print("op_uses: count live greater than max live. assigning count live to max live.")
+                self.max_live = self.count_live
         operand.vr = self.SR_to_VR[operand.sr]
         operand.nu = self.LU[operand.sr]
 
   
     def rename(self):
-        print("//in rename")
-        print("//num srs filled: " + str(self.num_srs_filled))
+        if (self.DEBUG):
+            print("//in rename")
+        if (self.DEBUG):
+            print("//num srs filled: " + str(self.num_srs_filled))
 
 
         self.SR_to_VR = [INVALID for i in range(self.max_sr_num + 1)] # register numbers start at 0 so must be plus one the max register
@@ -101,12 +123,13 @@ class Rename:
                 # if (OP.arg2.sr != None and OP.opcode != 0 and OP.opcode != 1 and OP.opcode != 2): # only ARITHOPs populate sr2
                 #   OP.arg2 = self.op_defines(OP.arg2)
 
-                
+                # REGISTER IS A DEF
                 if (OP.arg3.sr != None and OP.opcode != 1):  # all of them populate sr3, store's arg3 is a use, so dont define
                     OP.arg3 = self.op_defines(OP.arg3)
                 #-------------
                 # For each Operand (O) that OPCODE (OP) uses- first and second operand
                 
+                # REGISTER IS A USE
                 if (OP.arg1.sr != None and OP.opcode != 2): # LOADI stores constant at first sr
                     self.op_uses(OP.arg1)
                     self.LU[OP.arg1.sr] = index
@@ -121,12 +144,14 @@ class Rename:
             index -= 1
             OP = OP.prev
         
-        self.IR_LIST.print_table(self.IR_LIST)
+        if (self.DEBUG):
+            self.IR_LIST.print_table(self.IR_LIST)
 
     
     def print_renamed_block(self):
         start = self.IR_LIST.head
-        print("//HERE")
+        if (self.DEBUG):
+            print("//HERE")
         while (start != None):
             # print(start)
             lh = ""

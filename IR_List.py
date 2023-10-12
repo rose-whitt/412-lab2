@@ -57,7 +57,7 @@ class Node:
     def __str__(self):
         l0 = self.arg1.sr   # SR slot in first record list
         opcode = self.opcode  # value[1] = (category, opcode)- we want the opcode
-        print("opcode: " + str(opcode))
+        # print("opcode: " + str(opcode))
         if (opcode == 0 or opcode == 1 or (opcode >= 3 and opcode <= 7)):
             l0 = "sr" + str(l0)
         elif (opcode == 2 or opcode == 8):
@@ -110,6 +110,27 @@ class LinkedList:
             self.tail.next = node
             node.prev = self.tail
             self.tail = node
+    
+    def insert_before(self, new_node: Node, aft_node: Node):
+        """
+        Insert a node before the specified node
+
+        Inputs:
+        - new_node: the node being inserted
+        - aft_node: the node that will come after new_node
+        """
+
+        if (aft_node == self.head):
+            new_node.next = aft_node
+            aft_node.prev = new_node
+            self.head = new_node
+        else:
+            new_node.prev = aft_node.prev
+            new_node.next = aft_node
+            aft_node.prev.next = new_node
+            aft_node.prev = new_node
+
+        self.length += 1
     
     def print_list(self):
         start = self.head
