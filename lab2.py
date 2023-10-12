@@ -93,7 +93,7 @@ def allocator(k, filename):
     # #print(f"MaxLive: {renamer_obj.maxlive}")
     allocator_obj = Allocate(True, renamer_obj.IR_LIST, int(k), renamer_obj.max_live, renamer_obj.VR_name, lab1_obj.max_reg, lab1_obj.num_srs)
     allocator_obj.new_allocate()
-    # allocator_obj.print_allocated_file()
+    allocator_obj.print_allocated_file()
 
 
 if __name__ == "__main__":
