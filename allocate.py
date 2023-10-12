@@ -23,21 +23,21 @@ class Allocate:
         self.k = k
         
         self.max_live = max_live
-        print("max live: " + str(self.max_live))
+        # print("max live: " + str(self.max_live))
         self.VR_name = vr_name
-        print("vr_name: " + str(self.VR_name))
+        # print("vr_name: " + str(self.VR_name))
         self.IR_LIST = ir_list
         self.DEBUG = DEBUG
-        if (self.DEBUG):
-          self.IR_LIST.print_table(self.IR_LIST)
+        # if (self.DEBUG):
+        #   self.IR_LIST.print_table(self.IR_LIST)
         # self.IR_LIST.print_list()
 
         self.max_sr_num = max_reg
-        if (self.DEBUG):
-            print("//max reg num: " + str(self.max_sr_num))
+        # if (self.DEBUG):
+        #     print("//max reg num: " + str(self.max_sr_num))
         self.num_srs_filled = num_srs
-        if (self.DEBUG):
-            print("//num srs filled: " + str(self.num_srs_filled))
+        # if (self.DEBUG):
+        #     print("//num srs filled: " + str(self.num_srs_filled))
 
 
 
@@ -62,8 +62,8 @@ class Allocate:
 
         self.opcodes_list = ["load", "store", "loadI", "add", "sub", "mult", "lshift", "rshift", "output", "nop"]
 
-        if (self.DEBUG):
-            print("//done with lab 2 init")
+        # if (self.DEBUG):
+        #     print("//done with lab 2 init")
     
 
     # """
@@ -236,7 +236,7 @@ class Allocate:
     
 
     def allocate_use(self, op_num, node, line_num):
-        print("allocate use")
+        # print("allocate use")
 
         if op_num == 1:
             operand_i = node.arg1
@@ -260,7 +260,7 @@ class Allocate:
         return phys_reg
 
     def handle_restore(self, op_num, node):
-        print("handle restore")
+        # print("handle restore")
         if op_num == 1:
             operand_i = node.arg1
         if op_num == 2:
@@ -289,8 +289,8 @@ class Allocate:
         load_node.arg1.pr = phys_reg
         load_node.arg3.vr = virt_reg
         load_node.arg3.pr = phys_reg
-        print("loadnode:")
-        print(load_node)
+        # print("loadnode:")
+        # print(load_node)
         self.IR_LIST.insert_before(load_node, node)
 
         # update maps
@@ -302,7 +302,7 @@ class Allocate:
         return phys_reg
     
     def handle_spill(self, node):
-        print("handle spill")
+        # print("handle spill")
 
         pr_freed = max(self.PRNU, key=self.PRNU.get)
         if (pr_freed == self.pr_used_in_cur_op):
@@ -319,8 +319,8 @@ class Allocate:
         loadi_node.opcode = 2
         loadi_node.arg1.sr = self.spill_loc
         loadi_node.arg3.pr = self.spill_k
-        print("loadi node:")
-        print(loadi_node)
+        # print("loadi node:")
+        # print(loadi_node)
         self.IR_LIST.insert_before(loadi_node, node)
 
         # create and add store
@@ -329,8 +329,8 @@ class Allocate:
         store_node.arg1.vr = vr_to_spill
         store_node.arg1.pr = pr_freed
         store_node.arg3.pr = self.spill_k
-        print("store node:")
-        print(store_node)
+        # print("store node:")
+        # print(store_node)
         self.IR_LIST.insert_before(store_node, node)
 
         # update spill location
@@ -343,7 +343,7 @@ class Allocate:
         return pr_freed
 
     def free_use(self, op_num, node):
-        print("free use")
+        # print("free use")
 
         if op_num == 1:
             operand_i = node.arg1
@@ -353,7 +353,7 @@ class Allocate:
             operand_i = node.arg3
         
         old_phys_reg = operand_i.pr
-        print("old phys reg: " + str(old_phys_reg))
+        # print("old phys reg: " + str(old_phys_reg))
 
         # check if able to free
         if (operand_i.nu == INF):
@@ -366,7 +366,7 @@ class Allocate:
 
     
     def check_maps(self, line_num):
-        print("check maps")
+        # print("check maps")
 
         for key, val in self.VRToPR.items():
             if (val in self.PRToVR and self.PRToVR[val] != key):
@@ -411,20 +411,20 @@ class Allocate:
         # doesnt match slide 
 
     def new_allocate(self):
-        print("in new allocate!")
+        # print("in new allocate!")
         head = self.IR_LIST.head
         line_num = 1
 
         while (head != None):
             # ----- USES --------
-            print(head)
-            print(self.IR_LIST.print_table(self.IR_LIST))
-            print("VRToPR [")
-            print(self.VRToPR)
-            print("]")
-            print("PRToVR [")
-            print(self.PRToVR)
-            print("]")
+            # print(head)
+            # print(self.IR_LIST.print_table(self.IR_LIST))
+            # print("VRToPR [")
+            # print(self.VRToPR)
+            # print("]")
+            # print("PRToVR [")
+            # print(self.PRToVR)
+            # print("]")
 
             if (head.opcode == 0):  # load
                 self.allocate_use(1, head, line_num)
@@ -456,16 +456,16 @@ class Allocate:
                 self.PRToVR[phys_reg] = virt_reg
                 self.PRNU[phys_reg] = head.arg3.nu
             
-            error = self.check_maps
+            # error = self.check_maps
             # print("error: " + str(error))
 
             # iterate
             head = head.next
             line_num += 1
-        print(self.IR_LIST.print_table(self.IR_LIST))
-        print("VRToPR [")
-        print(self.VRToPR)
-        print("]")
-        print("PRToVR [")
-        print(self.PRToVR)
-        print("]")
+        # print(self.IR_LIST.print_table(self.IR_LIST))
+        # print("VRToPR [")
+        # print(self.VRToPR)
+        # print("]")
+        # print("PRToVR [")
+        # print(self.PRToVR)
+        # print("]")

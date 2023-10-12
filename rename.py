@@ -32,18 +32,18 @@ class Rename:
     def __init__(self, DEBUG, ir_list, max_reg, num_srs):
         # Get IR
         self.DEBUG = DEBUG
-        print("debug: " + str(self.DEBUG))
+        # print("debug: " + str(self.DEBUG))
         self.IR_LIST = ir_list
-        if (self.DEBUG):
-            self.IR_LIST.print_table(self.IR_LIST)
+        # if (self.DEBUG):
+        #     self.IR_LIST.print_table(self.IR_LIST)
         # self.IR_LIST.print_list()
 
         self.max_sr_num = max_reg
-        if (self.DEBUG):
-            print("//max reg num: " + str(self.max_sr_num))
+        # if (self.DEBUG):
+        #     print("//max reg num: " + str(self.max_sr_num))
         self.num_srs_filled = num_srs
-        if (self.DEBUG):
-            print("//num srs filled: " + str(self.num_srs_filled))
+        # if (self.DEBUG):
+        #     print("//num srs filled: " + str(self.num_srs_filled))
 
         self.VR_name = 0
         self.SR_to_VR = []
@@ -52,8 +52,8 @@ class Rename:
         self.count_live = 0
         self.max_live = 0
 
-        if (self.DEBUG):
-            print("//done with lab 2 init")
+        # if (self.DEBUG):
+        #     print("//done with lab 2 init")
             
         
 
@@ -71,8 +71,8 @@ class Rename:
         self.LU[operand.sr] = INF
         # update maxlive counter
         self.count_live -= 1
-        if (self.DEBUG):
-            print("op_defines: " + str(self.count_live))
+        # if (self.DEBUG):
+        #     print("op_defines: " + str(self.count_live))
         return operand
   
     def op_uses(self, operand):
@@ -81,21 +81,21 @@ class Rename:
             self.VR_name += 1
             # update maxlive counter
             self.count_live += 1
-            if (self.DEBUG):
-                print("op_uses: " + str(self.count_live))
+            # if (self.DEBUG):
+            #     print("op_uses: " + str(self.count_live))
             if self.count_live > self.max_live:
-                if (self.DEBUG):
-                    print("op_uses: count live greater than max live. assigning count live to max live.")
+                # if (self.DEBUG):
+                #     print("op_uses: count live greater than max live. assigning count live to max live.")
                 self.max_live = self.count_live
         operand.vr = self.SR_to_VR[operand.sr]
         operand.nu = self.LU[operand.sr]
 
   
     def rename(self):
-        if (self.DEBUG):
-            print("//in rename")
-        if (self.DEBUG):
-            print("//num srs filled: " + str(self.num_srs_filled))
+        # if (self.DEBUG):
+        #     print("//in rename")
+        # if (self.DEBUG):
+        #     print("//num srs filled: " + str(self.num_srs_filled))
 
 
         self.SR_to_VR = [INVALID for i in range(self.max_sr_num + 1)] # register numbers start at 0 so must be plus one the max register
@@ -144,16 +144,16 @@ class Rename:
             index -= 1
             OP = OP.prev
         
-        if (self.DEBUG):
-            self.IR_LIST.print_table(self.IR_LIST)
+        # if (self.DEBUG):
+        #     self.IR_LIST.print_table(self.IR_LIST)
 
     
     def print_renamed_block(self):
         start = self.IR_LIST.head
-        if (self.DEBUG):
-            print("//HERE")
+        # if (self.DEBUG):
+        #     print("//HERE")
         while (start != None):
-            # print(start)
+            print(start)
             lh = ""
             rh = ""
             

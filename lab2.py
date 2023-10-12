@@ -71,9 +71,9 @@ def renamer(filename):
     """
     Helper function for -x (renaming) flag
     """
-    print("renamer")
+    # print("renamer")
     lab1_obj = lab1.Lab1()  # init
-    print("//done with lab 1 init")
+    # print("//done with lab 1 init")
     lab1_obj.main(True, False)
     renamer_obj = Rename(True, lab1_obj.ir_list, lab1_obj.max_reg, lab1_obj.num_srs)
     renamer_obj.rename()
@@ -83,9 +83,9 @@ def allocator(k, filename):
     """
     Helper function for allocating k registers
     """
-    print("allocator")
+    # print("allocator")
     lab1_obj = lab1.Lab1()  # init
-    print("//done with lab 1 init")
+    # print("//done with lab 1 init")
     lab1_obj.main(True, False)
     renamer_obj = Rename(True, lab1_obj.ir_list, lab1_obj.max_reg, lab1_obj.num_srs)
     renamer_obj.rename()
