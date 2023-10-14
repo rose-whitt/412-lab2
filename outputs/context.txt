@@ -1,0 +1,18 @@
+debugging instructions:
+    - run my code through allocator 
+    - store output in file
+    - run that file through simulator
+    - do the same with reference solution
+    - compare the two
+
+
+ref_alloc_cc2.i: output of "~comp412/students/lab2/lab2_ref -r 5 ./code_check_2/cc2.i"
+sim_alloc_cc2.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 -i 0 1 2 3 4 5 6 7 8 9 10 < ./outputs/ref_alloc_cc2.i -t"
+
+ref_alloc_nospill_cc2.i: output of "~comp412/students/lab2/lab2_ref -r 64 ./code_check_2/cc2.i"
+sim_alloc_nospill_cc2.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 -i 0 1 2 3 4 5 6 7 8 9 10 < ./outputs/ref_alloc_nospill_cc2.i -t"
+
+debug_alloc_nospill_cc2.i: output of "./412alloc 64 ./code_check_2/cc2.i"
+
+
+ref_alloc_rename_ex.i: output of "~comp412/students/lab2/lab2_ref -r 5 ./test_inputs/rename_ex.i"
