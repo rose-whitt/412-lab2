@@ -43,6 +43,7 @@ EOL = 10    # end of current line ("\r\n" or "\n")
 BLANK = 11     # not an opcode, but used to signal blank space or tab
 SCANNER_ERROR = 12
 
+
 def main():
     if (len(sys.argv) == 2 and sys.argv[1] == '-h'):
         help()
