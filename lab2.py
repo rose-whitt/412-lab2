@@ -64,7 +64,8 @@ class Lab2:
 
 
         # ALLOCATION STUFF
-        self.max_vr_num = 0;
+        self.max_vr_num = 0
+        self.k = 0
         # print("max vr num: " + str(self.max_vr_num))
         # Allocator maps
         self.VRToPR = {}    # vr is the index, pr is the value
@@ -75,6 +76,14 @@ class Lab2:
 
         self.PRStack = [] # for spilling- (push and pop in algo)
         self.PRMark = {}  # make sure you're not reusing a pr in the current line
+        self.pr_used_in_cur_op = -1
+        self.is_spilled = []
+        self.spill_loc = 32768
+        self.spill_k = -1
+        self.max_live = 0
+        self.count_live = 0
+
+        # TODO: spill k and max live
 
         print("//done with lab 2 init")
     
@@ -91,12 +100,22 @@ class Lab2:
         operand.nu = self.LU[operand.sr]
         self.SR_to_VR[operand.sr] = INVALID # kill OP3
         self.LU[operand.sr] = INF
+        # update maxlive counter
+        self.count_live -= 1
         return operand
   
     def op_uses(self, operand):
         if (self.SR_to_VR[operand.sr] == INVALID):  # Last use
             self.SR_to_VR[operand.sr] = self.VR_name
             self.VR_name += 1
+            # update maxlive counter
+            self.count_live += 1
+            # if (self.DEBUG):
+            #     print("op_uses: " + str(self.count_live))
+            if self.count_live > self.max_live:
+                # if (self.DEBUG):
+                #     print("op_uses: count live greater than max live. assigning count live to max live.")
+                self.max_live = self.count_live
         operand.vr = self.SR_to_VR[operand.sr]
         operand.nu = self.LU[operand.sr]
 
@@ -196,111 +215,111 @@ class Lab2:
             start = start.next
   
 
-    """
-    Allocation helper that resets the mark in each pr to zero
-    """
-    def reset_marks(self):
-        for pr in self.PRMark.keys():
-            self.PRMark[pr] = 0
+    # """
+    # Allocation helper that resets the mark in each pr to zero
+    # """
+    # def reset_marks(self):
+    #     for pr in self.PRMark.keys():
+    #         self.PRMark[pr] = 0
   
-    """
-    Allocation helper that gets the uses of the given OPCODE
-    """
-    def get_uses(self, line):
-        if (line.opcode == LOAD_OP):
-            uses = [line.arg1]
-            # print("//[get uses] load uses: " + str(line.arg1))
+    # """
+    # Allocation helper that gets the uses of the given OPCODE
+    # """
+    # def get_uses(self, line):
+    #     if (line.opcode == LOAD_OP):
+    #         uses = [line.arg1]
+    #         # print("//[get uses] load uses: " + str(line.arg1))
             
-            return uses
-        elif (line.opcode == ADD_OP or line.opcode == SUB_OP or line.opcode == MULT_OP or line.opcode == LSHIFT_OP or line.opcode == RSHIFT_OP):
-            uses = [line.arg1, line.arg2]
-            # print("//[get uses] " + opcodes_list[line.opcode] + " uses: [" + str(line.arg1) + ", " + str(line.arg2) + "]")
-            return uses
-        elif (line.opcode == OUTPUT_OP):
-            uses = []
-            # print("//[get uses] output uses: " + str(uses))
-            return uses
-        elif (line.opcode == NOP_OP):
-            uses = []
-            # print("//[get uses] nop uses: " + str(uses))
-            return uses
-        elif (line.opcode == LOADI_OP):
-            uses = []
-            # print("//[get uses] loadI uses: " + str(uses))
-            return uses
-        elif (line.opcode == STORE_OP):
-            uses = [line.arg1, line.arg3]
-            # print("//[get uses] store uses: [" + str(line.arg1) + ", " + str(line.arg3) + "]")
-            return uses
-        else:
-            uses = []
-            # print("//[get uses] couldnt find opcode for opcode: " + str(line.opcode))
-            return uses
+    #         return uses
+    #     elif (line.opcode == ADD_OP or line.opcode == SUB_OP or line.opcode == MULT_OP or line.opcode == LSHIFT_OP or line.opcode == RSHIFT_OP):
+    #         uses = [line.arg1, line.arg2]
+    #         # print("//[get uses] " + opcodes_list[line.opcode] + " uses: [" + str(line.arg1) + ", " + str(line.arg2) + "]")
+    #         return uses
+    #     elif (line.opcode == OUTPUT_OP):
+    #         uses = []
+    #         # print("//[get uses] output uses: " + str(uses))
+    #         return uses
+    #     elif (line.opcode == NOP_OP):
+    #         uses = []
+    #         # print("//[get uses] nop uses: " + str(uses))
+    #         return uses
+    #     elif (line.opcode == LOADI_OP):
+    #         uses = []
+    #         # print("//[get uses] loadI uses: " + str(uses))
+    #         return uses
+    #     elif (line.opcode == STORE_OP):
+    #         uses = [line.arg1, line.arg3]
+    #         # print("//[get uses] store uses: [" + str(line.arg1) + ", " + str(line.arg3) + "]")
+    #         return uses
+    #     else:
+    #         uses = []
+    #         # print("//[get uses] couldnt find opcode for opcode: " + str(line.opcode))
+    #         return uses
 
       
     
-    """
-    Allocation helper that gets the defs of the given OPCODE
-    """
-    def get_defs(self, line):
-        if (line.opcode == LOAD_OP):
-            defs = [line.arg3]
-            # print("//[get defs] load defs: [" + str(line.arg3) + "]")
+    # """
+    # Allocation helper that gets the defs of the given OPCODE
+    # """
+    # def get_defs(self, line):
+    #     if (line.opcode == LOAD_OP):
+    #         defs = [line.arg3]
+    #         # print("//[get defs] load defs: [" + str(line.arg3) + "]")
             
-            return defs
-        elif (line.opcode == ADD_OP or line.opcode == SUB_OP or line.opcode == MULT_OP or line.opcode == LSHIFT_OP or line.opcode == RSHIFT_OP):
-            defs = [line.arg3]
-            # print("//[get defs] " + opcodes_list[line.opcode] + " defs: [" + str(line.arg3) + "]")
-            return defs
-        elif (line.opcode == OUTPUT_OP):
-            defs = []
-            # print("//[get defs] output defs: " + str(defs))
-            return defs
-        elif (line.opcode == NOP_OP):
-            defs = []
-            # print("//[get defs] nop defs: " + str(defs))
-            return defs
-        elif (line.opcode == LOADI_OP):
-            defs = [line.arg3]
-            # print("//[get defs] loadI defs: [" + str(line.arg3) + "]")
-            return defs
-        elif (line.opcode == STORE_OP):
-            defs = []
-            # print("//[get defs] store defs: " + str(defs))
-            return defs
-        else:
-            defs = []
-            # print("//[get defs] couldnt find opcode for opcode: " + str(line.opcode))
-            return defs
+    #         return defs
+    #     elif (line.opcode == ADD_OP or line.opcode == SUB_OP or line.opcode == MULT_OP or line.opcode == LSHIFT_OP or line.opcode == RSHIFT_OP):
+    #         defs = [line.arg3]
+    #         # print("//[get defs] " + opcodes_list[line.opcode] + " defs: [" + str(line.arg3) + "]")
+    #         return defs
+    #     elif (line.opcode == OUTPUT_OP):
+    #         defs = []
+    #         # print("//[get defs] output defs: " + str(defs))
+    #         return defs
+    #     elif (line.opcode == NOP_OP):
+    #         defs = []
+    #         # print("//[get defs] nop defs: " + str(defs))
+    #         return defs
+    #     elif (line.opcode == LOADI_OP):
+    #         defs = [line.arg3]
+    #         # print("//[get defs] loadI defs: [" + str(line.arg3) + "]")
+    #         return defs
+    #     elif (line.opcode == STORE_OP):
+    #         defs = []
+    #         # print("//[get defs] store defs: " + str(defs))
+    #         return defs
+    #     else:
+    #         defs = []
+    #         # print("//[get defs] couldnt find opcode for opcode: " + str(line.opcode))
+    #         return defs
     
 
   
-    def get_PR(self, vr, nu):
-        print("get_pr")
-        x = INVALID
-        # if stack is not empty, ie.e. there are free registers available
-        if (len(self.PRStack) > 0):
-            print("[GET_PR] stack empty, getting free reg")
-            x = self.PRStack.pop(0)
-        else:
-            # pick unmarked 
-            print("[GET_PR] stack not marked, picking unmarked to spill")
-            self.spill()
-        self.VRToPR[vr] = x
-        self.PRToVR[x] = nu
-        self.PRNU[x] = nu
-        return x
+    # def get_PR(self, vr, nu):
+    #     print("get_pr")
+    #     x = INVALID
+    #     # if stack is not empty, ie.e. there are free registers available
+    #     if (len(self.PRStack) > 0):
+    #         print("[GET_PR] stack empty, getting free reg")
+    #         x = self.PRStack.pop(0)
+    #     else:
+    #         # pick unmarked 
+    #         print("[GET_PR] stack not marked, picking unmarked to spill")
+    #         self.spill()
+    #     self.VRToPR[vr] = x
+    #     self.PRToVR[x] = nu
+    #     self.PRNU[x] = nu
+    #     return x
 
   
-    def restore(self, vr, pr):
-        print("restore")
+    # def restore(self, vr, pr):
+    #     print("restore")
   
-    def free_PR(self, pr):
-        print("free_pr")
-        self.VRToPR[self.PRToVR[pr]] = INVALID
-        self.PRToVR[pr] = INVALID
-        self.PRNU[pr] = INF
-        self.PRStack.insert(0, pr)  # cuz popping from index 0
+    # def free_PR(self, pr):
+    #     print("free_pr")
+    #     self.VRToPR[self.PRToVR[pr]] = INVALID
+    #     self.PRToVR[pr] = INVALID
+    #     self.PRNU[pr] = INF
+    #     self.PRStack.insert(0, pr)  # cuz popping from index 0
 
     def check_maps(self, line):
         print("[CHECK_MAPS]")
@@ -315,6 +334,16 @@ class Lab2:
         # for each vr, v, if vrtopr[v] is defined, prtovr[vrtopr[v]] = v
         print("PR TO VR:")  # pr is the index, vr is the value
         print(self.PRToVR)
+
+        for key, val in self.VRToPR.items():
+            if (val in self.PRToVR and self.PRToVR[val] != key):
+                print(f"ERROR {line.line}: the pair ({key}, {val}) in self.VRToPR does not match the pair ({val}, {self.PRToVR[val]}) in self.PRToVR")
+                return -1
+        for key, val in self.PRToVR.items():
+            if (val in self.VRToPR and self.VRToPR[val] != key):
+                print(f"ERROR {line.line}: the pair ({key}, {val}) in self.PRToVR does not match the pair ({val}, {self.VRToPR[val]}) in self.VRToPR")
+                return -1
+        return 0
         
         VRToPR_count_correct_1 = 0
         VRToPR_count_correct_2 = 0
@@ -388,90 +417,315 @@ class Lab2:
 
 
 
-    def spill(self):
-        print("spill")
+    # def spill(self):
+    #     print("spill")
 
   
 
+    def allocate_use(self, op_num, node, line_num):
+        # print("allocate use")
+
+        if op_num == 1:
+            operand_i = node.arg1
+        if op_num == 2:
+            operand_i = node.arg2
+        if op_num == 3:
+            operand_i = node.arg3
+        
+        virt_reg = operand_i.vr
+
+        # not spilled, get pr
+        if (virt_reg not in self.is_spilled):
+            phys_reg = self.VRToPR[virt_reg]
+            operand_i.pr = phys_reg
+            self.PRNU[phys_reg] = operand_i.nu
+        
+        # spilled, restore
+        else:
+            phys_reg = self.handle_restore(op_num, node)
+            self.is_spilled.remove(virt_reg)
+        return phys_reg
+    
+    def free_use(self, op_num, node):
+        # print("free use")
+
+        if op_num == 1:
+            operand_i = node.arg1
+        if op_num == 2:
+            operand_i = node.arg2
+        if op_num == 3:
+            operand_i = node.arg3
+        
+        old_phys_reg = operand_i.pr
+        # print("old phys reg: " + str(old_phys_reg))
+
+        # check if able to free
+        if (operand_i.nu == INF):
+            self.PRStack.append(old_phys_reg)
+            # free pr in maps
+            old_virt_reg = self.PRToVR[old_phys_reg]
+            self.PRToVR[old_phys_reg] = None
+            self.VRToPR[old_virt_reg] = None
 
 
-  
-    """
-    Main allocation funciton. Take the IR and allocate k registers to the code.
+    def handle_restore(self, op_num, node):
+        # print("handle restore")
+        if op_num == 1:
+            operand_i = node.arg1
+        if op_num == 2:
+            operand_i = node.arg2
+        if op_num == 3:
+            operand_i = node.arg3
+        
+        virt_reg = operand_i.vr
 
-    Input:
-        - k: maximum number of physical registers on this machine
+        # get new pr to hold restored vr
+        if (len(self.PRStack) > 0):
+            phys_reg = self.PRStack.pop()
+        else:
+            phys_reg = self.handle_spill(node)
+        
+        # create and add loadI
+        loadi_node = Node()
+        loadi_node.opcode = 2
+        loadi_node.arg1.sr = self.VRToSpillLoc[virt_reg]
+        loadi_node.arg3.pr = phys_reg
+        self.IR_LIST.insert_before(loadi_node, node)
 
-    """
-    def allocate(self, k):
+        # create and add load
+        load_node = Node()
+        load_node.opcode = 0
+        load_node.arg1.pr = phys_reg
+        load_node.arg3.vr = virt_reg
+        load_node.arg3.pr = phys_reg
+        # print("loadnode:")
+        # print(load_node)
+        self.IR_LIST.insert_before(load_node, node)
+
+        # update maps
+        self.VRToPR[virt_reg] = phys_reg
+        self.PRToVR[phys_reg] = virt_reg
+        self.PRNU[phys_reg] = operand_i.nu
+        operand_i.pr = phys_reg
+
+        return phys_reg
+    
+    def handle_spill(self, node):
+        # print("handle spill")
+
+        pr_freed = max(self.PRNU, key=self.PRNU.get)
+        if (pr_freed == self.pr_used_in_cur_op):
+            prnu_copy = self.PRNU.copy()
+            prnu_copy.pop(pr_freed)
+            pr_freed = max(prnu_copy, key=prnu_copy.get)
+        
+        vr_to_spill = self.PRToVR[pr_freed]
+
+        self.VRToPR[vr_to_spill] = None
+
+        # create and add loadI
+        loadi_node = Node()
+        loadi_node.opcode = 2
+        loadi_node.arg1.sr = self.spill_loc
+        loadi_node.arg3.pr = self.spill_k
+        # print("loadi node:")
+        # print(loadi_node)
+        self.IR_LIST.insert_before(loadi_node, node)
+
+        # create and add store
+        store_node = Node()
+        store_node.opcode = 1
+        store_node.arg1.vr = vr_to_spill
+        store_node.arg1.pr = pr_freed
+        store_node.arg3.pr = self.spill_k
+        # print("store node:")
+        # print(store_node)
+        self.IR_LIST.insert_before(store_node, node)
+
+        # update spill location
+        self.VRToSpillLoc[vr_to_spill] = self.spill_loc
+        self.spill_loc += 4
+
+        # add to spilled array
+        self.is_spilled.append(vr_to_spill)
+
+        return pr_freed
+    
+    def print_allocated_file(self):
+        """
+        Prints allocated file in human readable format
+        """
+
+        node = self.IR_LIST.head
+
+        while (node != None):
+            # load or store
+            if (node.opcode == 0 or node.opcode == 1):
+                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}  =>   r{node.arg3.pr}")
+            # loadI
+            elif (node.opcode == 2):
+                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}  =>   r{node.arg3.pr}")
+            # arithop
+            elif (node.opcode >= 3 and node.opcode <= 7):
+                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}, r{node.arg2.pr}  =>   r{node.arg3.pr}")
+            # output
+            elif (node.opcode == 8):
+                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}")
+            # nop
+            elif (node.opcode == 9):
+                print(f"{self.opcodes_list[node.opcode] : <7}")
+            
+            node = node.next
+    
+    def dif_alloc(self, k):
         self.max_vr_num = self.get_max_vr()
-        print("MAX VR NUM: " + str(self.max_vr_num))
-        self.VRToPR = {i: None for i in range(self.max_vr_num + 1)}    # vr is the index, pr is the value
-        self.PRToVR = {i: None for i in range(k)}
-        self.PRNU = {i: INF for i in range(k)}
+        self.k = k
+        self.VRToPR = {i: None for i in range(self.max_vr_num + 1)}
+        self.PRToVR = {i: None for i in range(self.k)}
+        self.VRToSpillLoc = {}
+        self.PRNU = {i: INF for i in range(self.k)}
+        self.PRStack = list(range(self.k - 1, -1, -1))
+        if (self.max_live > self.k):
+            self.k = self.k - 1
+            self.spill_k = self.k
 
-        print("in allocate")
-        vr = 0
-        while (vr < self.max_vr_num):
-            self.VRToPR[vr] = INVALID
-            self.VRToSpillLoc[vr] = INVALID
-            vr += 1
+        head = self.IR_LIST.head
+        line_num = 1
 
-        pr = 0
-        while (pr < k):
-            self.PRToVR[pr] = INVALID
-            self.PRNU[pr] = INF
-            self.PRMark[pr] = 0
-            self.PRStack.insert(0, pr)  # push(pr) in algo
-            pr += 1
+        while (head != None):
+            # ----- USES --------
+            # print(head)
+            # print(self.IR_LIST.print_table(self.IR_LIST))
+            # print("VRToPR [")
+            # print(self.VRToPR)
+            # print("]")
+            # print("PRToVR [")
+            # print(self.PRToVR)
+            # print("]")
 
-        line = self.IR_LIST.head
-        # iterate over block
-        while (line != None):
-            # clear the mark in each pr
-            self.reset_marks()
+            if (head.opcode == 0):  # load
+                self.allocate_use(1, head, line_num)
+                self.free_use(1, head)
+            if (head.opcode >= 3 and head.opcode <= 7): # arithop
+                self.pr_used_in_cur_op = self.allocate_use(1, head, line_num)
+                self.allocate_use(2, head, line_num)
+                self.pr_used_in_cur_op = -1
+                self.free_use(1, head)
+                self.free_use(2, head)
+            if (head.opcode == 1):  # store
+                self.pr_used_in_cur_op = self.allocate_use(1, head, line_num)
+                self.allocate_use(3, head, line_num)
+                self.pr_used_in_cur_op = -1
+                self.free_use(1, head)
+                self.free_use(3, head)
             
-
-            # print("LINE1")
-            # print(line)
-            defs = self.get_defs(line)
-            uses = self.get_uses(line)
-
-            # allocate uses
-            for use in uses:
-                pr = self.VRToPR[use.vr]
-                # print("pr: " + str(pr))
-                if (pr == INVALID):
-                    print("gettin a pr")
-                    use.pr = self.get_PR(use.vr, use.nu)  # TODO: implement func
-                    # TODO: implement restore
-                    print("pr gotten: " + str(use.pr))
-                    self.restore(use.vr, use.pr)  # TODO: implement func
+            # ----- DEFS --------
+            if (head.arg3.sr != None and head.opcode != 1):
+                virt_reg = head.arg3.vr
+                # get phys reg
+                if (len(self.PRStack) > 0):
+                    phys_reg = self.PRStack.pop()
                 else:
-                    use.pr = pr
+                    phys_reg = self.handle_spill(head)
+                # update maps
+                head.arg3.pr = phys_reg
+                self.VRToPR[virt_reg] = phys_reg
+                self.PRToVR[phys_reg] = virt_reg
+                self.PRNU[phys_reg] = head.arg3.nu
+            
+            # error = self.check_maps(head)
+            # if (error == -1):
+            #     print("error: " + str(error))
+
+            # iterate
+            head = head.next
+            line_num += 1
+        # print(self.IR_LIST.print_table(self.IR_LIST))
+        # print("VRToPR [")
+        # print(self.VRToPR)
+        # print("]")
+        # print("PRToVR [")
+        # print(self.PRToVR)
+        # print("]")
+  
+    # """
+    # Main allocation funciton. Take the IR and allocate k registers to the code.
+
+    # Input:
+    #     - k: maximum number of physical registers on this machine
+
+    # """
+    # def allocate(self, k):
+    #     self.max_vr_num = self.get_max_vr()
+    #     print("MAX VR NUM: " + str(self.max_vr_num))
+    #     # self.VRToPR = {i: None for i in range(self.max_vr_num + 1)}    # vr is the index, pr is the value
+    #     # self.PRToVR = {i: None for i in range(k)}
+    #     # self.PRNU = {i: INF for i in range(k)}
+
+    #     print("in allocate")
+    #     vr = 0
+    #     while (vr < self.max_vr_num):
+    #         self.VRToPR[vr] = INVALID
+    #         self.VRToSpillLoc[vr] = INVALID
+    #         vr += 1
+
+    #     pr = 0
+    #     while (pr < k):
+    #         self.PRToVR[pr] = INVALID
+    #         self.PRNU[pr] = INF
+    #         self.PRMark[pr] = 0
+    #         self.PRStack.insert(0, pr)  # push(pr) in algo
+    #         pr += 1
+
+    #     line = self.IR_LIST.head
+    #     # iterate over block
+    #     while (line != None):
+    #         # clear the mark in each pr
+    #         self.reset_marks()
+            
+
+    #         # print("LINE1")
+    #         # print(line)
+    #         defs = self.get_defs(line)
+    #         uses = self.get_uses(line)
+
+    #         # allocate uses
+    #         for use in uses:
+    #             pr = self.VRToPR[use.vr]
+    #             # print("pr: " + str(pr))
+    #             if (pr == INVALID):
+    #                 print("gettin a pr")
+    #                 use.pr = self.get_PR(use.vr, use.nu)  # TODO: implement func
+    #                 # TODO: implement restore
+    #                 print("pr gotten: " + str(use.pr))
+    #                 self.restore(use.vr, use.pr)  # TODO: implement func
+    #             else:
+    #                 use.pr = pr
                 
-                self.PRMark[use.pr] = 1
+    #             self.PRMark[use.pr] = 1
 
-            # check if last use
-            for use in uses:
-                if (use.nu == INF and not self.PRToVR[use.pr] == INVALID):
-                    self.free_PR(use.pr)  # TODO: implement func
+    #         # check if last use
+    #         for use in uses:
+    #             if (use.nu == INF and not self.PRToVR[use.pr] == INVALID):
+    #                 self.free_PR(use.pr)  # TODO: implement func
             
-            # clear mark in each pr
-            self.reset_marks()
+    #         # clear mark in each pr
+    #         self.reset_marks()
 
-            # allocate defs
-            for d in defs:
-                d.pr = self.get_PR(d.vr, d.nu)  # TODO: implement func
-                self.PRMark[d.pr] = 1
+    #         # allocate defs
+    #         for d in defs:
+    #             d.pr = self.get_PR(d.vr, d.nu)  # TODO: implement func
+    #             self.PRMark[d.pr] = 1
             
-            # print("LINE2")
-            # print(line)
-            self.check_maps(line) # TODO: implement func
+    #         # print("LINE2")
+    #         # print(line)
+    #         error = self.check_maps(line) # TODO: implement func
+    #         # if (error == -1):
+    #         #     return
             
-            line = line.next
+    #         line = line.next
 
-        self.IR_LIST.print_table(self.IR_LIST)
+    #     self.IR_LIST.print_table(self.IR_LIST)
 
       
 
@@ -490,7 +744,8 @@ def main():
   if (sys.argv[1] == '-x'):
     lab2.print_renamed_block()
   elif (int(sys.argv[1]) >= 3 and int(sys.argv[1]) <= 64):
-    lab2.allocate(int(sys.argv[1]))
+    # lab2.allocate(int(sys.argv[1]))
+    lab2.dif_alloc(int(sys.argv[1]))
     print("//allocating done")
     lab2.print_renamed_block()
 

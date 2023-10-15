@@ -18,3 +18,10 @@ ref_alloc_rename_ex.i: output of "~comp412/students/lab2/lab2_ref -r 5 ./test_in
 
 debug_alloc_nospill_cc2.i: output of "./412alloc 64 ./code_check_2/cc2.i"
 sim_debug_alloc_nospill_cc2.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 -i 0 1 2 3 4 5 6 7 8 9 10 < ./outputs/debug_alloc_nospill_cc2.i -t"
+
+
+debug_alloc_nospill_cc1.i: output of "./412alloc 64 ./code_check_2/cc1.i"
+sim_debug_alloc_nospill_cc1.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/debug_alloc_nospill_cc1.i -t"
+
+ref_alloc_nospill_cc1.i: output of "~comp412/students/lab2/lab2_ref -r 64 ./code_check_2/cc1.i"
+sim_alloc_nospill_cc1.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/ref_alloc_nospill_cc1.i -t"
