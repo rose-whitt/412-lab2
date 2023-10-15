@@ -64,10 +64,12 @@ class Lab2:
 
 
         # ALLOCATION STUFF
-        self.max_vr_num = self.max_sr_num;
+        self.max_vr_num = 0;
+        # print("max vr num: " + str(self.max_vr_num))
         # Allocator maps
-        self.VRToPR = {}
-        self.PRToVR = {}
+        self.VRToPR = {}    # vr is the index, pr is the value
+        
+        self.PRToVR = {}    # pr is the index, vr is the value
         self.VRToSpillLoc = {}
         self.PRNU = {}
 
@@ -151,6 +153,20 @@ class Lab2:
 
         self.IR_LIST.print_table(self.IR_LIST)
 
+    def get_max_vr(self):
+        start = self.IR_LIST.head
+        max = 0
+        while (start != None):
+            if (start.arg1.vr != None and start.arg1.vr > max):
+                max = start.arg1.vr
+            if (start.arg2.vr != None and start.arg2.vr > max):
+                max = start.arg2.vr
+            if (start.arg3.vr != None and start.arg3.vr > max):
+                max = start.arg3.vr
+            start = start.next
+        return max
+
+
     
     def print_renamed_block(self):
         start = self.IR_LIST.head
@@ -193,32 +209,32 @@ class Lab2:
     def get_uses(self, line):
         if (line.opcode == LOAD_OP):
             uses = [line.arg1]
-            print("//[get uses] load uses: " + str(line.arg1))
+            # print("//[get uses] load uses: " + str(line.arg1))
             
             return uses
         elif (line.opcode == ADD_OP or line.opcode == SUB_OP or line.opcode == MULT_OP or line.opcode == LSHIFT_OP or line.opcode == RSHIFT_OP):
             uses = [line.arg1, line.arg2]
-            print("//[get uses] " + opcodes_list[line.opcode] + " uses: [" + str(line.arg1) + ", " + str(line.arg2) + "]")
+            # print("//[get uses] " + opcodes_list[line.opcode] + " uses: [" + str(line.arg1) + ", " + str(line.arg2) + "]")
             return uses
         elif (line.opcode == OUTPUT_OP):
             uses = []
-            print("//[get uses] output uses: " + str(uses))
+            # print("//[get uses] output uses: " + str(uses))
             return uses
         elif (line.opcode == NOP_OP):
             uses = []
-            print("//[get uses] nop uses: " + str(uses))
+            # print("//[get uses] nop uses: " + str(uses))
             return uses
         elif (line.opcode == LOADI_OP):
             uses = []
-            print("//[get uses] loadI uses: " + str(uses))
+            # print("//[get uses] loadI uses: " + str(uses))
             return uses
         elif (line.opcode == STORE_OP):
             uses = [line.arg1, line.arg3]
-            print("//[get uses] store uses: [" + str(line.arg1) + ", " + str(line.arg3) + "]")
+            # print("//[get uses] store uses: [" + str(line.arg1) + ", " + str(line.arg3) + "]")
             return uses
         else:
             uses = []
-            print("//[get uses] couldnt find opcode for opcode: " + str(line.opcode))
+            # print("//[get uses] couldnt find opcode for opcode: " + str(line.opcode))
             return uses
 
       
@@ -229,32 +245,32 @@ class Lab2:
     def get_defs(self, line):
         if (line.opcode == LOAD_OP):
             defs = [line.arg3]
-            print("//[get defs] load defs: [" + str(line.arg3) + "]")
+            # print("//[get defs] load defs: [" + str(line.arg3) + "]")
             
             return defs
         elif (line.opcode == ADD_OP or line.opcode == SUB_OP or line.opcode == MULT_OP or line.opcode == LSHIFT_OP or line.opcode == RSHIFT_OP):
             defs = [line.arg3]
-            print("//[get defs] " + opcodes_list[line.opcode] + " defs: [" + str(line.arg3) + "]")
+            # print("//[get defs] " + opcodes_list[line.opcode] + " defs: [" + str(line.arg3) + "]")
             return defs
         elif (line.opcode == OUTPUT_OP):
             defs = []
-            print("//[get defs] output defs: " + str(defs))
+            # print("//[get defs] output defs: " + str(defs))
             return defs
         elif (line.opcode == NOP_OP):
             defs = []
-            print("//[get defs] nop defs: " + str(defs))
+            # print("//[get defs] nop defs: " + str(defs))
             return defs
         elif (line.opcode == LOADI_OP):
             defs = [line.arg3]
-            print("//[get defs] loadI defs: [" + str(line.arg3) + "]")
+            # print("//[get defs] loadI defs: [" + str(line.arg3) + "]")
             return defs
         elif (line.opcode == STORE_OP):
             defs = []
-            print("//[get defs] store defs: " + str(defs))
+            # print("//[get defs] store defs: " + str(defs))
             return defs
         else:
             defs = []
-            print("//[get defs] couldnt find opcode for opcode: " + str(line.opcode))
+            # print("//[get defs] couldnt find opcode for opcode: " + str(line.opcode))
             return defs
     
 
@@ -262,7 +278,7 @@ class Lab2:
     def get_PR(self, vr, nu):
         print("get_pr")
         x = INVALID
-        # if stack is empty, ie.e. there are free registers available
+        # if stack is not empty, ie.e. there are free registers available
         if (len(self.PRStack) > 0):
             print("[GET_PR] stack empty, getting free reg")
             x = self.PRStack.pop(0)
@@ -281,9 +297,96 @@ class Lab2:
   
     def free_PR(self, pr):
         print("free_pr")
+        self.VRToPR[self.PRToVR[pr]] = INVALID
+        self.PRToVR[pr] = INVALID
+        self.PRNU[pr] = INF
+        self.PRStack.insert(0, pr)  # cuz popping from index 0
 
-    def check_maps(self):
-        print("check_maps")
+    def check_maps(self, line):
+        print("[CHECK_MAPS]")
+        # self.IR_LIST.print_table(self.IR_LIST)
+        print(line)
+        print("PR STACK:")
+        print(self.PRStack)
+        # head = self.IR_LIST.head
+        # for each pr, p, if vrtopr[prtovr[p]] = p
+        print("VR TO PR:")  # vr is th index, pr is the value
+        print(self.VRToPR)
+        # for each vr, v, if vrtopr[v] is defined, prtovr[vrtopr[v]] = v
+        print("PR TO VR:")  # pr is the index, vr is the value
+        print(self.PRToVR)
+        
+        VRToPR_count_correct_1 = 0
+        VRToPR_count_correct_2 = 0
+        VRToPR_count_correct_3 = 0
+        PRToVR_count_correct_1 = 0
+        PRToVR_count_correct_2 = 0
+        PRToVR_count_correct_3 = 0
+        # while (head != None):
+            # print(head)
+            # for each pr, p, if vrtopr[prtovr[p]] = p
+        # if (line.arg1.pr != None and self.PRToVR.get(line.arg1.pr) != None and self.PRToVR.get(line.arg1.pr) != INF):
+        #     if ((self.PRToVR[line.arg1.pr] < len(self.VRToPR)) and self.VRToPR[self.PRToVR[line.arg1.pr]] == line.arg1.pr):
+        #         VRToPR_count_correct_1 += 1
+        #     else:
+        #         print("VRToPR ERROR! ARG1 LINE " + str(line.line) + ". EXPECTED: " + str(line.arg1.pr) + " ; ACTUAL: " + str(self.VRToPR[self.PRToVR[line.arg1.pr]]))
+        # # print("ARG2 PRToVR[PR]: " + str(self.PRToVR.get(line.arg2.pr)))
+        # # print("ARG2 PR: " + str(line.arg2.pr))
+        # # print("VRToPR len: " + str(len(self.VRToPR)))
+        # # print("PRTOVR len: " + str(len(self.PRToVR)))
+        # if (line.arg2.pr != None and self.PRToVR.get(line.arg2.pr) != None and self.PRToVR.get(line.arg2.pr) != INF):
+        #     if ((self.PRToVR[line.arg2.pr] < len(self.VRToPR)) and self.VRToPR[self.PRToVR[line.arg2.pr]] == line.arg2.pr):
+        #         VRToPR_count_correct_2 += 1
+        #     else:
+        #         print("VRToPR ERROR! ARG2 LINE " + str(line.line) + ". EXPECTED: " + str(line.arg2.pr) + " ; ACTUAL: " + str(self.VRToPR[self.PRToVR[line.arg2.pr]]))
+        # # print("ARG3 PRToVR[PR]: " + str(self.PRToVR.get(line.arg3.pr)))
+        # # print("ARG3 PR: " + str(line.arg3.pr))
+        # # print("VRToPR len: " + str(len(self.VRToPR)))
+        # # print("PRTOVR len: " + str(len(self.PRToVR)))
+
+        # if (line.arg3.pr != None and self.PRToVR.get(line.arg3.pr) != None and self.PRToVR.get(line.arg3.pr) != INF):
+        #     if ((self.PRToVR[line.arg3.pr] < len(self.VRToPR)) and self.VRToPR[self.PRToVR[line.arg3.pr]] == line.arg3.pr):
+        #         VRToPR_count_correct_3 += 1
+        #     else:
+        #         print("VRToPR ERROR! ARG3 LINE " + str(line.line) + ". EXPECTED: " + str(line.arg3.pr) + " ; ACTUAL: " + str(self.VRToPR[self.PRToVR[line.arg3.pr]]))
+
+        # # for each vr, v, if vrtopr[v] is defined, prtovr[vrtopr[v]] = v
+        # # print("ARG1 VRToPR[VR] " + self.VRToPR[head.arg1.vr])
+        # if (line.arg1.vr != None and self.VRToPR.get(line.arg1.vr) != INVALID and self.VRToPR.get(line.arg1.vr) != None):
+        #     if (self.PRToVR[self.VRToPR[line.arg1.vr]] == line.arg1.vr):
+        #         PRToVR_count_correct_1 += 1
+        #     else:
+        #         print("PRToVR ERROR! ARG1 LINE " + str(line.line) + ". EXPECTED: " + str(line.arg1.vr) + " ; ACTUAL: " + str(self.PRToVR[self.VRToPR[line.arg1.vr]]))
+        # # print("ARG2 VRToPR[VR] " + self.VRToPR[head.arg2.vr])
+        # if (line.arg2.vr != None and self.VRToPR.get(line.arg2.vr) != INVALID and self.VRToPR.get(line.arg2.vr) != None):
+        #     if (self.PRToVR[self.VRToPR[line.arg2.vr]] == line.arg2.vr):
+        #         PRToVR_count_correct_2 += 1
+        #     else:
+        #         print("PRToVR ERROR! ARG2 LINE " + str(line.line) + ". EXPECTED: " + str(line.arg2.vr) + " ; ACTUAL: " + str(self.PRToVR[self.VRToPR[line.arg2.vr]] ))
+        # # print("ARG3 VRToPR[VR]: " + str(self.VRToPR.get(line.arg3.vr)))
+        # # print("ARG3 VR: " + str(line.arg3.vr))
+
+        # if (line.arg3.vr != None and self.VRToPR.get(line.arg3.vr) != INVALID and self.VRToPR.get(line.arg3.vr) != None):
+        #     # if (self.VRToPR[head.arg3.vr] != INVALID):
+        #     if (self.PRToVR[self.VRToPR[line.arg3.vr]] == line.arg3.vr):
+        #         PRToVR_count_correct_3 += 1
+        #     else:
+        #         print("PRToVR ERROR! ARG3 LINE " + str(line.line) + ". EXPECTED: " + str(line.arg3.vr) + " ; ACTUAL: " + str(self.PRToVR[self.VRToPR[line.arg3.vr]]))
+
+        # at operation x, for each pr, p, nu[p] > x
+        # if (line.arg1.pr != None):
+        #     print("ARG1 LINE " + str(line.line) + ": PR: " + str(line.arg1.pr) + " ; PRNU[PR]: " + str(self.PRNU[line.arg1.pr]))
+        # if (line.arg2.pr != None):
+        #     print("ARG2 LINE " + str(line.line) + ": PR: " + str(line.arg2.pr) + " ; PRNU[PR]: " + str(self.PRNU[line.arg2.pr]))
+        # if (line.arg3.pr != None):
+        #     print("ARG3 LINE " + str(line.line) + ": PR: " + str(line.arg3.pr) + " ; PRNU[PR]: " + str(self.PRNU[line.arg3.pr]))
+        
+            # head = head.next
+
+        
+        
+
+
 
     def spill(self):
         print("spill")
@@ -301,6 +404,12 @@ class Lab2:
 
     """
     def allocate(self, k):
+        self.max_vr_num = self.get_max_vr()
+        print("MAX VR NUM: " + str(self.max_vr_num))
+        self.VRToPR = {i: None for i in range(self.max_vr_num + 1)}    # vr is the index, pr is the value
+        self.PRToVR = {i: None for i in range(k)}
+        self.PRNU = {i: INF for i in range(k)}
+
         print("in allocate")
         vr = 0
         while (vr < self.max_vr_num):
@@ -323,19 +432,20 @@ class Lab2:
             self.reset_marks()
             
 
-            
-            print(line)
+            # print("LINE1")
+            # print(line)
             defs = self.get_defs(line)
             uses = self.get_uses(line)
 
             # allocate uses
             for use in uses:
                 pr = self.VRToPR[use.vr]
-                print("pr: " + str(pr))
+                # print("pr: " + str(pr))
                 if (pr == INVALID):
                     print("gettin a pr")
                     use.pr = self.get_PR(use.vr, use.nu)  # TODO: implement func
                     # TODO: implement restore
+                    print("pr gotten: " + str(use.pr))
                     self.restore(use.vr, use.pr)  # TODO: implement func
                 else:
                     use.pr = pr
@@ -355,10 +465,12 @@ class Lab2:
                 d.pr = self.get_PR(d.vr, d.nu)  # TODO: implement func
                 self.PRMark[d.pr] = 1
             
-            print(line)
-            self.check_maps() # TODO: implement func
+            # print("LINE2")
+            # print(line)
+            self.check_maps(line) # TODO: implement func
             
             line = line.next
+
         self.IR_LIST.print_table(self.IR_LIST)
 
       
@@ -374,10 +486,12 @@ def main():
   # TODO: -h flag
 
   lab2.rename()
+  print("//renaming done")
   if (sys.argv[1] == '-x'):
     lab2.print_renamed_block()
   elif (int(sys.argv[1]) >= 3 and int(sys.argv[1]) <= 64):
     lab2.allocate(int(sys.argv[1]))
+    print("//allocating done")
     lab2.print_renamed_block()
 
 

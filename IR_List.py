@@ -79,7 +79,9 @@ class Node:
         else:
             l2 = ""
         
-        temp_str = str(self.line) + " : " +  opcodes_list[opcode] + " : [ "  + l0 + " ] , [ " + l1 + " ], [ " + l2 + " ]\n"
+        # temp_str = str(self.line) + " : " +  opcodes_list[opcode] + " : [ "  + l0 + " ] , [ " + l1 + " ], [ " + l2 + " ]\n"
+        temp_str = str(self.line) + " : " +  opcodes_list[opcode] + " : [ "  + l0 + " ] , [ " + l1 + " ], [ " + l2 + " ]"
+
         return temp_str
         
 
