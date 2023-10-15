@@ -75,34 +75,39 @@
 //30       39       loadI      | 0     None  None  inf   | None  None  None  inf   | 0     1     None  31    | 30              
 //31       40       store      | 20    0     None  inf   | None  None  None  inf   | 0     1     None  inf   | 31              
 //32       41       output     | 0     None  None  inf   | None  None  None  inf   | None  None  None  inf   | 32              
-in allocate
-6 : loadI : [ val 0 ] , [  ], [ sr0 ]
-
-//[get defs] loadI defs: [[ SR: 0 , VR: 30 , PR: None , NU: 2 ]]
-//[get uses] loadI uses: []
-get_pr
-[GET_PR] stack empty, getting free reg
-6 : loadI : [ val 0 ] , [  ], [ sr0 ]
-
-check_maps
-7 : loadI : [ val 4 ] , [  ], [ sr1 ]
-
-//[get defs] loadI defs: [[ SR: 1 , VR: 22 , PR: None , NU: 3 ]]
-//[get uses] loadI uses: []
-get_pr
-[GET_PR] stack empty, getting free reg
-7 : loadI : [ val 4 ] , [  ], [ sr1 ]
-
-check_maps
-8 : load : [ sr0 ] , [  ], [ sr10 ]
-
-//[get defs] load defs: [[ SR: 10 , VR: 18 , PR: None , NU: 21 ]]
-//[get uses] load uses: [ SR: 0 , VR: 30 , PR: None , NU: 3 ]
-Traceback (most recent call last):
-  File "lab2.py", line 379, in <module>
-    main()
-  File "lab2.py", line 374, in main
-    lab2.allocate(int(sys.argv[1]))
-  File "lab2.py", line 329, in allocate
-    pr = self.VRToPR[use.vr]
-KeyError: 30
+//renaming done
+//allocating done
+//HERE
+loadI 0 => r30
+loadI 4 => r22
+load r30 => r18
+add r30,r22 => r29
+load r29 => r19
+add r29,r22 => r28
+load r28 => r16
+add r28,r22 => r27
+load r27 => r17
+add r27,r22 => r26
+load r26 => r14
+add r26,r22 => r25
+load r25 => r15
+add r25,r22 => r24
+load r24 => r12
+add r24,r22 => r23
+load r23 => r13
+add r23,r22 => r21
+load r21 => r10
+add r21,r22 => r20
+load r20 => r11
+add r18,r19 => r8
+add r16,r17 => r9
+add r14,r15 => r6
+add r12,r13 => r7
+add r10,r11 => r5
+add r8,r9 => r4
+add r6,r7 => r3
+add r4,r5 => r2
+add r2,r3 => r0
+loadI 0 => r1
+store r0 => r1
+output 0
