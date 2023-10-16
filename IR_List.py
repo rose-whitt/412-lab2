@@ -150,9 +150,30 @@ class LinkedList:
 
         i = 0
         while (start != None):
+            # temp_line = start.line
+            # if (temp_line == None):
+            #     temp_line = -1
+            # temp_opcode = self.opcodes[start.opcode]
+            # if (temp_opcode):
+            #     temp_opcode = -1
             
-            print('//' + "{:<8} {:<8} {:<10} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<15} ".format(i, start.line, self.opcodes[start.opcode], str(start.arg1.sr), str(start.arg1.vr), str(start.arg1.pr), str(start.arg1.nu), str(start.arg2.sr), str(start.arg2.vr), str(start.arg2.pr), str(start.arg2.nu),  str(start.arg3.sr), str(start.arg3.vr), str(start.arg3.pr), str(start.arg3.nu), i))
-
+            
+            # print('//' + "{:<8} {:<8} {:<10} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<15} ".format(i, start.line, self.opcodes[start.opcode], str(start.arg1.sr), str(start.arg1.vr), str(start.arg1.pr), str(start.arg1.nu), str(start.arg2.sr), str(start.arg2.vr), str(start.arg2.pr), str(start.arg2.nu),  str(start.arg3.sr), str(start.arg3.vr), str(start.arg3.pr), str(start.arg3.nu), i))
+            temp_line = start.line if start.line is not None else -1
+            temp_opcode = self.opcodes[start.opcode] if start.opcode is not None else -1
+            temp_arg1_sr = str(start.arg1.sr) if start.arg1.sr is not None else -1
+            temp_arg1_vr = str(start.arg1.vr) if start.arg1.vr is not None else -1
+            temp_arg1_pr = str(start.arg1.pr) if start.arg1.pr is not None else -1
+            temp_arg1_nu = str(start.arg1.nu) if start.arg1.nu is not None else -1
+            temp_arg2_sr = str(start.arg2.sr) if start.arg2.sr is not None else -1
+            temp_arg2_vr = str(start.arg2.vr) if start.arg2.vr is not None else -1
+            temp_arg2_pr = str(start.arg2.pr) if start.arg2.pr is not None else -1
+            temp_arg2_nu = str(start.arg2.nu) if start.arg2.nu is not None else -1
+            temp_arg3_sr = str(start.arg3.sr) if start.arg3.sr is not None else -1
+            temp_arg3_vr = str(start.arg3.vr) if start.arg3.vr is not None else -1
+            temp_arg3_pr = str(start.arg3.pr) if start.arg3.pr is not None else -1
+            temp_arg3_nu = str(start.arg3.nu) if start.arg3.nu is not None else -1
+            print('//' + "{:<8} {:<8} {:<10} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<15} ".format(i, temp_line, temp_opcode, temp_arg1_sr, temp_arg1_vr, temp_arg1_pr, temp_arg1_nu, temp_arg2_sr, temp_arg2_vr, temp_arg2_pr, temp_arg2_nu, temp_arg3_sr, temp_arg3_vr, temp_arg3_pr, temp_arg3_nu, i))
             start = start.next
             i += 1
 
