@@ -645,9 +645,9 @@ class Lab2:
                 self.PRToVR[phys_reg] = virt_reg
                 self.PRNU[phys_reg] = head.arg3.nu
             
-            error = self.check_maps(head)
-            if (error == -1):
-                print("error: " + str(error))
+            # error = self.check_maps(head)
+            # if (error == -1):
+            #     print("error: " + str(error))
 
             # iterate
             head = head.next
