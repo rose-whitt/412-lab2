@@ -125,7 +125,7 @@ class LinkedList:
         - new_node: the node being inserted
         - aft_node: the node that will come after new_node
         """
-        print("aft node line num: " + str(aft_node.line))
+        # print("aft node line num: " + str(aft_node.line))
 
         if (aft_node == self.head):
             new_node.next = aft_node
@@ -138,8 +138,9 @@ class LinkedList:
             aft_node.prev = new_node
         
         # handle line nums
-        print("new node line num: " + str(new_node.line))
-        print("aft node line num: " + str(aft_node.line))
+        # print("new node line num: " + str(new_node.line))
+        # print("aft node line num: " + str(aft_node.line))
+        # NOTE: this doesnt seem to change the print_allocated_file output, but it does change the actual IR 
         new_node.line = aft_node.line
         start = aft_node
         while (start != None):

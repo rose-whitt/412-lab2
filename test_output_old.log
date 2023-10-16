@@ -7,14 +7,14 @@ Running 522 tests...
 - Reference output:
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 - Your output:
-[0, 1, 32780, 32777, 32788, 65561, 32796, 98353, 32804, 131153, 163957]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block12.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0]
 - Your output:
-[262404, 0, 65588]
+[262372, 0, 65580]
 ✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block9.i passed!
 ❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block8.i failed!
 - Summary:
@@ -23,32 +23,22 @@ Running 522 tests...
 [2, 110]
 - Your output:
 [2, 0]
-❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block6.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block6.i passed!
 ✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block11.i passed!
-❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block5.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block5.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 11.11% lower than number of cycles used by the reference.
+Your cycles:	72
+Ref cycles:	81
 ✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block4.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 56.67% higher than number of cycles used by the reference.
-Your cycles:	47
+Your number of cycles for this file is 50.00% higher than number of cycles used by the reference.
+Your cycles:	45
 Ref cycles:	30
 ✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block3.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
-Your cycles:	48
+Your number of cycles for this file is 27.78% higher than number of cycles used by the reference.
+Your cycles:	46
 Ref cycles:	36
 ❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block2.i failed!
 - Summary:
@@ -56,14 +46,14 @@ Ref cycles:	36
 - Reference output:
 [3, 4, 6, 11]
 - Your output:
-[3, 4, 6, 32784]
+[3, 4, 6, 32780]
 ❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block10.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [131071, 131071]
 - Your output:
-[536903755, 511]
+[536838223, 1]
 ✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/unrelated_stores.i failed!
 - Summary:
@@ -78,7 +68,7 @@ Ref cycles:	36
 - Reference output:
 [0, 0]
 - Your output:
-[131104, 0]
+[131088, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-4.i passed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 🐇 You are more effective on this test case.
@@ -92,14 +82,11 @@ Ref cycles:	18
 Your number of cycles for this file is 9.52% lower than number of cycles used by the reference.
 Your cycles:	19
 Ref cycles:	21
-❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[10]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 13.33% lower than number of cycles used by the reference.
+Your cycles:	13
+Ref cycles:	15
 ✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-2.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 5.88% lower than number of cycles used by the reference.
@@ -120,7 +107,7 @@ Ref cycles:	17
 - Reference output:
 [7, 15]
 - Your output:
-[7, 32783]
+[7, 32779]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/trickystores.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/jwc.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -143,27 +130,24 @@ Ref cycles:	10
 - Reference output:
 [2048, 1028, 1032]
 - Your output:
-[-30736, 1028, 1032]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[-271]
-- Your output:
-[]
+[-30732, 1028, 1032]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 11.11% lower than number of cycles used by the reference.
+Your cycles:	16
+Ref cycles:	18
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test4.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0]
 - Your output:
-[33165380]
+[33161332]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test2.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 56.67% higher than number of cycles used by the reference.
-Your cycles:	47
+Your number of cycles for this file is 50.00% higher than number of cycles used by the reference.
+Your cycles:	45
 Ref cycles:	30
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s50_test1.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -179,7 +163,7 @@ Ref cycles:	30
 - Reference output:
 [1, 2, 3, 4, 5]
 - Your output:
-[1, 2, 32772, 32776, 32777]
+[1, 2, 32768, 32772, 32773]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test2.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -201,13 +185,13 @@ Ref cycles:	13
 - Reference output:
 [210, 210]
 - Your output:
-[524842, 344736]
+[524778, 344694]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_lshift2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_fibonacci.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 23.33% higher than number of cycles used by the reference.
-Your cycles:	74
+Your number of cycles for this file is 20.00% higher than number of cycles used by the reference.
+Your cycles:	72
 Ref cycles:	60
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test3.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -224,7 +208,7 @@ Ref cycles:	60
 - Reference output:
 [42, 441, 194481, 189, 1134, 126, 55566, 3, 2032]
 - Your output:
-[32812, 32844, 1077940224, 1112292112, -1916181920, 1377096, -2026316000, 32808, 2032]
+[0, 1084361536, 1031704576, -1067448064, 32824, 196704, 32836, 3, 2032]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test3.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test3.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -265,41 +249,25 @@ Your number of cycles for this file is 15.38% lower than number of cycles used b
 Your cycles:	11
 Ref cycles:	13
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s31_test2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.17% lower than number of cycles used by the reference.
+Your cycles:	23
+Ref cycles:	24
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_mult3.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[32, 32, 0]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test4.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[5]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[2]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 10.34% lower than number of cycles used by the reference.
+Your cycles:	26
+Ref cycles:	29
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 7.14% lower than number of cycles used by the reference.
+Your cycles:	26
+Ref cycles:	28
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test3.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s61_test1.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -320,24 +288,14 @@ Ref cycles:	13
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_sub5.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test4.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block6.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[5]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block6.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 8.33% lower than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	12
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block1.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -352,7 +310,7 @@ Ref cycles:	13
 - Reference output:
 [97, 112, 112, 108, 101, 106, 97, 99, 107]
 - Your output:
-[97, 112, 112, 108, 101, 32780, 97, 99, 107]
+[97, 112, 112, 108, 101, 32776, 97, 99, 107]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock4.i passed!
@@ -374,7 +332,7 @@ Ref cycles:	13
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 0, 0, 0, 0, 32808, 0]
+[3000, 0, 0, 0, 0, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test0.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test1.i passed!
@@ -383,8 +341,8 @@ Ref cycles:	13
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test3.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 37.04% higher than number of cycles used by the reference.
-Your cycles:	74
+Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
+Your cycles:	72
 Ref cycles:	54
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test4.i passed!
@@ -400,7 +358,7 @@ Ref cycles:	54
 - Reference output:
 [16576, 4160, 1032, 64, 1028]
 - Your output:
-[1086324736, 1075183776, -31788, 64, 0]
+[67895296, 1074921472, -31784, 1032, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block2.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_largeRegTest.i failed!
@@ -420,7 +378,7 @@ Ref cycles:	54
 - Reference output:
 [0, 0, 0, 0, 0]
 - Your output:
-[0, 0, 0, 0, 32776]
+[0, 0, 0, 32772, 1073741824]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block3.i passed!
 🐌 You are less effective on this test case.
 Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
@@ -432,18 +390,11 @@ Ref cycles:	6
 - Reference output:
 [3, 4, 6, 11]
 - Your output:
-[3, 4, 6, 32784]
+[3, 4, 6, 32780]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test1.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block5.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[2, 1]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block5.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test6.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test1.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -461,16 +412,13 @@ Ref cycles:	6
 - Reference output:
 [1, 2, 3, 5, 8, 13]
 - Your output:
-[1, 2, 3, 5, 32772, 32776]
+[1, 2, 3, 5, 32768, 32772]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test1.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[12, 2008]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 20.00% higher than number of cycles used by the reference.
+Your cycles:	12
+Ref cycles:	10
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s20_test4.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -488,7 +436,7 @@ Ref cycles:	6
 - Reference output:
 [0, 0, 0, 0, 0, 20]
 - Your output:
-[0, 0, -32772, -65548, -65548, 20]
+[0, 0, -32768, -65540, -65540, 20]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test2.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test4.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -523,23 +471,16 @@ Ref cycles:	22
 - Reference output:
 [0]
 - Your output:
-[16388]
+[16386]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block4.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [8, 2, 36, 9, 32, 8, 25]
 - Your output:
-[1024, 0, 589824, 9, 4096, 0, 25]
+[64, 0, 2304, 9, 256, 1, 25]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test1.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[5, 10, 15, 20]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block4.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s38_round.i failed!
 - Summary:
@@ -548,49 +489,25 @@ Ref cycles:	22
 [0, 4, 8, 12, 16]
 - Your output:
 [0, 0, 0, 0, 0]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test2.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block1.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0, 0, 0]
 - Your output:
-[0, 0, 1074003984, 1074036768, 1074036768]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[1, 20]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[45]
-- Your output:
-[]
+[0, 0, 1073741824, 1073774604, 1073774604]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 11.11% lower than number of cycles used by the reference.
+Your cycles:	72
+Ref cycles:	81
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test3.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
-Your cycles:	40
+Your number of cycles for this file is 26.67% higher than number of cycles used by the reference.
+Your cycles:	38
 Ref cycles:	30
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock3.i passed!
@@ -600,7 +517,7 @@ Ref cycles:	30
 - Reference output:
 [0, 0, 0]
 - Your output:
-[262404, 0, 65588]
+[262372, 0, 65580]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test4.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -617,34 +534,20 @@ Ref cycles:	30
 [0, 100]
 - Your output:
 []
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test5.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test5.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s10_test4.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [4032]
 - Your output:
-[3814922]
+[3814458]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test4.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test3.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 28.17% higher than number of cycles used by the reference.
-Your cycles:	91
+Your number of cycles for this file is 25.35% higher than number of cycles used by the reference.
+Your cycles:	89
 Ref cycles:	71
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s20_test3.i failed!
 - Summary:
@@ -652,42 +555,39 @@ Ref cycles:	71
 - Reference output:
 [2]
 - Your output:
-[32985]
+[32981]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block3.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [3000, 3004, 3008, 3012, 3016, 3020, 3024, 3028, 2032, 3036, 3040, 3044]
 - Your output:
-[3000, 3004, 3008, 3012, 32808, 32776, 32816, 32784, 2032, 32792, 32824, 32800]
+[3000, 3004, 3008, 3012, 32804, 32772, 32812, 32780, 2032, 32788, 32820, 32796]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s39_test2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_allOpsTest.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[8]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_allOpsTest.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test4.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0]
 - Your output:
-[-1546946368]
+[-1550950368]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.17% lower than number of cycles used by the reference.
+Your cycles:	23
+Ref cycles:	24
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test4.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 - Your output:
-[0, 1, 32780, 32777, 32788, 65561, 32796, 98353, 32804, 131153, 163957]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s56_test2.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test4.i failed!
@@ -696,14 +596,14 @@ Ref cycles:	71
 - Reference output:
 [0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 0, 0, 1074003984, 12059072, -1513926912]
+[0, 0, 0, 1073741824, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block2.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0]
 - Your output:
-[426208, 1264632832]
+[426156, 1220309904]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test2.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 5.26% lower than number of cycles used by the reference.
@@ -718,7 +618,7 @@ Ref cycles:	19
 - Reference output:
 [5050]
 - Your output:
-[3164362]
+[3163978]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s08_test4.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block4.i failed!
 - Summary:
@@ -726,11 +626,11 @@ Ref cycles:	19
 - Reference output:
 [9, 5, 45, 225, 10125, 2278125, 1591179145, -163480619, 2032, 3, 3, 9]
 - Your output:
-[9, 5, 32808, 164020, 32816, 1086856944, 32832, 941508800, 2032, 3, 3, 9]
+[9, 5, 32804, 164000, 32812, 1085544704, 32828, 776253440, 2032, 3, 3, 9]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test2.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 7.55% lower than number of cycles used by the reference.
-Your cycles:	147
+Your number of cycles for this file is 8.81% lower than number of cycles used by the reference.
+Your cycles:	145
 Ref cycles:	159
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block4.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -749,14 +649,7 @@ Ref cycles:	159
 [14]
 - Your output:
 []
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test4.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[4096, 4]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test4.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test2.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -771,7 +664,7 @@ Ref cycles:	159
 - Reference output:
 [3628800]
 - Your output:
-[1908539392]
+[1073741824]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test3.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -782,22 +675,8 @@ Ref cycles:	159
 []
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s41_test2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[15]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[2, 110]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test3.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test5.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -806,36 +685,23 @@ Ref cycles:	159
 [0, 0]
 - Your output:
 []
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block4.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[6, 3, 10, 5, 16, 8, 4, 2, 1, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s08_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_rshift4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_copy.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test4.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_Factorial10Test.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[90, 720, 5040, 30240, 151200, 604800, 1814400, 3628800, 3628800]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 8.82% lower than number of cycles used by the reference.
+Your cycles:	31
+Ref cycles:	34
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_Factorial10Test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 14.04% lower than number of cycles used by the reference.
+Your cycles:	49
+Ref cycles:	57
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test1.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -850,7 +716,7 @@ Ref cycles:	159
 - Reference output:
 [8, 4, 9, 3]
 - Your output:
-[32812, 4, 9, 32784]
+[32808, 4, 9, 32780]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test2.i passed!
@@ -860,7 +726,7 @@ Ref cycles:	159
 - Reference output:
 [0]
 - Your output:
-[32776]
+[32772]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test4.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test3.i failed!
 - Summary:
@@ -868,7 +734,7 @@ Ref cycles:	159
 - Reference output:
 [1000001, 1100011, 1110111, 1111111, 1110111, 1100011, 1000001]
 - Your output:
-[3277601, 3605371, 3638247, 3671019, 3638247, 3605371, 3277601]
+[3277201, 3604931, 3637803, 3670571, 3637803, 3604931, 3277201]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test4.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test2.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -878,14 +744,7 @@ Ref cycles:	159
 [1]
 - Your output:
 []
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[4108]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s62_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s10_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test3.i passed!
@@ -901,31 +760,21 @@ Ref cycles:	159
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test4.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 30.77% higher than number of cycles used by the reference.
-Your cycles:	51
+Your number of cycles for this file is 25.64% higher than number of cycles used by the reference.
+Your cycles:	49
 Ref cycles:	39
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block0.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 11.11% higher than number of cycles used by the reference.
+Your cycles:	10
+Ref cycles:	9
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test2.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 30.00% higher than number of cycles used by the reference.
-Your cycles:	52
+Your number of cycles for this file is 25.00% higher than number of cycles used by the reference.
+Your cycles:	50
 Ref cycles:	40
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test4.i passed!
@@ -933,14 +782,11 @@ Ref cycles:	40
 Your number of cycles for this file is 5.88% lower than number of cycles used by the reference.
 Your cycles:	16
 Ref cycles:	17
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 26.92% lower than number of cycles used by the reference.
+Your cycles:	19
+Ref cycles:	26
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test1.i passed!
@@ -959,18 +805,11 @@ Ref cycles:	10
 []
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test3.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test4.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 50.00% higher than number of cycles used by the reference.
-Your cycles:	36
+Your number of cycles for this file is 41.67% higher than number of cycles used by the reference.
+Your cycles:	34
 Ref cycles:	24
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block4.i passed!
@@ -982,36 +821,26 @@ Ref cycles:	24
 - Reference output:
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
 - Your output:
-[1, 2, 3, 32772, 32776, 32780, 32784, 32788, 32792, 32796, 32800, 32804, 32808, 32812, 32816, 32820, 32824, 32828, 32832, 32836, 32840, 32844, 32848, 32852, 32856, 32860, 32864, 32868, 32872, 32876, 32880, 32884, 32888, 32892, 32896, 32900, 32904, 32908, 32912, 32916, 32920, 32924, 32928, 32932, 32936, 32940, 32944, 33120]
+[1, 2, 3, 32768, 32772, 32776, 32780, 32784, 32788, 32792, 32796, 32800, 32804, 32808, 32812, 32816, 32820, 32824, 32828, 32832, 32836, 32840, 32844, 32848, 32852, 32856, 32860, 32864, 32868, 32872, 32876, 32880, 32884, 32888, 32892, 32896, 32900, 32904, 32908, 32912, 32916, 32920, 32924, 32928, 32932, 32936, 32940, 33116]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s31_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block1.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[8]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 35.00% lower than number of cycles used by the reference.
+Your cycles:	26
+Ref cycles:	40
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test1.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 50.00% higher than number of cycles used by the reference.
-Your cycles:	36
+Your number of cycles for this file is 41.67% higher than number of cycles used by the reference.
+Your cycles:	34
 Ref cycles:	24
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test1.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[7, 5, 49, 25, 24]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test3.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s10_test2.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -1064,14 +893,7 @@ Your number of cycles for this file is 9.09% lower than number of cycles used by
 Your cycles:	10
 Ref cycles:	11
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s01_test.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s53_test.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 4, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s53_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s29_test.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s16_test2.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -1081,32 +903,15 @@ Ref cycles:	11
 [21, 84]
 - Your output:
 []
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s40_test.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[1, 2, 3]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s40_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s55_test.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s22_test.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[38]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s22_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s43_renamed.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s12_test.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s12_test.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 11.11% higher than number of cycles used by the reference.
+Your cycles:	20
+Ref cycles:	18
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s03_the_monster.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s31_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s11_test.i passed!
@@ -1117,39 +922,36 @@ Your number of cycles for this file is 5.56% lower than number of cycles used by
 Your cycles:	17
 Ref cycles:	18
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s04_test.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s17_test.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[2, 4, 6, 4, 6, 8, 6, 8, 14, 48]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s17_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.71% lower than number of cycles used by the reference.
+Your cycles:	33
+Ref cycles:	35
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s05_test.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 0, 0, 0, 0, 0, 32812]
+[0, 0, 0, 0, 0, 0, 32808]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s39_test.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 3, 7, 5]
 - Your output:
-[0, 3, 32814, -2080828960]
+[0, 3, 32810, -2083458364]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s49_SumMult.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0]
 - Your output:
-[65548, 0]
+[65540, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s25_test.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 90.00% higher than number of cycles used by the reference.
-Your cycles:	38
+Your number of cycles for this file is 80.00% higher than number of cycles used by the reference.
+Your cycles:	36
 Ref cycles:	20
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s06_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s28_test.i passed!
@@ -1158,22 +960,16 @@ Ref cycles:	20
 Your number of cycles for this file is 19.23% higher than number of cycles used by the reference.
 Your cycles:	31
 Ref cycles:	26
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s54_test.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s50_trickyRename.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 2048, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s54_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 7.69% lower than number of cycles used by the reference.
+Your cycles:	48
+Ref cycles:	52
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s50_trickyRename.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 16.67% higher than number of cycles used by the reference.
+Your cycles:	14
+Ref cycles:	12
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s19_output_order.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s13_testpriorities.i passed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -1183,8 +979,8 @@ Your cycles:	0
 Ref cycles:	32
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s46_test.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 20.83% higher than number of cycles used by the reference.
-Your cycles:	29
+Your number of cycles for this file is 12.50% higher than number of cycles used by the reference.
+Your cycles:	27
 Ref cycles:	24
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s38_test.i failed!
 - Summary:
@@ -1192,16 +988,9 @@ Ref cycles:	24
 - Reference output:
 [1, 1, 1, 1]
 - Your output:
-[32772, 32776, 32780, 32784]
+[32768, 32772, 32776, 32780]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s14_test.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s30_test.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[24, 6144]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s30_test.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s58_test.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -1216,33 +1005,27 @@ Ref cycles:	24
 - Reference output:
 [0, 0]
 - Your output:
-[32776, 0]
+[32772, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s26_vectoradd_easy.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 44.44% higher than number of cycles used by the reference.
-Your cycles:	26
+Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
+Your cycles:	24
 Ref cycles:	18
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s02_memory_disambiguation_1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s36_memoryconfusion.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s48_crowdedStore.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s47_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s10_dependency_test.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s23_test.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[4, 8, 4]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s44_test.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[5, 4]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s23_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.00% lower than number of cycles used by the reference.
+Your cycles:	19
+Ref cycles:	20
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s44_test.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 12.50% higher than number of cycles used by the reference.
+Your cycles:	18
+Ref cycles:	16
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s15_test.i passed!
 🐌 You are less effective on this test case.
 Your number of cycles for this file is 10.00% higher than number of cycles used by the reference.
@@ -1257,36 +1040,22 @@ Ref cycles:	10
 [1, 2, 3]
 - Your output:
 []
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s08_test.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s08_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cal7.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jjc6.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yp10.i passed!
-🐌 You are less effective on this test case.
-Your number of cycles for this file is 10.20% higher than number of cycles used by the reference.
-Your cycles:	54
-Ref cycles:	49
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wg7.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [1, 2, 3, 3, 5, 9, 10, 20, 30, 10, -1014, 5]
 - Your output:
-[1, 2, 3, 32785, 32787, 9, 10, 20, 32808, 32792, 31768, 5]
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wan1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[50, 5, -5, -1, 50]
-- Your output:
-[]
+[1, 2, 3, 32781, 32783, 9, 10, 20, 32804, 32788, 31764, 5]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wan1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.88% lower than number of cycles used by the reference.
+Your cycles:	39
+Ref cycles:	41
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/nbh2.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -1300,36 +1069,33 @@ Ref cycles:	49
 - Reference output:
 [16]
 - Your output:
-[55393]
+[886182]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/my12.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 164]
 - Your output:
-[197088, 32820]
+[197064, 32816]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yd9.squares.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121]
 - Your output:
-[1, 1074003984, 1074266176, 1074528400, 1074790656, 1075052944, 1075315264, 1075577616, 1075840000, 1076102416, 1076168025]
+[1, 1073741824, 1074003984, 1074266176, 1074528400, 1074790656, 1075052944, 1075315264, 1075577616, 1075840000, 1075905601]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jmn8.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [11111, 11111, 11111, 11111, 11111]
 - Your output:
-[32780, 32784, 3607061, 11111, 11111]
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ssh2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0]
-- Your output:
-[]
+[32776, 32780, 3606621, 11111, 11111]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ssh2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.35% lower than number of cycles used by the reference.
+Your cycles:	22
+Ref cycles:	23
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yw27.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/xl22.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jl71.i passed!
@@ -1349,17 +1115,14 @@ Ref cycles:	49
 - Reference output:
 [3628800, 1814400, 0]
 - Your output:
-[-1002962944, -1004777344, 1006591744]
+[-2147483648, 2145669248, -2143854848]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yd9.gcd.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wj3.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jl98.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jl98.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.00% lower than number of cycles used by the reference.
+Your cycles:	19
+Ref cycles:	20
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ews1.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -1379,58 +1142,44 @@ Ref cycles:	10
 - Reference output:
 [0, 0]
 - Your output:
-[0, -133299944]
+[0, -133529418]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kcb5.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [10, 6, 294912]
 - Your output:
-[32802, 32798, 2098944]
+[32798, 32794, 537264128]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wsp1.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [362880]
 - Your output:
-[-1919356928]
+[-662700032]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/les6.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/icm2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yl65.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/sm80.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/msp5.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 8.39% lower than number of cycles used by the reference.
-Your cycles:	273
+Your number of cycles for this file is 9.06% lower than number of cycles used by the reference.
+Your cycles:	271
 Ref cycles:	298
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kwa2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[41, 43, 47, 53, 61, 71, 83, 97, 113, 131, 151, 173, 197, 223, 251, 281, 313, 347, 383, 421, 461, 503, 547, 593, 641, 691, 743, 797, 853, 911, 971, 1033, 1097, 1163, 1231, 1301, 1373, 1447, 1523, 1601]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kwa2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/sjl4.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 40.20% higher than number of cycles used by the reference.
-Your cycles:	279
+Your number of cycles for this file is 39.20% higher than number of cycles used by the reference.
+Your cycles:	277
 Ref cycles:	199
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jmg9.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[190]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jmg9.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jjo1.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [96]
 - Your output:
-[-33124]
+[-32640]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ash4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/fg10.i passed!
 🐌 You are less effective on this test case.
@@ -1443,25 +1192,22 @@ Ref cycles:	8
 - Reference output:
 [3240]
 - Your output:
-[4940352]
+[4939752]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jak6.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [1, 8, 28, 56, 70, 56, 28, 8, 1]
 - Your output:
-[1, 32798, 196771, 0, 0, 0, 0, 0, 1]
+[1, 32794, 196747, 0, 0, 0, 0, 0, 1]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cms14.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jdw7.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/veb2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/mcc10.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/mcc10.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 16.67% lower than number of cycles used by the reference.
+Your cycles:	25
+Ref cycles:	30
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/zw12.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jdc5.i failed!
 - Summary:
@@ -1472,8 +1218,8 @@ Ref cycles:	8
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/gel1.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 10.45% lower than number of cycles used by the reference.
-Your cycles:	120
+Your number of cycles for this file is 11.94% lower than number of cycles used by the reference.
+Your cycles:	118
 Ref cycles:	134
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cz21.i failed!
 - Summary:
@@ -1481,23 +1227,16 @@ Ref cycles:	134
 - Reference output:
 [1536, 6144, 2048, 6144, 3072, 3072]
 - Your output:
-[1536, 6144, 2048, 32792, 49194, 8172]
+[1536, 6144, 2048, 32788, 49188, 8171]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kz12.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cx5.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[3]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cx5.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yn4.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [18]
 - Your output:
-[-65526]
+[-65518]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/dtp3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yx14.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kef2.i passed!
@@ -1516,7 +1255,7 @@ Ref cycles:	134
 - Reference output:
 [0, 0, 0, 0, 0]
 - Your output:
-[32876, 163968, 196756, 229548, 262348]
+[32872, 163948, 196732, 229520, 262316]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cal7.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jjc6.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yp10.i passed!
@@ -1531,30 +1270,13 @@ Ref cycles:	134
 ['The ILOC simulator was not able to execute your transformed ILOC file :(']
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/tbw1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jfj2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/my12.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/tc19.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[4, 4, 8, 4]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/ssh2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/my12.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/tc19.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/ssh2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.35% lower than number of cycles used by the reference.
+Your cycles:	22
+Ref cycles:	23
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.2.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 4.17% lower than number of cycles used by the reference.
@@ -1569,7 +1291,7 @@ Ref cycles:	24
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 32784, 32788, 32792, 32796, 32800, 32804, 32808, 32812, 32816, 32820, 32824, 32828, 32832, 32836, 32836]
+[0, 32780, 32784, 32788, 32792, 32796, 32800, 32804, 32808, 32812, 32816, 32820, 32824, 32828, 32832, 32832]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/pyw1.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -1601,14 +1323,11 @@ Ref cycles:	24
 Your number of cycles for this file is 6.25% lower than number of cycles used by the reference.
 Your cycles:	15
 Ref cycles:	16
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/imh1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[640]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/imh1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 23.08% lower than number of cycles used by the reference.
+Your cycles:	20
+Ref cycles:	26
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wsp1.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -1622,27 +1341,17 @@ Ref cycles:	16
 Your number of cycles for this file is 6.67% lower than number of cycles used by the reference.
 Your cycles:	14
 Ref cycles:	15
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/icm2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/icm2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 10.34% lower than number of cycles used by the reference.
+Your cycles:	26
+Ref cycles:	29
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/sm80.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/msp5.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/msp5.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/kwa2.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 38.05% higher than number of cycles used by the reference.
-Your cycles:	156
+Your number of cycles for this file is 36.28% higher than number of cycles used by the reference.
+Your cycles:	154
 Ref cycles:	113
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/sjl4.i failed!
 - Summary:
@@ -1650,7 +1359,7 @@ Ref cycles:	113
 - Reference output:
 [460, 103488, 0]
 - Your output:
-[32824, -5536256, 0]
+[32820, -5535552, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmg9.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -1665,11 +1374,11 @@ Ref cycles:	113
 - Reference output:
 [128626604]
 - Your output:
-[840572076]
+[994461480]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/fg10.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 44.44% higher than number of cycles used by the reference.
-Your cycles:	104
+Your number of cycles for this file is 41.67% higher than number of cycles used by the reference.
+Your cycles:	102
 Ref cycles:	72
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/xl43.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jps12.i failed!
@@ -1678,14 +1387,14 @@ Ref cycles:	72
 - Reference output:
 [16, 100, 324]
 - Your output:
-[16, 1099962624, 324]
+[16, 1093406224, 324]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jak6.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [1, 1, 2, 0]
 - Your output:
-[1, 1, 32788, 0]
+[1, 1, 32784, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cms14.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jdw7.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -1706,7 +1415,7 @@ Ref cycles:	14
 - Reference output:
 [0, 0, 0]
 - Your output:
-[0, 32772, 0]
+[0, 32768, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jdc5.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -1716,8 +1425,8 @@ Ref cycles:	14
 [0, 0, 0, 0, 0, 0, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/gel1.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 35.29% higher than number of cycles used by the reference.
-Your cycles:	115
+Your number of cycles for this file is 32.94% higher than number of cycles used by the reference.
+Your cycles:	113
 Ref cycles:	85
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cz21.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cx5.i passed!
@@ -1727,16 +1436,9 @@ Ref cycles:	85
 - Reference output:
 [6, 3, 7, 11, 3000, 3004]
 - Your output:
-[6, 3, 32788, 11, 3000, 3004]
+[6, 3, 32784, 11, 3000, 3004]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.3.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/dtp3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/dtp3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jfj2.avg.i failed!
@@ -1745,11 +1447,11 @@ Ref cycles:	85
 - Reference output:
 [16]
 - Your output:
-[55393]
+[886182]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yx14.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 19.74% higher than number of cycles used by the reference.
-Your cycles:	91
+Your number of cycles for this file is 17.11% higher than number of cycles used by the reference.
+Your cycles:	89
 Ref cycles:	76
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/kag8.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/gty1.i failed!
@@ -1773,7 +1475,7 @@ Ref cycles:	76
 - Reference output:
 [0, 0, 2056, 0, 0, 0, 0, 0]
 - Your output:
-[32844, 0, 2056, 0, 0, 0, 0, 0]
+[32840, 0, 2056, 0, 0, 0, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pe4.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/tl18.i failed!
 - Summary:
@@ -1781,22 +1483,15 @@ Ref cycles:	76
 - Reference output:
 [0, 0, 0]
 - Your output:
-[0, -535756752, -535723964]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/fdb1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[60000]
-- Your output:
-[]
+[0, -536936448, -536903664]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/fdb1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/bx3.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [1, 1, 2, 5, 14, 42]
 - Your output:
-[1, 1, 32781, -2145844935, 0, 0]
+[1, 1, 32777, -2146369391, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/zkk1.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -1819,21 +1514,14 @@ Ref cycles:	76
 [1, 2, 6, 24, 120, 153]
 - Your output:
 [1, 2, 0, 0, 0, 0]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pq2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[1500000, 1375000, 1437500, 1398438, 1425781, 1405274, 1421387, 1408295, 1419205]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pq2.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/mas20.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 32788, 0, 32784, 0, 0, 0, 0, 0, 0]
+[0, 32784, 0, 32780, 0, 0, 0, 0, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yd18.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -1847,15 +1535,8 @@ Ref cycles:	76
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[1078329888, 0, 0, 0, 32941408, -1039592480, -1028769584, -1028769584, -1028769584, -1028769584, -1028769584, -1028769584, -1028769584, -1028769584, -1028769584, -1028769584]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/tve1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+[1078067200, 0, 0, 0, 31888880, -1040383024, -1029561440, -1029561440, -1029561440, -1029561440, -1029561440, -1029561440, -1029561440, -1029561440, -1029561440, -1029561440]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/tve1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/gak2.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -1863,33 +1544,30 @@ Ref cycles:	76
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 - Your output:
 [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 55]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ac86.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ac86.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 19.35% lower than number of cycles used by the reference.
+Your cycles:	25
+Ref cycles:	31
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jj26.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 106.12% higher than number of cycles used by the reference.
-Your cycles:	101
+Your number of cycles for this file is 102.04% higher than number of cycles used by the reference.
+Your cycles:	99
 Ref cycles:	49
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/asn2.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 15.94% lower than number of cycles used by the reference.
-Your cycles:	58
+Your number of cycles for this file is 18.84% lower than number of cycles used by the reference.
+Your cycles:	56
 Ref cycles:	69
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/mww4.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 46.77% higher than number of cycles used by the reference.
-Your cycles:	91
+Your number of cycles for this file is 43.55% higher than number of cycles used by the reference.
+Your cycles:	89
 Ref cycles:	62
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xw32.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 64.86% higher than number of cycles used by the reference.
-Your cycles:	122
+Your number of cycles for this file is 62.16% higher than number of cycles used by the reference.
+Your cycles:	120
 Ref cycles:	74
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yz56.i failed!
 - Summary:
@@ -1897,18 +1575,18 @@ Ref cycles:	74
 - Reference output:
 [1, 2, 5, 14, 42]
 - Your output:
-[32828, 32800, 0, 0, 0]
+[32824, 32796, 0, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/fgd1.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0, 0]
 - Your output:
-[0, 32772, 32776, 0]
+[0, 32768, 32772, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/am98.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 37.50% higher than number of cycles used by the reference.
-Your cycles:	77
+Your number of cycles for this file is 33.93% higher than number of cycles used by the reference.
+Your cycles:	75
 Ref cycles:	56
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/zc12.i failed!
 - Summary:
@@ -1923,7 +1601,7 @@ Ref cycles:	56
 - Reference output:
 [0, 0, 0, 0]
 - Your output:
-[0, 32796, 32804, 0]
+[0, 32792, 32800, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/dh15.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/wl22.i failed!
 - Summary:
@@ -1931,11 +1609,11 @@ Ref cycles:	56
 - Reference output:
 [0, 1, 15, 25, 10, 1]
 - Your output:
-[0, 1076496096, 0, 0, 0, 0]
+[0, 1076233632, 0, 0, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jnd2.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 100.64% higher than number of cycles used by the reference.
-Your cycles:	313
+Your number of cycles for this file is 99.36% higher than number of cycles used by the reference.
+Your cycles:	311
 Ref cycles:	156
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/kh25.i failed!
 - Summary:
@@ -1943,21 +1621,21 @@ Ref cycles:	156
 - Reference output:
 [252]
 - Your output:
-[164063]
+[164043]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/med7.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0]
 - Your output:
-[32840, 0, 32836]
+[32836, 0, 32832]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/mmj4.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 0, 32772, 32776, 32780, 32784, -229488, 1835904]
+[0, 0, 32768, 32772, 32776, 32780, -229460, 1835680]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/lh15.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -1979,33 +1657,30 @@ Ref cycles:	156
 - Reference output:
 [1597, 4181, 28657, 514229, 1346269, 24157817, 165580141]
 - Your output:
-[1597, 4181, 28657, 32772, 32776, 32780, 25911664]
+[1597, 4181, 28657, 32768, 32772, 32776, 25911548]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/dw20.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0]
 - Your output:
-[134299648]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/clf6.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[13, 18]
-- Your output:
-[]
+[134283264]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/clf6.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.88% lower than number of cycles used by the reference.
+Your cycles:	16
+Ref cycles:	17
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/meh9.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [122522400, 122522400]
 - Your output:
-[122522400, 797501504]
+[122522400, 781165184]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jml13.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 23.08% higher than number of cycles used by the reference.
-Your cycles:	80
+Your number of cycles for this file is 20.00% higher than number of cycles used by the reference.
+Your cycles:	78
 Ref cycles:	65
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/bsl3.i failed!
 - Summary:
@@ -2013,7 +1688,7 @@ Ref cycles:	65
 - Reference output:
 [217966]
 - Your output:
-[612387]
+[612335]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pd22.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -2027,7 +1702,7 @@ Ref cycles:	65
 - Reference output:
 [1073676182, -79592]
 - Your output:
-[-824740520, -1958520344]
+[1844920480, 2118742976]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/arb11.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jbk2.i failed!
 - Summary:
@@ -2035,14 +1710,14 @@ Ref cycles:	65
 - Reference output:
 [1, 0, 1, 0, 5, 0, 61, 0, 1385, 0, 50521, 0, 2702765, 0, 199360981]
 - Your output:
-[1, 0, 32776, 0, 32784, 0, 65588, 0, 229608, 0, 1344960, 32992, 33000, 0, -2103679851]
+[1, 0, 32772, 0, 32780, 0, 65580, 0, 229580, 0, 1344796, 32988, 32996, 0, -2103947195]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xal1.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0]
 - Your output:
-[131088]
+[131072]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yk26.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -2056,14 +1731,14 @@ Ref cycles:	65
 - Reference output:
 [-53328]
 - Your output:
-[355409608]
+[745280084]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/hz30.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [6060]
 - Your output:
-[199796]
+[199772]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/wcr1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ls53.i failed!
 - Summary:
@@ -2071,7 +1746,7 @@ Ref cycles:	65
 - Reference output:
 [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 - Your output:
-[32828, 1, 32801, 32802, 0, 0, 0, 0, 0, 0]
+[32824, 1, 32797, 32798, 0, 0, 0, 0, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yz75.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -2085,18 +1760,18 @@ Ref cycles:	65
 - Reference output:
 [0, 0, 0, 0]
 - Your output:
-[32792, 0, 0, 0]
+[32788, 0, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jfk2.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 - Your output:
-[32788, 1, 1, 2, 32776, 32774, 32784, 65554, 0, 32792]
+[32784, 1, 1, 2, 32772, 32770, 32780, 65546, 0, 32788]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xc12.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 64.00% higher than number of cycles used by the reference.
-Your cycles:	82
+Your number of cycles for this file is 60.00% higher than number of cycles used by the reference.
+Your cycles:	80
 Ref cycles:	50
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ish1.i failed!
 - Summary:
@@ -2111,7 +1786,7 @@ Ref cycles:	50
 - Reference output:
 [0]
 - Your output:
-[32792]
+[32788]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/skn2.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -2125,27 +1800,20 @@ Ref cycles:	50
 - Reference output:
 [1, 2, 4, 7, 11, 16]
 - Your output:
-[32824, 2, 4, 7, 0, 0]
+[32820, 2, 4, 7, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yg31.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [4, 8, 12, 20, 32, 0, 0, 0, 0, 0, 0, 32, 20, 12, 32, 0, 0]
 - Your output:
-[4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pe4.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[1028, 1024]
-- Your output:
-[]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pe4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/tl18.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/bx3.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 48.15% higher than number of cycles used by the reference.
-Your cycles:	40
+Your number of cycles for this file is 40.74% higher than number of cycles used by the reference.
+Your cycles:	38
 Ref cycles:	27
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/zkk1.i failed!
 - Summary:
@@ -2153,7 +1821,7 @@ Ref cycles:	27
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 32776, 0, 0, 0, 0, 0, 0, 0]
+[0, 32772, 0, 0, 0, 0, 0, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yw27.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -2175,14 +1843,14 @@ Ref cycles:	27
 - Reference output:
 [0, 0, 0]
 - Your output:
-[0, 32776, 0]
+[0, 32772, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yd18.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2000, 2004, 2056, 2004]
 - Your output:
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1992, 2004, 32772, 2004]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1992, 2004, 32768, 2004]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/cav2.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -2209,23 +1877,20 @@ Ref cycles:	27
 - Your output:
 []
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jj26.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/asn2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/asn2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 13.16% lower than number of cycles used by the reference.
+Your cycles:	33
+Ref cycles:	38
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/mww4.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 9.62% lower than number of cycles used by the reference.
-Your cycles:	47
+Your number of cycles for this file is 13.46% lower than number of cycles used by the reference.
+Your cycles:	45
 Ref cycles:	52
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/xw32.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
-Your cycles:	32
+Your number of cycles for this file is 25.00% higher than number of cycles used by the reference.
+Your cycles:	30
 Ref cycles:	24
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yz56.i passed!
 🐇 You are more effective on this test case.
@@ -2234,8 +1899,8 @@ Your cycles:	31
 Ref cycles:	32
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/fgd1.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 40.62% higher than number of cycles used by the reference.
-Your cycles:	90
+Your number of cycles for this file is 37.50% higher than number of cycles used by the reference.
+Your cycles:	88
 Ref cycles:	64
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/am98.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/zc12.i failed!
@@ -2245,44 +1910,35 @@ Ref cycles:	64
 [0, 0, 0, 2, 12]
 - Your output:
 [0, 0, 0, 0, 0]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ptd3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0, 0, 0, 0]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/dh15.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[5, 10, 15, 50]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ptd3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.71% lower than number of cycles used by the reference.
+Your cycles:	33
+Ref cycles:	35
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/dh15.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.55% lower than number of cycles used by the reference.
+Your cycles:	21
+Ref cycles:	22
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wl22.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 8, 4, 32, 40, 40]
 - Your output:
-[0, 0, 8, 4, 32, 32788, 32788]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jnd2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0]
-- Your output:
-[]
+[0, 0, 8, 4, 32, 32784, 32784]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jnd2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 8.00% lower than number of cycles used by the reference.
+Your cycles:	23
+Ref cycles:	25
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kh25.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [2, 6, 20, 70, 252]
 - Your output:
-[2, 6, 32780, 131128, 491728]
+[2, 6, 32776, 131112, 491668]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/med7.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -2316,34 +1972,24 @@ Ref cycles:	21
 - Reference output:
 [0]
 - Your output:
-[131192]
+[131176]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/bsl3.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [217966, 1103765]
 - Your output:
-[32804, 231107380]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pd22.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[1036, 4, 256]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pat2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[4, 2000, 2000]
-- Your output:
-[]
+[32800, 231079332]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pd22.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.53% higher than number of cycles used by the reference.
+Your cycles:	21
+Ref cycles:	19
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pat2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/arb11.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 11.11% lower than number of cycles used by the reference.
-Your cycles:	48
+Your number of cycles for this file is 14.81% lower than number of cycles used by the reference.
+Your cycles:	46
 Ref cycles:	54
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jbk2.i passed!
 🐇 You are more effective on this test case.
@@ -2362,7 +2008,7 @@ Ref cycles:	17
 - Reference output:
 [4000, 0, 0, 0, 29000, 0]
 - Your output:
-[0, 0, 0, 0, 41780, 0]
+[0, 0, 0, 0, 41776, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wcr1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yz75.i failed!
 - Summary:
@@ -2372,14 +2018,7 @@ Ref cycles:	17
 - Your output:
 [128, 8, 0, 8]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/njm3.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/xc12.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/xc12.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ish1.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -2394,35 +2033,29 @@ Ref cycles:	17
 - Reference output:
 [0]
 - Your output:
-[-1071906480]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/skn2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[88, 440, 408, 56]
-- Your output:
-[]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ktr2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[12]
-- Your output:
-[]
+[-1072693088]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/skn2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 28.07% lower than number of cycles used by the reference.
+Your cycles:	41
+Ref cycles:	57
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ktr2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 7.69% lower than number of cycles used by the reference.
+Your cycles:	12
+Ref cycles:	13
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/lss4.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 3]
 - Your output:
-[0, 65556]
+[0, 65548]
 ----------------------------------------------------------------------
-Your aggregrate number of cycles is 7.01% higher than the aggregate number of cycles used by lab2_ref.
-Your number of cycles is on average 4.22% higher than the number of cycles used by lab2_ref.
+Your aggregrate number of cycles is 4.19% higher than the aggregate number of cycles used by lab2_ref.
+Your number of cycles is on average 2.14% higher than the number of cycles used by lab2_ref.
 
-🙃 You passed 271/522 tests.
+🙃 You passed 344/522 tests.
 Run tests with register: 7
 Running 522 tests...
 ❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block7.i failed!
@@ -2431,14 +2064,14 @@ Running 522 tests...
 - Reference output:
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 - Your output:
-[0, 1, 1, 2, 32780, 32778, 32788, 65562, 32796, 98354, 131150]
+[0, 1, 1, 32772, 32769, 32780, 65545, 32788, 98329, 32792, 131121]
 ❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block12.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0]
 - Your output:
-[163960, 0, 32788]
+[163940, 0, 32784]
 ✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block9.i passed!
 ✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block8.i passed!
 ✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block6.i passed!
@@ -2452,14 +2085,14 @@ Running 522 tests...
 - Reference output:
 [3, 4, 6, 11]
 - Your output:
-[3, 32777, 6, 11]
+[3, 32773, 6, 11]
 ❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block10.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [131071, 131071]
 - Your output:
-[134201415, 131071]
+[134185035, 131071]
 ✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/unrelated_stores.i failed!
 - Summary:
@@ -2467,20 +2100,12 @@ Running 522 tests...
 - Reference output:
 [200, 400, 800]
 - Your output:
-[200, 32780, 800]
-❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/TestTiebreaking.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0]
-- Your output:
-[]
+[200, 32776, 800]
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/TestTiebreaking.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-4.i passed!
-🤨 Your solution took 0 cycles. Something weird is going on...
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 100.00% lower than number of cycles used by the reference.
-Your cycles:	0
+Your number of cycles for this file is 22.22% lower than number of cycles used by the reference.
+Your cycles:	14
 Ref cycles:	18
 ✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/witt-2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/yanxinlu.i passed!
@@ -2505,14 +2130,7 @@ Your number of cycles for this file is 21.74% lower than number of cycles used b
 Your cycles:	18
 Ref cycles:	23
 ✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/simple.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/simple_alternating.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[7, 15]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/simple_alternating.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/trickystores.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/jwc.i passed!
 🐌 You are less effective on this test case.
@@ -2545,25 +2163,15 @@ Ref cycles:	18
 - Reference output:
 [0]
 - Your output:
-[360496]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+[360452]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.76% lower than number of cycles used by the reference.
+Your cycles:	20
+Ref cycles:	21
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s50_test1.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[1, 2, 3, 4, 5]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test2.i passed!
@@ -2578,17 +2186,10 @@ Ref cycles:	13
 - Reference output:
 [210, 210]
 - Your output:
-[459193, 344652]
+[459137, 344610]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_lshift2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_fibonacci.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[6765, 6765]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_fibonacci.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s41_test1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block2.i failed!
@@ -2597,7 +2198,7 @@ Ref cycles:	13
 - Reference output:
 [42, 441, 194481, 189, 1134, 126, 55566, 3, 2032]
 - Your output:
-[42, 441, 194481, 189, 1134, 126, 32816, 3, 2032]
+[42, 441, 194481, 189, 1134, 126, 32812, 3, 2032]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test3.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test3.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -2675,7 +2276,7 @@ Ref cycles:	12
 - Reference output:
 [97, 112, 112, 108, 101, 106, 97, 99, 107]
 - Your output:
-[97, 112, 112, 108, 101, 106, 97, 99, 32772]
+[97, 112, 112, 108, 101, 106, 97, 99, 32768]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock4.i passed!
@@ -2697,7 +2298,7 @@ Ref cycles:	13
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 32800, 0, 0, 32792, 0, 0]
+[3000, 0, 0, 0, 0, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test0.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test1.i passed!
@@ -2726,7 +2327,7 @@ Ref cycles:	13
 - Reference output:
 [16576, 4160, 1032, 64, 1028]
 - Your output:
-[32784, 32840, 1032, 64, 1028]
+[32780, 32836, 1032, 64, 1028]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block2.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_largeRegTest.i failed!
@@ -2740,14 +2341,7 @@ Ref cycles:	13
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_block1ZeroTest.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test4.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s38_squares.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s38_squares.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block3.i passed!
 🐌 You are less effective on this test case.
 Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
@@ -2759,7 +2353,7 @@ Ref cycles:	6
 - Reference output:
 [3, 4, 6, 11]
 - Your output:
-[3, 32777, 6, 11]
+[3, 32773, 6, 11]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test1.i passed!
@@ -2768,14 +2362,7 @@ Ref cycles:	6
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s41_test3.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[1, 2, 3, 5, 8, 13]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test3.i passed!
 🐌 You are less effective on this test case.
@@ -2793,14 +2380,11 @@ Ref cycles:	10
 []
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s56_test4.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0, 20]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.71% lower than number of cycles used by the reference.
+Your cycles:	33
+Ref cycles:	35
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test2.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test4.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -2836,14 +2420,7 @@ Ref cycles:	22
 [0]
 - Your output:
 [4096]
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block4.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[8, 2, 36, 9, 32, 8, 25]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block4.i passed!
@@ -2855,14 +2432,11 @@ Ref cycles:	22
 - Your output:
 [0, 4, 8, 0, 16]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.41% lower than number of cycles used by the reference.
+Your cycles:	35
+Ref cycles:	37
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test3.i passed!
@@ -2875,7 +2449,7 @@ Ref cycles:	22
 - Reference output:
 [0, 0, 0]
 - Your output:
-[163960, 0, 32788]
+[163940, 0, 32784]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test4.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -2899,7 +2473,7 @@ Ref cycles:	22
 - Reference output:
 [4032]
 - Your output:
-[3682952]
+[3682504]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test4.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test3.i failed!
@@ -2908,21 +2482,21 @@ Ref cycles:	22
 - Reference output:
 [3, 4, 6]
 - Your output:
-[3, 32777, 6]
+[3, 32773, 6]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s20_test3.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [2]
 - Your output:
-[32969]
+[32965]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block3.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [3000, 3004, 3008, 3012, 3016, 3020, 3024, 3028, 2032, 3036, 3040, 3044]
 - Your output:
-[3000, 3004, 3008, 3012, 3016, 3020, 32800, 32776, 2032, 32784, 32808, 32792]
+[3000, 3004, 3008, 3012, 3016, 3020, 32796, 32772, 2032, 32780, 32804, 32788]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test4.i passed!
@@ -2934,7 +2508,7 @@ Ref cycles:	22
 - Reference output:
 [0]
 - Your output:
-[327840000]
+[327800000]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test4.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test4.i failed!
@@ -2943,24 +2517,21 @@ Ref cycles:	22
 - Reference output:
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 - Your output:
-[0, 1, 1, 2, 32780, 32778, 32788, 65562, 32796, 98354, 131150]
+[0, 1, 1, 32772, 32769, 32780, 65545, 32788, 98329, 32792, 131121]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s56_test2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test4.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 2.56% lower than number of cycles used by the reference.
+Your cycles:	38
+Ref cycles:	39
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block2.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0]
 - Your output:
-[327832, 99637824]
+[327792, 73412864]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test2.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 5.26% lower than number of cycles used by the reference.
@@ -2975,7 +2546,7 @@ Ref cycles:	19
 - Reference output:
 [5050]
 - Your output:
-[3098073]
+[3097697]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s08_test4.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block4.i failed!
 - Summary:
@@ -2983,11 +2554,11 @@ Ref cycles:	19
 - Reference output:
 [9, 5, 45, 225, 10125, 2278125, 1591179145, -163480619, 2032, 3, 3, 9]
 - Your output:
-[9, 5, 45, 225, 32808, 7380900, 32824, 1663922224, 2032, 3, 3, 9]
+[9, 5, 45, 225, 32804, 7380000, 32820, 1604871424, 2032, 3, 3, 9]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test2.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 4.51% lower than number of cycles used by the reference.
-Your cycles:	127
+Your number of cycles for this file is 6.02% lower than number of cycles used by the reference.
+Your cycles:	125
 Ref cycles:	133
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test1.i passed!
@@ -3000,21 +2571,18 @@ Ref cycles:	133
 - Your output:
 []
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test4.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[2]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 10.53% lower than number of cycles used by the reference.
+Your cycles:	17
+Ref cycles:	19
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_factorial.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [3628800]
 - Your output:
-[-1423298560]
+[-1040187392]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test3.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -3044,41 +2612,28 @@ Ref cycles:	133
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_copy.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_Factorial10Test.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 34]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 15.00% higher than number of cycles used by the reference.
+Your cycles:	23
+Ref cycles:	20
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test1.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [8, 4, 9, 3]
 - Your output:
-[32804, 4, 9, 3]
+[8, 4, 9, 32792]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_sumarray.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_sumarray.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test4.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test3.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[1000001, 1100011, 1110111, 1111111, 1110111, 1100011, 1000001]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.44% lower than number of cycles used by the reference.
+Your cycles:	43
+Ref cycles:	45
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test4.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test2.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -3135,14 +2690,7 @@ Ref cycles:	16
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test4.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test3.i passed!
@@ -3153,21 +2701,14 @@ Ref cycles:	16
 - Reference output:
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
 - Your output:
-[1, 2, 3, 4, 5, 32772, 32776, 32780, 32784, 32788, 32792, 32796, 32800, 32804, 32808, 32812, 32816, 32820, 32824, 32828, 32832, 32836, 32840, 32844, 32848, 32852, 32856, 32860, 32864, 32868, 32872, 32876, 32880, 32884, 32888, 32892, 32896, 32900, 32904, 32908, 32912, 32916, 32920, 32924, 32928, 32932, 32936, 33104]
+[1, 2, 3, 4, 5, 32768, 32772, 32776, 32780, 32784, 32788, 32792, 32796, 32800, 32804, 32808, 32812, 32816, 32820, 32824, 32828, 32832, 32836, 32840, 32844, 32848, 32852, 32856, 32860, 32864, 32868, 32872, 32876, 32880, 32884, 32888, 32892, 32896, 32900, 32904, 32908, 32912, 32916, 32920, 32924, 32928, 32932, 33100]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s31_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test3.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test1.i passed!
@@ -3178,17 +2719,14 @@ Ref cycles:	16
 - Reference output:
 [62]
 - Your output:
-[32848]
+[131182]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s39_test4.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s50_multipleStores.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[1048, 0, 1024, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s50_multipleStores.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 6.90% lower than number of cycles used by the reference.
+Your cycles:	27
+Ref cycles:	29
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s51_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s35_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s16_test1.i passed!
@@ -3213,14 +2751,7 @@ Ref cycles:	11
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s01_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s53_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s29_test.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s16_test2.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[21, 84]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s16_test2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s40_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s55_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s22_test.i passed!
@@ -3247,23 +2778,23 @@ Ref cycles:	18
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 0, 0, 0, 0, 32804, 0]
+[0, 0, 0, 0, 0, 32800, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s39_test.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 3, 7, 5]
 - Your output:
-[0, 32796, 7, -2126164582]
+[0, 32792, 7, -2126691434]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s49_SumMult.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 15.38% lower than number of cycles used by the reference.
-Your cycles:	33
+Your number of cycles for this file is 20.51% lower than number of cycles used by the reference.
+Your cycles:	31
 Ref cycles:	39
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s25_test.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 45.00% higher than number of cycles used by the reference.
-Your cycles:	29
+Your number of cycles for this file is 35.00% higher than number of cycles used by the reference.
+Your cycles:	27
 Ref cycles:	20
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s06_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s28_test.i passed!
@@ -3276,11 +2807,6 @@ Your cycles:	14
 Ref cycles:	12
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s19_output_order.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s13_testpriorities.i passed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-🐇 You are more effective on this test case.
-Your number of cycles for this file is 100.00% lower than number of cycles used by the reference.
-Your cycles:	0
-Ref cycles:	22
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s46_test.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 8.33% lower than number of cycles used by the reference.
@@ -3292,7 +2818,7 @@ Ref cycles:	24
 - Reference output:
 [1, 1, 1, 1]
 - Your output:
-[1, 32776, 1, 1]
+[1, 32772, 1, 1]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s14_test.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s30_test.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s58_test.i failed!
@@ -3303,14 +2829,11 @@ Ref cycles:	24
 [0]
 - Your output:
 []
-❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s26_vectoradd_hard.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s26_vectoradd_hard.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.35% lower than number of cycles used by the reference.
+Your cycles:	22
+Ref cycles:	23
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s26_vectoradd_easy.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s02_memory_disambiguation_1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s36_memoryconfusion.i passed!
@@ -3350,14 +2873,14 @@ Ref cycles:	10
 - Reference output:
 [2]
 - Your output:
-[33]
+[32]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wg7.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [1, 2, 3, 3, 5, 9, 10, 20, 30, 10, -1014, 5]
 - Your output:
-[1, 2, 3, 3, 5, 32781, 10, 20, 30, 10, -1014, 5]
+[1, 2, 3, 3, 5, 32777, 10, 20, 30, 10, -1014, 5]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wan1.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 4.88% lower than number of cycles used by the reference.
@@ -3369,56 +2892,53 @@ Ref cycles:	41
 - Reference output:
 [1, 4, 27, 256, 3125]
 - Your output:
-[1, 4, 27, 32780, 3125]
+[1, 4, 27, 32776, 3125]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jfj2.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [16]
 - Your output:
-[25642]
+[25639]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/my12.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 164]
 - Your output:
-[98532, 32828]
+[98520, 32824]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yd9.squares.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121]
 - Your output:
-[1, 4, 32772, 32776, 32780, 32784, 32788, 32792, 32796, 100, 121]
+[1, 4, 32768, 32772, 32776, 32780, 32784, 32788, 32792, 100, 121]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jmn8.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [11111, 11111, 11111, 11111, 11111]
 - Your output:
-[32772, 32776, 11111, 11111, 11111]
+[32768, 32772, 11111, 11111, 11111]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ssh2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yw27.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/xl22.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jl71.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/bw6.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ngr2.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/pyw1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[100, 20, 2048000000, 100, 20]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/pyw1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 10.64% lower than number of cycles used by the reference.
+Your cycles:	42
+Ref cycles:	47
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/hz21.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [3628800, 1814400, 0]
 - Your output:
-[-1423298560, -1425112960, 1426927360]
+[-1040187392, -1042001792, 1043816192]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yd9.gcd.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wj3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jl98.i passed!
@@ -3441,35 +2961,35 @@ Ref cycles:	10
 - Reference output:
 [0, 0]
 - Your output:
-[0, 134709358]
+[0, 134545468]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kcb5.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [10, 6, 294912]
 - Your output:
-[32794, 32790, 294912]
+[32790, 32786, 75497472]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wsp1.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [362880]
 - Your output:
-[-1746720256]
+[849346560]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/les6.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/icm2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yl65.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/sm80.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/msp5.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 7.53% lower than number of cycles used by the reference.
-Your cycles:	221
+Your number of cycles for this file is 8.37% lower than number of cycles used by the reference.
+Your cycles:	219
 Ref cycles:	239
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kwa2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/sjl4.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 25.14% higher than number of cycles used by the reference.
-Your cycles:	219
+Your number of cycles for this file is 24.00% higher than number of cycles used by the reference.
+Your cycles:	217
 Ref cycles:	175
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jmg9.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jjo1.i passed!
@@ -3485,14 +3005,14 @@ Ref cycles:	8
 - Reference output:
 [3240]
 - Your output:
-[4008220]
+[4007732]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jak6.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [1, 8, 28, 56, 70, 56, 28, 8, 1]
 - Your output:
-[1, 32790, 196723, 491804, 655755, 0, 0, 0, 1]
+[1, 32786, 196699, 491744, 655675, 0, 0, 0, 1]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cms14.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jdw7.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/veb2.i passed!
@@ -3504,11 +3024,11 @@ Ref cycles:	8
 - Reference output:
 [1, 3, 6, 10, 15, 21, 28, 36, 45, 55]
 - Your output:
-[1, 3, 32772, 32776, 32780, 32784, 32788, 32792, 32796, 32800]
+[1, 3, 32768, 32772, 32776, 32780, 32784, 32788, 32792, 32796]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/gel1.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 11.46% lower than number of cycles used by the reference.
-Your cycles:	85
+Your number of cycles for this file is 13.54% lower than number of cycles used by the reference.
+Your cycles:	83
 Ref cycles:	96
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cz21.i failed!
 - Summary:
@@ -3516,7 +3036,7 @@ Ref cycles:	96
 - Reference output:
 [1536, 6144, 2048, 6144, 3072, 3072]
 - Your output:
-[2048, 6144, 2048, 6144, 0, 12584452]
+[2048, 6144, 2048, 6144, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kz12.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cx5.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yn4.i passed!
@@ -3541,7 +3061,7 @@ Ref cycles:	15
 - Reference output:
 [0, 0]
 - Your output:
-[0, 8193]
+[0, 8192]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/eeb3.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -3561,7 +3081,7 @@ Ref cycles:	15
 - Reference output:
 [1, 4, 27, 256, 3125]
 - Your output:
-[1, 4, 98328, 32788, 3125]
+[1, 4, 98316, 32784, 3125]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/tbw1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jfj2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/my12.i passed!
@@ -3577,8 +3097,8 @@ Ref cycles:	24
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/bw6.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/ngr2.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 19.35% lower than number of cycles used by the reference.
-Your cycles:	100
+Your number of cycles for this file is 20.97% lower than number of cycles used by the reference.
+Your cycles:	98
 Ref cycles:	124
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/pyw1.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
@@ -3591,28 +3111,22 @@ Ref cycles:	124
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/hz21.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wj3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jl98.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/ews1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[1028, 0, 1028, 1056784, 1028]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/ews1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.17% lower than number of cycles used by the reference.
+Your cycles:	23
+Ref cycles:	24
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/hl33.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 6.25% lower than number of cycles used by the reference.
 Your cycles:	15
 Ref cycles:	16
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/imh1.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wsp1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wsp1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 3.45% lower than number of cycles used by the reference.
+Your cycles:	28
+Ref cycles:	29
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/les6.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 6.67% lower than number of cycles used by the reference.
@@ -3632,15 +3146,8 @@ Ref cycles:	27
 - Reference output:
 [460, 103488, 0]
 - Your output:
-[32952, 103488, 0]
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmg9.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[4096, 4096]
-- Your output:
-[]
+[32948, 103488, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmg9.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jjo1.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -3648,14 +3155,11 @@ Ref cycles:	27
 [128626604]
 - Your output:
 ['The ILOC simulator was not able to execute your transformed ILOC file :(']
-❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/fg10.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/fg10.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 3.08% lower than number of cycles used by the reference.
+Your cycles:	63
+Ref cycles:	65
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/xl43.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jps12.i failed!
 - Summary:
@@ -3663,7 +3167,7 @@ Ref cycles:	27
 - Reference output:
 [16, 100, 324]
 - Your output:
-[1074266176, 100, 324]
+[1074003984, 100, 324]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jak6.i failed!
 🤨 Your solution took 0 cycles. Something weird is going on...
 - Summary:
@@ -3689,18 +3193,18 @@ Ref cycles:	14
 - Reference output:
 [0, 0, 0]
 - Your output:
-[32776, 0, 0]
+[32772, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jdc5.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [1, 4, 16, 185, 355, 526, 698, 871]
 - Your output:
-[1, 4, 32776, 32780, 32784, 32788, 32792, 32796]
+[1, 32800, 32780, 32949, 33119, 33290, 33462, 33635]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/gel1.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 24.66% higher than number of cycles used by the reference.
-Your cycles:	91
+Your number of cycles for this file is 21.92% higher than number of cycles used by the reference.
+Your cycles:	89
 Ref cycles:	73
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cz21.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cx5.i passed!
@@ -3710,7 +3214,7 @@ Ref cycles:	73
 - Reference output:
 [6, 3, 7, 11, 3000, 3004]
 - Your output:
-[6, 32777, 7, 11, 3000, 3004]
+[6, 32773, 7, 11, 3000, 3004]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/dtp3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.4.i passed!
@@ -3721,15 +3225,19 @@ Ref cycles:	73
 - Reference output:
 [16]
 - Your output:
-[25642]
+[25639]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yx14.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 1.52% lower than number of cycles used by the reference.
+Your cycles:	65
+Ref cycles:	66
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/kag8.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/gty1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/eeb3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yd9.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 44.64% higher than number of cycles used by the reference.
-Your cycles:	81
+Your number of cycles for this file is 41.07% higher than number of cycles used by the reference.
+Your cycles:	79
 Ref cycles:	56
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yg31.i failed!
 - Summary:
@@ -3737,13 +3245,9 @@ Ref cycles:	56
 - Reference output:
 [0, 0, 2056, 0, 0, 0, 0, 0]
 - Your output:
-[32820, 0, 2056, 0, 0, 0, 0, 0]
+[32816, 0, 2056, 0, 0, 0, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pe4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/tl18.i passed!
-🐌 You are less effective on this test case.
-Your number of cycles for this file is 13.64% higher than number of cycles used by the reference.
-Your cycles:	50
-Ref cycles:	44
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/fdb1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/bx3.i failed!
 - Summary:
@@ -3751,19 +3255,19 @@ Ref cycles:	44
 - Reference output:
 [1, 1, 2, 5, 14, 42]
 - Your output:
-[1, 1, 32773, -2146893783, 7471442, 1157171963]
+[1, 1, 32769, -2147418111, 131074, 1074069507]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/zkk1.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0, 0]
 - Your output:
-[32832, 0, 4, -32824]
+[32828, 0, 4, -32820]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yw27.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ehs2.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 9.91% lower than number of cycles used by the reference.
-Your cycles:	818
+Your number of cycles for this file is 10.13% lower than number of cycles used by the reference.
+Your cycles:	816
 Ref cycles:	908
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/oky1.i failed!
 - Summary:
@@ -3779,7 +3283,7 @@ Ref cycles:	908
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 32780, 0, 32776, 32772, 0, 0, 0, 0, 0]
+[0, 32776, 0, 32772, 32768, 0, 0, 0, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yd18.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/cav2.i failed!
 - Summary:
@@ -3787,7 +3291,7 @@ Ref cycles:	908
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 0, 0, 0, 1079378592, 0, 0, 1079642688, -2132663392, 0, 0, -2123817472, -2123158240, 0, 0, -2127143088]
+[0, 0, 0, 0, 1079115776, 0, 0, 1079379840, -2133189456, 0, 0, -2124344608, -2123685456, 0, 0, -2127669824]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/tve1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/gak2.i failed!
 - Summary:
@@ -3799,8 +3303,8 @@ Ref cycles:	908
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ac86.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jj26.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 108.57% higher than number of cycles used by the reference.
-Your cycles:	73
+Your number of cycles for this file is 102.86% higher than number of cycles used by the reference.
+Your cycles:	71
 Ref cycles:	35
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/asn2.i failed!
 - Summary:
@@ -3808,11 +3312,11 @@ Ref cycles:	35
 - Reference output:
 [0, 0, 0]
 - Your output:
-[0, 0, 32772]
+[0, 0, 32768]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/mww4.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 46.67% higher than number of cycles used by the reference.
-Your cycles:	66
+Your number of cycles for this file is 42.22% higher than number of cycles used by the reference.
+Your cycles:	64
 Ref cycles:	45
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xw32.i failed!
 - Summary:
@@ -3820,26 +3324,23 @@ Ref cycles:	45
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 0, 32820, 32796, 0, 0, 0, 0, 0, 0]
+[0, 0, 32816, 32792, 0, 0, 0, 0, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yz56.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [1, 2, 5, 14, 42]
 - Your output:
-[1, 32777, 65562, 196693, 0]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/fgd1.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0]
-- Your output:
-[]
+[1, 32773, 65554, 196669, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/fgd1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 9.43% lower than number of cycles used by the reference.
+Your cycles:	48
+Ref cycles:	53
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/am98.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 21.43% higher than number of cycles used by the reference.
-Your cycles:	51
+Your number of cycles for this file is 16.67% higher than number of cycles used by the reference.
+Your cycles:	49
 Ref cycles:	42
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/zc12.i failed!
 - Summary:
@@ -3847,14 +3348,14 @@ Ref cycles:	42
 - Reference output:
 [1064, 1064, 4, 10]
 - Your output:
-[327784, 2491280, 4, 0]
+[327744, 2490976, 4, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ptd3.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0, 0]
 - Your output:
-[0, 0, 32784, 0]
+[0, 0, 32780, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/dh15.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/wl22.i failed!
 - Summary:
@@ -3865,8 +3366,8 @@ Ref cycles:	42
 [0, 1, 15, 25, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jnd2.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 108.21% higher than number of cycles used by the reference.
-Your cycles:	279
+Your number of cycles for this file is 106.72% higher than number of cycles used by the reference.
+Your cycles:	277
 Ref cycles:	134
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/kh25.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/med7.i failed!
@@ -3875,14 +3376,14 @@ Ref cycles:	134
 - Reference output:
 [0, 0, 0]
 - Your output:
-[0, 0, 1075183776]
+[0, 0, 1074921472]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/mmj4.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 0, 0, 0, 0, 0, 0, 0]
 - Your output:
-[0, 0, 0, 0, 32772, 32776, -229432, 1835456]
+[0, 0, 0, 0, 32768, 32772, -229404, 1835232]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/lh15.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/cl41.i failed!
 - Summary:
@@ -3890,21 +3391,21 @@ Ref cycles:	134
 - Reference output:
 [362880, 45]
 - Your output:
-[1707263168, 163897]
+[0, 163877]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/kws4.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [1597, 4181, 28657, 514229, 1346269, 24157817, 165580141]
 - Your output:
-[1597, 4181, 28657, 514229, 1346269, 32772, 44954916]
+[1597, 4181, 28657, 514229, 1346269, 32768, 44954896]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/dw20.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0]
 - Your output:
-[2097920]
+[2097664]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/clf6.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 5.88% lower than number of cycles used by the reference.
@@ -3920,8 +3421,8 @@ Ref cycles:	17
 []
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jml13.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
-Your cycles:	56
+Your number of cycles for this file is 28.57% higher than number of cycles used by the reference.
+Your cycles:	54
 Ref cycles:	42
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/bsl3.i failed!
 - Summary:
@@ -3929,7 +3430,7 @@ Ref cycles:	42
 - Reference output:
 [217966]
 - Your output:
-[277129]
+[277121]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pd22.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -3943,11 +3444,11 @@ Ref cycles:	42
 - Reference output:
 [1073676182, -79592]
 - Your output:
-[19898, -304101134]
+[19898, 359178798]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/arb11.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 17.50% higher than number of cycles used by the reference.
-Your cycles:	47
+Your number of cycles for this file is 12.50% higher than number of cycles used by the reference.
+Your cycles:	45
 Ref cycles:	40
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jbk2.i failed!
 - Summary:
@@ -3955,11 +3456,11 @@ Ref cycles:	40
 - Reference output:
 [1, 0, 1, 0, 5, 0, 61, 0, 1385, 0, 50521, 0, 2702765, 0, 199360981]
 - Your output:
-[1, 0, 1, 0, 32776, 0, 262260, 0, 4360180, 0, 25931668, 0, 237548684, 0, 1329146314]
+[1, 0, 1, 0, 32772, 0, 262228, 0, 4359648, 0, 25928504, 0, 237519700, 0, 1324791806]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xal1.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 16.22% higher than number of cycles used by the reference.
-Your cycles:	43
+Your number of cycles for this file is 10.81% higher than number of cycles used by the reference.
+Your cycles:	41
 Ref cycles:	37
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yk26.i failed!
 - Summary:
@@ -3974,14 +3475,14 @@ Ref cycles:	37
 - Reference output:
 [-53328]
 - Your output:
-[-89657328]
+[-1572912]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/hz30.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [6060]
 - Your output:
-[37856]
+[37852]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/wcr1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ls53.i failed!
 - Summary:
@@ -3989,7 +3490,7 @@ Ref cycles:	37
 - Reference output:
 [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 - Your output:
-[32820, 1, 32793, 32794, 65587, 98381, 0, 0, 0, 0]
+[32816, 1, 32789, 32790, 65579, 98369, 0, 0, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yz75.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -4003,18 +3504,18 @@ Ref cycles:	37
 - Reference output:
 [0, 0, 0, 0]
 - Your output:
-[32784, 0, 0, 0]
+[32780, 0, 0, 0]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jfk2.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 - Your output:
-[32780, 1, 1, 2, 3, 5, 32776, 32777, 0, 32784]
+[32776, 1, 1, 2, 3, 5, 32772, 32773, 0, 32780]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xc12.i passed!
 🐌 You are less effective on this test case.
-Your number of cycles for this file is 40.00% higher than number of cycles used by the reference.
-Your cycles:	70
+Your number of cycles for this file is 36.00% higher than number of cycles used by the reference.
+Your cycles:	68
 Ref cycles:	50
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ish1.i failed!
 - Summary:
@@ -4025,8 +3526,8 @@ Ref cycles:	50
 [1, 2, 6, 24, 0, 0, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/kl33.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 3.51% lower than number of cycles used by the reference.
-Your cycles:	55
+Your number of cycles for this file is 7.02% lower than number of cycles used by the reference.
+Your cycles:	53
 Ref cycles:	57
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/skn2.i failed!
 - Summary:
@@ -4041,14 +3542,14 @@ Ref cycles:	57
 - Reference output:
 [1, 2, 4, 7, 11, 16]
 - Your output:
-[32808, 2, 4, 7, 11, 16]
+[32804, 2, 4, 7, 11, 16]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yg31.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [4, 8, 12, 20, 32, 0, 0, 0, 0, 0, 0, 32, 20, 12, 32, 0, 0]
 - Your output:
-[4, 8, 12, 0, 0, 0, 0, 0, 0, 32784, 0, 32776, 12, 0, 0, 0, 0]
+[4, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 65548, 0, 0, 0, 0, 0]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pe4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/tl18.i passed!
 🐌 You are less effective on this test case.
@@ -4065,8 +3566,8 @@ Ref cycles:	59
 []
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/zkk1.i passed!
 🐇 You are more effective on this test case.
-Your number of cycles for this file is 6.76% lower than number of cycles used by the reference.
-Your cycles:	69
+Your number of cycles for this file is 9.46% lower than number of cycles used by the reference.
+Your cycles:	67
 Ref cycles:	74
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yw27.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ehs2.i passed!
@@ -4077,14 +3578,7 @@ Ref cycles:	74
 [1, 2, 6, 24, 120, 153]
 - Your output:
 [1, 2, 6, 24, 0, 0]
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/mas20.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/mas20.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yd18.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
@@ -4102,14 +3596,11 @@ Ref cycles:	74
 [4, 3, 2, 1]
 - Your output:
 []
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ac86.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 0, 0, 0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ac86.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 12.50% higher than number of cycles used by the reference.
+Your cycles:	18
+Ref cycles:	16
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jj26.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/asn2.i passed!
 🐇 You are more effective on this test case.
@@ -4117,6 +3608,10 @@ Your number of cycles for this file is 2.94% lower than number of cycles used by
 Your cycles:	33
 Ref cycles:	34
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/mww4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 2.78% lower than number of cycles used by the reference.
+Your cycles:	35
+Ref cycles:	36
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/xw32.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yz56.i passed!
 🐇 You are more effective on this test case.
@@ -4138,30 +3633,24 @@ Ref cycles:	32
 - Reference output:
 [0, 0, 0, 2, 12]
 - Your output:
-[0, 0, 0, 0, 131184]
+[0, 0, 0, 0, 131168]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ptd3.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/dh15.i passed!
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wl22.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0, 0, 8, 4, 32, 40, 40]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wl22.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 19.57% lower than number of cycles used by the reference.
+Your cycles:	37
+Ref cycles:	46
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jnd2.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 8.00% lower than number of cycles used by the reference.
 Your cycles:	23
 Ref cycles:	25
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kh25.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[2, 6, 20, 70, 252]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kh25.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 2.08% lower than number of cycles used by the reference.
+Your cycles:	47
+Ref cycles:	48
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/med7.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 2.70% lower than number of cycles used by the reference.
@@ -4172,14 +3661,7 @@ Ref cycles:	37
 Your number of cycles for this file is 4.00% lower than number of cycles used by the reference.
 Your cycles:	24
 Ref cycles:	25
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kws4.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[2]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kws4.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/clf6.i passed!
 🐇 You are more effective on this test case.
 Your number of cycles for this file is 4.76% lower than number of cycles used by the reference.
@@ -4192,14 +3674,14 @@ Ref cycles:	21
 - Reference output:
 [0]
 - Your output:
-[65572]
+[65564]
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/bsl3.i failed!
 - Summary:
 - Simulator input used:Nothing (None found in source file)
 - Reference output:
 [217966, 1103765]
 - Your output:
-[32788, 230660138]
+[32784, 230632134]
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pd22.i passed!
 🐌 You are less effective on this test case.
 Your number of cycles for this file is 10.53% higher than number of cycles used by the reference.
@@ -4219,10 +3701,6 @@ Your cycles:	15
 Ref cycles:	17
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wsb1.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/hz30.i passed!
-🐌 You are less effective on this test case.
-Your number of cycles for this file is 15.15% higher than number of cycles used by the reference.
-Your cycles:	38
-Ref cycles:	33
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wcr1.i passed!
 ❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yz75.i failed!
 - Summary:
@@ -4241,14 +3719,11 @@ Ref cycles:	33
 [8, 64]
 - Your output:
 []
-❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kl33.i failed!
-🤨 Your solution took 0 cycles. Something weird is going on...
-- Summary:
-- Simulator input used:Nothing (None found in source file)
-- Reference output:
-[0]
-- Your output:
-[]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kl33.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 28.89% lower than number of cycles used by the reference.
+Your cycles:	32
+Ref cycles:	45
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/skn2.i passed!
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ktr2.i passed!
 🐇 You are more effective on this test case.
@@ -4257,10 +3732,10 @@ Your cycles:	12
 Ref cycles:	13
 ✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/lss4.i passed!
 ----------------------------------------------------------------------
-Your aggregrate number of cycles is 1.43% higher than the aggregate number of cycles used by lab2_ref.
-Your number of cycles is on average 1.06% higher than the number of cycles used by lab2_ref.
+Your aggregrate number of cycles is 0.91% higher than the aggregate number of cycles used by lab2_ref.
+Your number of cycles is on average 0.96% higher than the number of cycles used by lab2_ref.
 
-🙃 You passed 367/522 tests.
+🙃 You passed 399/522 tests.
 
 Consider adding your own tests cases to the repository so the whole class can benefit!
 https://github.com/zawie/zill412
