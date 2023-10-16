@@ -54,6 +54,9 @@ class Node:
         self.next = None
         self.prev = None
     
+    
+
+    
     def __str__(self):
         l0 = self.arg1.sr   # SR slot in first record list
         opcode = self.opcode  # value[1] = (category, opcode)- we want the opcode
@@ -82,6 +85,7 @@ class Node:
         # temp_str = str(self.line) + " : " +  opcodes_list[opcode] + " : [ "  + l0 + " ] , [ " + l1 + " ], [ " + l2 + " ]\n"
         temp_str = str(self.line) + " : " +  opcodes_list[opcode] + " : [ "  + l0 + " ] , [ " + l1 + " ], [ " + l2 + " ]"
 
+            
         return temp_str
         
 
@@ -121,6 +125,7 @@ class LinkedList:
         - new_node: the node being inserted
         - aft_node: the node that will come after new_node
         """
+        print("aft node line num: " + str(aft_node.line))
 
         if (aft_node == self.head):
             new_node.next = aft_node
@@ -131,6 +136,16 @@ class LinkedList:
             new_node.next = aft_node
             aft_node.prev.next = new_node
             aft_node.prev = new_node
+        
+        # handle line nums
+        print("new node line num: " + str(new_node.line))
+        print("aft node line num: " + str(aft_node.line))
+        new_node.line = aft_node.line
+        start = aft_node
+        while (start != None):
+            start.line += 1
+            start = start.next
+
 
         self.length += 1
     
@@ -211,4 +226,21 @@ class LinkedList:
 
         return temp_str
         # print(f"{self.opcodes[opcode] : <6}  [ {l0} ], [ {l1} ], [ {l2} ]")
+    
+    def print_full_line(self, node):
+        temp_line = node.line if node.line is not None else -1
+        temp_opcode = self.opcodes[node.opcode] if node.opcode is not None else -1
+        temp_arg1_sr = str(node.arg1.sr) if node.arg1.sr is not None else -1
+        temp_arg1_vr = str(node.arg1.vr) if node.arg1.vr is not None else -1
+        temp_arg1_pr = str(node.arg1.pr) if node.arg1.pr is not None else -1
+        temp_arg1_nu = str(node.arg1.nu) if node.arg1.nu is not None else -1
+        temp_arg2_sr = str(node.arg2.sr) if node.arg2.sr is not None else -1
+        temp_arg2_vr = str(node.arg2.vr) if node.arg2.vr is not None else -1
+        temp_arg2_pr = str(node.arg2.pr) if node.arg2.pr is not None else -1
+        temp_arg2_nu = str(node.arg2.nu) if node.arg2.nu is not None else -1
+        temp_arg3_sr = str(node.arg3.sr) if node.arg3.sr is not None else -1
+        temp_arg3_vr = str(node.arg3.vr) if node.arg3.vr is not None else -1
+        temp_arg3_pr = str(node.arg3.pr) if node.arg3.pr is not None else -1
+        temp_arg3_nu = str(node.arg3.nu) if node.arg3.nu is not None else -1
+        print('//' + "{:<8} {:<10} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5} | {:<5} {:<5} {:<5} {:<5}".format(temp_line, temp_opcode, temp_arg1_sr, temp_arg1_vr, temp_arg1_pr, temp_arg1_nu, temp_arg2_sr, temp_arg2_vr, temp_arg2_pr, temp_arg2_nu, temp_arg3_sr, temp_arg3_vr, temp_arg3_pr, temp_arg3_nu))
         

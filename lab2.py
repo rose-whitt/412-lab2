@@ -75,10 +75,10 @@ class Lab2:
         self.PRNU = {}
 
         self.PRStack = [] # for spilling- (push and pop in algo)
-        self.PRMark = {}  # make sure you're not reusing a pr in the current line
+        # self.PRMark = {}  # make sure you're not reusing a pr in the current line
         self.pr_used_in_cur_op = -1
         self.is_spilled = []
-        self.spill_loc = 32768
+        self.spill_loc = 32768  # and higher reserved for allocator
         self.spill_k = -1
         self.max_live = 0
         self.count_live = 0
@@ -189,28 +189,32 @@ class Lab2:
     
     def handle_spill(self, node):
         print("// " + str(node.line) + " [HANDLE_SPILL]: " + self.opcodes_list[node.opcode])
-        print("//" + str(node))
+        self.IR_LIST.print_full_line(node)
         pr_freed = max(self.PRNU, key=self.PRNU.get)
         if (pr_freed == self.pr_used_in_cur_op):
+            print("poo")
             prnu_copy = self.PRNU.copy()
             prnu_copy.pop(pr_freed)
             pr_freed = max(prnu_copy, key=prnu_copy.get)
         
+        print("pr freed: " + str(pr_freed))
         vr_to_spill = self.PRToVR[pr_freed]
+        print("vr to spill: " + str(vr_to_spill))
 
         self.VRToPR[vr_to_spill] = None
 
         # create and add loadI
         loadi_node = Node()
+        # TODO: line number- should i do in insert before?
         loadi_node.opcode = 2
         loadi_node.arg1.sr = self.spill_loc
         loadi_node.arg3.pr = self.spill_k
         print("[SPILL]IR LEN BEFORE: " + str(self.IR_LIST.length))
         print("[SPILL]loadi node:")
-        print(loadi_node)
+        self.IR_LIST.print_full_line(loadi_node)
         self.IR_LIST.insert_before(loadi_node, node)
         print("[SPILL]IR LEN AFTER: " + str(self.IR_LIST.length))
-
+        # self.IR_LIST.print_table(self.IR_LIST)
 
         # create and add store
         store_node = Node()
@@ -220,9 +224,10 @@ class Lab2:
         store_node.arg3.pr = self.spill_k
         print("[SPILL]IR LEN BEFORE: " + str(self.IR_LIST.length))
         print("[SPILL]store node:")
-        print(store_node)
+        self.IR_LIST.print_full_line(store_node)
         self.IR_LIST.insert_before(store_node, node)
         print("[SPILL]IR LEN AFTER: " + str(self.IR_LIST.length))
+        # self.IR_LIST.print_table(self.IR_LIST)
 
 
         # update spill location
@@ -267,10 +272,16 @@ class Lab2:
         self.k = k
         print("//k: " + str(self.k))
         self.VRToPR = {i: None for i in range(self.max_vr_num + 1)}
-        self.PRToVR = {i: None for i in range(self.k)}
+        self.PRToVR = {i: None for i in range(self.k)}  # keep it as normal k
+        print("PR TO VR")
+        print()
         self.VRToSpillLoc = {}
         self.PRNU = {i: INF for i in range(self.k)}
-        self.PRStack = list(range(self.k - 1, -1, -1))
+        # self.PRStack = list(range(self.k - 1, -1, -1))
+        self.PRStack = []
+        for i in range(0, self.k - 1):
+            self.PRStack.append(i)
+        self.PRStack.reverse()
         print("// LEN OF PRSTACK: " + str(len(self.PRStack)))
         print("// PRSTACK: " + str(self.PRStack))
 
@@ -326,9 +337,9 @@ class Lab2:
                 self.PRToVR[phys_reg] = virt_reg
                 self.PRNU[phys_reg] = head.arg3.nu
             
-            # error = self.check_maps(head)
-            # if (error == -1):
-            #     print("error: " + str(error))
+            error = self.check_maps(head)
+            if (error == -1):
+                print("error: " + str(error))
 
             # iterate
             head = head.next
@@ -423,18 +434,26 @@ class Lab2:
 
     def check_maps(self, line):
         print("[CHECK_MAPS]")
-        self.print_renamed_block()
+        # self.print_renamed_block()
         # self.IR_LIST.print_table(self.IR_LIST)
         print(line)
         print("PR STACK:")
         print(self.PRStack)
         # head = self.IR_LIST.head
         # for each pr, p, if vrtopr[prtovr[p]] = p
-        print("VR TO PR:")  # vr is th index, pr is the value
-        print(self.VRToPR)
+        # print("VR TO PR:")  # vr is th index, pr is the value
+        # print(self.VRToPR)
         # for each vr, v, if vrtopr[v] is defined, prtovr[vrtopr[v]] = v
-        print("PR TO VR:")  # pr is the index, vr is the value
-        print(self.PRToVR)
+        # print("PR TO VR:")  # pr is the index, vr is the value
+        # print(self.PRToVR)
+        print("SPILL LOC:")
+        print(self.spill_loc)
+        print("VR TO SPILL LOC: ")
+        print(self.VRToSpillLoc)
+        print("pr_used_in_cur_op")
+        print(self.pr_used_in_cur_op)
+        print("IS SPILLED: ")
+        print(self.is_spilled)
 
         for key, val in self.VRToPR.items():
             if (val in self.PRToVR and self.PRToVR[val] != key):
@@ -598,6 +617,7 @@ def main():
     print("//allocating done")
     print("// MaxLive is " + str(lab2.max_live))
     lab2.print_renamed_block()
+    print("--------------")
     lab2.print_allocated_file()
     lab2.IR_LIST.print_table(lab2.IR_LIST)
 
