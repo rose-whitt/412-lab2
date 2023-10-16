@@ -83,7 +83,8 @@ class Lab2:
         self.max_live = 0
         self.count_live = 0
 
-        # TODO: spill k and max live
+        self.opcodes_list = ["load", "store", "loadI", "add", "sub", "mult", "lshift", "rshift", "output", "nop"]
+
 
         print("//done with lab 2 init")
     
@@ -323,6 +324,7 @@ class Lab2:
 
     def check_maps(self, line):
         print("[CHECK_MAPS]")
+        self.print_renamed_block()
         # self.IR_LIST.print_table(self.IR_LIST)
         print(line)
         print("PR STACK:")
@@ -423,7 +425,7 @@ class Lab2:
   
 
     def allocate_use(self, op_num, node, line_num):
-        # print("allocate use")
+        print("//allocate use")
 
         if op_num == 1:
             operand_i = node.arg1
@@ -447,7 +449,7 @@ class Lab2:
         return phys_reg
     
     def free_use(self, op_num, node):
-        # print("free use")
+        print("//free use")
 
         if op_num == 1:
             operand_i = node.arg1
@@ -469,7 +471,7 @@ class Lab2:
 
 
     def handle_restore(self, op_num, node):
-        # print("handle restore")
+        print("//handle restore")
         if op_num == 1:
             operand_i = node.arg1
         if op_num == 2:
@@ -511,7 +513,7 @@ class Lab2:
         return phys_reg
     
     def handle_spill(self, node):
-        # print("handle spill")
+        print("//handle spill")
 
         pr_freed = max(self.PRNU, key=self.PRNU.get)
         if (pr_freed == self.pr_used_in_cur_op):
@@ -578,16 +580,26 @@ class Lab2:
             node = node.next
     
     def dif_alloc(self, k):
+        print("//START OF DIF_ALLOC")
         self.max_vr_num = self.get_max_vr()
+        print("//MAX VR NUM: " + str(self.max_vr_num))
         self.k = k
+        print("//k: " + str(self.k))
         self.VRToPR = {i: None for i in range(self.max_vr_num + 1)}
         self.PRToVR = {i: None for i in range(self.k)}
         self.VRToSpillLoc = {}
         self.PRNU = {i: INF for i in range(self.k)}
         self.PRStack = list(range(self.k - 1, -1, -1))
+        print("// LEN OF PRSTACK: " + str(len(self.PRStack)))
+        print("// PRSTACK: " + str(self.PRStack))
+
+        print("// MAX LIVE: " + str(self.max_live))
         if (self.max_live > self.k):
             self.k = self.k - 1
             self.spill_k = self.k
+        print("// SPILL_k: " + str(self.spill_k))
+        print("// k after: " + str(self.k))
+
 
         head = self.IR_LIST.head
         line_num = 1
@@ -747,7 +759,8 @@ def main():
     # lab2.allocate(int(sys.argv[1]))
     lab2.dif_alloc(int(sys.argv[1]))
     print("//allocating done")
-    lab2.print_renamed_block()
+    print("// MaxLive is " + str(lab2.max_live))
+    lab2.print_allocated_file()
 
 
 if __name__ == "__main__":

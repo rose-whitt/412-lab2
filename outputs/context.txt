@@ -20,8 +20,44 @@ debug_alloc_nospill_cc2.i: output of "./412alloc 64 ./code_check_2/cc2.i"
 sim_debug_alloc_nospill_cc2.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 -i 0 1 2 3 4 5 6 7 8 9 10 < ./outputs/debug_alloc_nospill_cc2.i -t"
 
 
+----------sun 5:53pm commit "OUTPUT CHECKPOINT" #0ff131c--------
+
+                cc1:
 debug_alloc_nospill_cc1.i: output of "./412alloc 64 ./code_check_2/cc1.i"
 sim_debug_alloc_nospill_cc1.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/debug_alloc_nospill_cc1.i -t"
 
 ref_alloc_nospill_cc1.i: output of "~comp412/students/lab2/lab2_ref -r 64 ./code_check_2/cc1.i"
 sim_alloc_nospill_cc1.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/ref_alloc_nospill_cc1.i -t"
+
+                cc2:
+debug_alloc_nospill_cc2.i: output of "./412alloc 64 ./code_check_2/cc2.i"
+sim_debug_alloc_nospill_cc2.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 -i 0 1 2 3 4 5 6 7 8 9 10 < ./outputs/debug_alloc_nospill_cc2.i -t"
+
+
+                rename_ex:
+    k = 64
+debug_alloc_nospill_rename_ex.i: output of "./412alloc 64 ./test_inputs/rename_ex.i"
+sim_debug_alloc_nospill_rename_ex.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/debug_alloc_nospill_rename_ex.i -t"
+
+
+ref_alloc_nospill_rename_ex.i: output of "~comp412/students/lab2/lab2_ref -r 64 ./test_inputs/rename_ex.i""
+sim_alloc_nospill_rename_ex.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/ref_alloc_nospill_rename_ex.i -t"
+
+    k = 4
+debug_alloc_4_rename_ex.i: output of "./412alloc 4 ./test_inputs/rename_ex.i"
+sim_debug_alloc_4_rename_ex.i: output of "/clear/courses/comp412/students/lab2/sim -r 4 < ./outputs/debug_alloc_4_rename_ex.i -t"
+
+ref_alloc_4_rename_ex.i: output of "~comp412/students/lab2/lab2_ref -r 4 ./test_inputs/rename_ex.i"
+sim_alloc_4_rename_ex.i: output of "/clear/courses/comp412/students/lab2/sim -r 4 < ./outputs/ref_alloc_4_rename_ex.i -t"
+
+---------
+
+✅✅✅✅✅✅✅RENAME NO SPILL 64 WORKS✅✅✅✅✅✅✅
+i mightve been fucking up by calling print_renamed_block after i allocate instead of print_allocated_file. this is when i switched it to print_allocated_file
+debug_test_alloc.i: output of "./412alloc 64 ./test_inputs/rename_ex.i"
+debug_test_sim.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/debug_test_alloc.i -t"
+
+
+test_alloc.i: output of "~comp412/students/lab2/lab2_ref -r 64 ./test_inputs/rename_ex.i"
+test_sim.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/test_alloc.i -t"
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅
