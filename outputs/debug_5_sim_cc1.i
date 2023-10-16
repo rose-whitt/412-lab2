@@ -5,28 +5,32 @@ Interlock settings: memory registers branches
 1:      [loadI 128 => r1 (128)]
 2:      [loadI 32 => r2 (32)]
 3:      [loadI 1028 => r3 (1028)]
-4:      [mult r2 (32), r2 (32) => r4 (1024)]
-5:      [rshift r2 (32), r4 (1024) => r4 (32)]
-6:      [loadI 32768 => r4 (32768)]
-7:      [store r0 (1024) => r4 (addr: 32768)]
-8:      [lshift r2 (32), r4 (32768) => r0 (32)]
-9:      [add r0 (32), r4 (32768) => r4 (32800)] *7
-10:     [sub r2 (32), r4 (32800) => r4 (-32768)]
-11:     [store r4 (-32768) => r3 (addr: 1028)]
-12:     [ stall ]
-13:     [ stall ] *11
-14:     [load r3 (addr: 1028) => r3 (-32768)]
-15:     [ stall ]
-16:     [ stall ] *14
-17:     [add r3 (-32768), r1 (128) => r1 (-32640)]
-18:     [loadI 32768 => r3 (32768)]
-19:     [load r3 (addr: 32768) => r3 (1024)]
-20:     [ stall ]
-21:     [ stall ] *19
-22:     [store r1 (-32640) => r3 (addr: 1024)]
-23:     [ stall ]
-24:     [ stall ] *22
-25:     [output 1024 (-32640)]
-output generates => -32640
+4:      [loadI 32768 => r4 (32768)]
+5:      [store r0 (1024) => r4 (addr: 32768)]
+6:      [mult r2 (32), r2 (32) => r0 (1024)]
+7:      [rshift r2 (32), r0 (1024) => r0 (32)] *5
+8:      [loadI 32772 => r4 (32772)]
+9:      [store r1 (128) => r4 (addr: 32772)]
+10:     [lshift r2 (32), r0 (32) => r1 (32)]
+11:     [add r1 (32), r0 (32) => r0 (64)] *9
+12:     [sub r2 (32), r0 (64) => r0 (-32)]
+13:     [store r0 (-32) => r3 (addr: 1028)]
+14:     [ stall ]
+15:     [ stall ] *13
+16:     [load r3 (addr: 1028) => r3 (-32)]
+17:     [loadI 32772 => r0 (32772)]
+18:     [load r0 (addr: 32772) => r0 (128)] *16
+19:     [ stall ]
+20:     [ stall ] *18
+21:     [add r3 (-32), r0 (128) => r0 (96)]
+22:     [loadI 32768 => r3 (32768)]
+23:     [load r3 (addr: 32768) => r3 (1024)]
+24:     [ stall ]
+25:     [ stall ] *23
+26:     [store r0 (96) => r3 (addr: 1024)]
+27:     [ stall ]
+28:     [ stall ] *26
+29:     [output 1024 (96)]
+output generates => 96
 
-Executed 18 instructions and 18 operations in 26 cycles.
+Executed 22 instructions and 22 operations in 30 cycles.

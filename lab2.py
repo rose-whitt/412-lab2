@@ -193,6 +193,8 @@ class Lab2:
     def handle_spill(self, node):
         print("// " + str(node.line) + " [HANDLE_SPILL]: " + self.opcodes_list[node.opcode])
         self.IR_LIST.print_full_line(node)
+        print("PRNU: ")
+        print(self.PRNU)
         pr_freed = max(self.PRNU, key=self.PRNU.get)
         if (pr_freed == self.pr_used_in_cur_op):
             print("//poo")
@@ -242,7 +244,7 @@ class Lab2:
         # add to spilled array
         self.is_spilled.append(vr_to_spill)
 
-        self.stop_running = True
+        # self.stop_running = True
 
         return pr_freed
     
@@ -279,11 +281,13 @@ class Lab2:
         self.k = k
         print("//k: " + str(self.k))
         self.VRToPR = {i: None for i in range(self.max_vr_num + 1)}
-        self.PRToVR = {i: None for i in range(self.k)}  # keep it as normal k
+        self.PRToVR = {i: None for i in range(self.k - 1)}  # keep it as normal k
         print("//PR TO VR")
-        # print()
+        print(self.PRToVR)
         self.VRToSpillLoc = {}
-        self.PRNU = {i: INF for i in range(self.k)}
+        self.PRNU = {i: INF for i in range(self.k - 1)}
+        print("// PRNU")
+        print(self.PRNU)
         # self.PRStack = list(range(self.k - 1, -1, -1))
         self.PRStack = []
         for i in range(0, self.k - 1):
