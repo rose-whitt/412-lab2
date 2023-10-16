@@ -38,19 +38,61 @@
 //12       29       store      | 7     0     None  inf   | None  None  None  inf   | 0     1     None  inf   | 12              
 //13       30       output     | 1024  None  None  inf   | None  None  None  inf   | None  None  None  inf   | 13              
 //renaming done
+//START OF DIF_ALLOC
+//MAX VR NUM: 10
+//k: 64
+// LEN OF PRSTACK: 64
+// PRSTACK: [63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+// MAX LIVE: 6
+// SPILL_k: -1
+// k after: 64
+//allocate use
+//allocate use
+//free use
+//free use
+//allocate use
+//allocate use
+//free use
+//free use
+//allocate use
+//allocate use
+//free use
+//free use
+//allocate use
+//allocate use
+//free use
+//free use
+//allocate use
+//allocate use
+//free use
+//free use
+//allocate use
+//allocate use
+//free use
+//free use
+//allocate use
+//free use
+//allocate use
+//allocate use
+//free use
+//free use
+//allocate use
+//allocate use
+//free use
+//free use
 //allocating done
-//HERE
-loadI 1024 => r1
-loadI 128 => r3
-loadI 32 => r6
-loadI 1028 => r4
-mult r6,r6 => r10
-rshift r6,r10 => r9
-lshift r6,r9 => r8
-add r8,r9 => r7
-sub r6,r7 => r5
-store r5 => r4
-load r4 => r2
-add r2,r3 => r0
-store r0 => r1
-output 1024
+// MaxLive is 6
+loadI   1024  =>   r0
+loadI   128  =>   r1
+loadI   32  =>   r2
+loadI   1028  =>   r3
+mult    r2, r2  =>   r4
+rshift  r2, r4  =>   r4
+lshift  r2, r4  =>   r5
+add     r5, r4  =>   r4
+sub     r2, r4  =>   r4
+store   r4  =>   r3
+load    r3  =>   r3
+add     r3, r1  =>   r1
+store   r1  =>   r0
+output  1024

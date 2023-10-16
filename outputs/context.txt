@@ -52,12 +52,33 @@ sim_alloc_4_rename_ex.i: output of "/clear/courses/comp412/students/lab2/sim -r 
 
 ---------
 
+------- sun 8:13 commit "CHECKPOINT- RENAME 64 WORKS" #f34e85e--------
 ✅✅✅✅✅✅✅RENAME NO SPILL 64 WORKS✅✅✅✅✅✅✅
 i mightve been fucking up by calling print_renamed_block after i allocate instead of print_allocated_file. this is when i switched it to print_allocated_file
+NO SPILLS (K = 64)
+        rename_ex:
 debug_test_alloc.i: output of "./412alloc 64 ./test_inputs/rename_ex.i"
 debug_test_sim.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/debug_test_alloc.i -t"
 
 
 test_alloc.i: output of "~comp412/students/lab2/lab2_ref -r 64 ./test_inputs/rename_ex.i"
 test_sim.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/test_alloc.i -t"
-✅✅✅✅✅✅✅✅✅✅✅✅✅✅
+
+        cc1:
+debug_alloc_nospill_cc1.i: output of "./412alloc 64 ./code_check_2/cc1.i"
+sim_debug_alloc_nospill_cc1.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/debug_alloc_nospill_cc1.i -t"
+
+ref_alloc_nospill_cc1.i: output of "~comp412/students/lab2/lab2_ref -r 64 ./code_check_2/cc1.i"
+sim_alloc_nospill_cc1.i: output of "/clear/courses/comp412/students/lab2/sim -r 64 < ./outputs/ref_alloc_nospill_cc1.i -t"
+
+--
+
+POSSIBLE SPILLS (K = 4)
+debug_4_alloc_rename.i: output of "./412alloc 4 ./test_inputs/rename_ex.i"
+debug_4_sim_rename.i: output of "/clear/courses/comp412/students/lab2/sim -r 4 < ./outputs/debug_4_alloc_rename.i -t"
+
+4_alloc_rename.i: output of "~comp412/students/lab2/lab2_ref -r 4 ./test_inputs/rename_ex.i"
+4_sim_rename.i: output of "/clear/courses/comp412/students/lab2/sim -r 4 < ./outputs/4_alloc_rename.i -t"
+
+--------------------------------
+
