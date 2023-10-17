@@ -63,11 +63,10 @@
 //START OF DIF_ALLOC
 //MAX VR NUM: 14
 //k: 7
-//PR TO VR
 // LEN OF PRSTACK: 6
 // PRSTACK: [5, 4, 3, 2, 1, 0]
 // MAX LIVE: 6
-// SPILL_k: -1
+// RESERVED REG: -1
 // k after: 7
 //allocating done
 // MaxLive is 6
