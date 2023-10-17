@@ -93,7 +93,11 @@ debug_4_sim_rename.i: output of "/clear/courses/comp412/students/lab2/sim -r 4 <
 commit cc2c836:
 investigating block 6.i failing:
 block6_debug_alloc_5.i: output of "./412alloc 5 /clear/courses/comp412/students/ILOC/blocks/lab2/block6.i"
+    MaxLive is 4.
 block6_debug_sim_5.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 -i 1024 0 1 < ./outputs/block6_debug_alloc_5.i -t"
 
 block6_alloc_5.i: output of "~comp412/students/lab2/lab2_ref -r 5 /clear/courses/comp412/students/ILOC/blocks/lab2/block6.i"
+    MaxLive is 4.
 block6_sim_5.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 -i 1024 0 1 < ./outputs/block6_alloc_5.i -t"
+
+alloc registers are wrong but the alloc output is correct

@@ -66,7 +66,7 @@
 // LEN OF PRSTACK: 6
 // PRSTACK: [5, 4, 3, 2, 1, 0]
 // MAX LIVE: 6
-// RESERVED REG: -1
+// RESERVED REG: 6
 // k after: 7
 //allocating done
 // MaxLive is 6

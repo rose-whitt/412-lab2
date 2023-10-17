@@ -1,4 +1,5 @@
 // ERROR 14:       Definition of source register r0 has no uses.
+//    MaxLive is 4.
 // COMP 412 Reference Allocator (2023-1-1), k = 5
 loadI  0 => r0                // from input block
 loadI  4 => r0                // from input block

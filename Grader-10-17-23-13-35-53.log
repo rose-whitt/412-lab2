@@ -26,16 +26,24 @@ report7.i:	{3: 100, 4: 81, 5: 68, 6: 61, 8: 47, 12: 44, 16: 44}
 Quick Scalability Test:
 	(For a more accurate test, run the auto-timer)
 
-	T008k.i:  	0.0245 seconds
-	T016k.i:  	0.0377 seconds
-	T032k.i:  	0.0644 seconds
-	T064k.i:  	0.1215 seconds
-	T128k.i:  	0.2345 seconds
+	T008k.i:  	0.0233 seconds
+	T016k.i:  	0.0356 seconds
+	T032k.i:  	0.0626 seconds
+	T064k.i:  	0.1164 seconds
+	T128k.i:  	0.2239 seconds
  
 
 Finished submission  comp412.tar
 ==================================================
-Testing submission from NetID 'rew9', name 'Rose Whitt'
+
+Student name not found in README file.
+Will lose conformance points.
+
+
+Student netid not found in README file.
+Will lose conformance points.
+
+Testing submission from NetID 'no netid given', name 'no name given'
 Archive name:  rew9.tar 		Date From Files:  2023-10-16
 
 ------------------------------------------------------------
@@ -59,8 +67,8 @@ report7.i:	{3: 200, 4: 156, 5: 129, 6: 112, 8: 77, 12: 55, 16: 44}
 Quick Scalability Test:
 	(For a more accurate test, run the auto-timer)
 
-	T008k.i:  	8.2332 seconds
-	T016k.i:  	30.202 seconds
+	T008k.i:  	8.6366 seconds
+	T016k.i:  	32.606 seconds
 	T032k.i:  	60.007 seconds
 	T064k.i:  	60.0 seconds
 	T128k.i:  	60.0 seconds
@@ -82,7 +90,7 @@ Run the auto_timer to get a more precise estimate.
    Scaling appears to be linear
    Scalability points:     100 
 
-Rose Whitt :
+no name given :
    Correctness points:     100.0
    Effectiveness points:   61.978
 

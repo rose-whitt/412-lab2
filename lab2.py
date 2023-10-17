@@ -162,8 +162,9 @@ class Lab2:
         loadi_node.opcode = 2
         loadi_node.arg1.sr = self.VRToSpillLoc[virt_reg]
         loadi_node.arg3.pr = phys_reg
-        self.IR_LIST.print_full_line(loadi_node)
         self.IR_LIST.insert_before(loadi_node, node)
+        self.IR_LIST.print_full_line(loadi_node)
+
 
         # create and add load
         load_node = Node()
@@ -171,8 +172,9 @@ class Lab2:
         load_node.arg1.pr = phys_reg
         load_node.arg3.vr = virt_reg
         load_node.arg3.pr = phys_reg
-        self.IR_LIST.print_full_line(load_node)
         self.IR_LIST.insert_before(load_node, node)
+        self.IR_LIST.print_full_line(load_node)
+
 
         # update maps
         self.VRToPR[virt_reg] = phys_reg
@@ -207,8 +209,12 @@ class Lab2:
         loadi_node.opcode = 2
         loadi_node.arg1.sr = self.spill_loc
         loadi_node.arg3.pr = self.reserved_reg
-        self.IR_LIST.print_full_line(loadi_node)
+        # print('[HANDLE SPILL] RESERVED REG: ' + str(self.reserved_reg))
+        # print('[HANDLE SPILL]loadi_node.arg3.pr: ' + str(loadi_node.arg3.pr))
+
         self.IR_LIST.insert_before(loadi_node, node)
+        self.IR_LIST.print_full_line(loadi_node)
+
         # self.IR_LIST.print_table(self.IR_LIST)
 
         # create and add store- move spilled value from spill location into its new PR
@@ -217,8 +223,9 @@ class Lab2:
         store_node.arg1.vr = vr_to_spill
         store_node.arg1.pr = pr_freed
         store_node.arg3.pr = self.reserved_reg
-        self.IR_LIST.print_full_line(store_node)
         self.IR_LIST.insert_before(store_node, node)
+        self.IR_LIST.print_full_line(store_node)
+
         # self.IR_LIST.print_table(self.IR_LIST)
 
 

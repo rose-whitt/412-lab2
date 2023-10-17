@@ -10,42 +10,40 @@ cp script 412alloc
 
 Testing Scalability:
 
-	T001k.i:  	0.0083 seconds
-	T002k.i:  	0.0107 seconds
-	T004k.i:  	0.0121 seconds
-	T008k.i:  	0.0166 seconds
-	T016k.i:  	0.0314 seconds
-	T032k.i:  	0.0364 seconds
-	T064k.i:  	0.0804 seconds
-	T128k.i:  	0.1946 seconds
+	T001k.i:  	0.0113 seconds
+	T002k.i:  	0.0127 seconds
+	T004k.i:  	0.0162 seconds
+	T008k.i:  	0.0208 seconds
+	T016k.i:  	0.0293 seconds
+	T032k.i:  	0.0635 seconds
+	T064k.i:  	0.1172 seconds
+	T128k.i:  	0.2076 seconds
 
 Scaling score is 100
-Efficiency score is 100	(c , 0.19460400000000003)
-
-	Anomalous behavior: 1 inputs showed minimal growth
+Efficiency score is 100	(c , 0.20762)
 
 finished timing run on submission comp412.tar
 =======================================================================
-Testing submission from NetID 'rew9', name 'Rose Whitt'
+Testing submission from NetID 'no netid given', name 'no name given'
 Archive name:  rew9.tar		5 trials per block
 
 --- built executable; should be ready to run ---
 
 Testing Scalability:
 
-	T001k.i:  	0.2543 seconds
-	T002k.i:  	1.0636 seconds
-	T004k.i:  	2.7242 seconds
-	T008k.i:  	8.1684 seconds
-	T016k.i:  	28.871 seconds
+	T001k.i:  	0.4617 seconds
+	T002k.i:  	1.0421 seconds
+	T004k.i:  	2.6120 seconds
+	T008k.i:  	8.1164 seconds
+	T016k.i:  	29.210 seconds
 	T032k.i:  	timed out at 60 seconds.
 	T064k.i:  	timed out at 60 seconds.
 	T128k.i:  	timed out at 60 seconds.
 
 Scaling score is 0
-Efficiency score is 0	(python , 60.005974)
+Efficiency score is 0	(python , 60.005797)
 
-	Anomalous behavior: 5 inputs showed minimal growth
+	Anomalous behavior: 4 inputs showed minimal growth
 
 finished timing run on submission rew9.tar
 =======================================================================

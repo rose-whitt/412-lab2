@@ -1,3 +1,3 @@
 NetId	Name	T1k	T2k	T4k	T8k	T16k	T32k	T64k	T128k	Lang.	Scaling Pts	Eff Pts %
-comp412	Comp 412	0.0083	0.0107	0.0121	0.0166	0.0314	0.0364	0.0804	0.1946	c 	 linear (1 jump) (?)	100	100	*
-rew9	Rose Whitt	0.2543	1.0636	2.7242	8.1684	28.871	60.007	60.006	60.005	python 	 unusual (?)	0	0	*
+comp412	Comp 412	0.0113	0.0127	0.0162	0.0208	0.0293	0.0635	0.1172	0.2076	c 	 linear	100	100
+no netid given	no name given	0.4617	1.0421	2.6120	8.1164	29.210	60.006	60.006	60.005	python 	 unusual (?)	0	0	*
