@@ -162,12 +162,8 @@ class Lab2:
         loadi_node.opcode = 2
         loadi_node.arg1.sr = self.VRToSpillLoc[virt_reg]
         loadi_node.arg3.pr = phys_reg
-        print("//[RESTORE]IR LEN BEFORE: " + str(self.IR_LIST.length))
-        print("//[RESTORE]loadi node:")
         self.IR_LIST.print_full_line(loadi_node)
         self.IR_LIST.insert_before(loadi_node, node)
-        print("//[RESTORE]IR LEN AFTER: " + str(self.IR_LIST.length))
-
 
         # create and add load
         load_node = Node()
@@ -175,12 +171,8 @@ class Lab2:
         load_node.arg1.pr = phys_reg
         load_node.arg3.vr = virt_reg
         load_node.arg3.pr = phys_reg
-        print("//[RESTORE]IR LEN BEFORE: " + str(self.IR_LIST.length))
-        print("//[REST0RE]loadnode:")
         self.IR_LIST.print_full_line(load_node)
         self.IR_LIST.insert_before(load_node, node)
-        print("//[RESTORE]IR LEN AFTER: " + str(self.IR_LIST.length))
-
 
         # update maps
         self.VRToPR[virt_reg] = phys_reg
@@ -195,45 +187,38 @@ class Lab2:
         self.IR_LIST.print_full_line(node)
         # print("PRNU: ")
         # print(self.PRNU)
+        # TODO: check that register has a next use
         pr_freed = max(self.PRNU, key=self.PRNU.get)
         if (pr_freed == self.pr_used_in_cur_op):
-            print("//poo")
+            print("//[SPILL] pr_freed == self.pr_used_in_cur_op")
             prnu_copy = self.PRNU.copy()
             prnu_copy.pop(pr_freed)
             pr_freed = max(prnu_copy, key=prnu_copy.get)
         
-        print("//pr freed: " + str(pr_freed))
+        # print("//pr freed: " + str(pr_freed))
         vr_to_spill = self.PRToVR[pr_freed]
-        print("//vr to spill: " + str(vr_to_spill))
+        # print("//vr to spill: " + str(vr_to_spill))
 
         self.VRToPR[vr_to_spill] = None
+
 
         # create and add loadI- put spill location addy into reserved reg
         loadi_node = Node()
         loadi_node.opcode = 2
         loadi_node.arg1.sr = self.spill_loc
         loadi_node.arg3.pr = self.reserved_reg
-        print("//[SPILL]IR LEN BEFORE: " + str(self.IR_LIST.length))
-        print("//[SPILL]loadi node:")
         self.IR_LIST.print_full_line(loadi_node)
         self.IR_LIST.insert_before(loadi_node, node)
-        print("//[SPILL]IR LEN AFTER: " + str(self.IR_LIST.length))
         # self.IR_LIST.print_table(self.IR_LIST)
 
         # create and add store- move spilled value from spill location into its new PR
         store_node = Node()
         store_node.opcode = 1
-        print("// [HANDLE SPILL- STORE] vr to spill: " + str(vr_to_spill))
         store_node.arg1.vr = vr_to_spill
-        print("// [HANDLE SPILL- STORE] pr freed: " + str(pr_freed))
         store_node.arg1.pr = pr_freed
-        print("// [HANDLE SPILL- STORE] reserved reg: " + str(self.reserved_reg))
         store_node.arg3.pr = self.reserved_reg
-        print("//[SPILL]IR LEN BEFORE: " + str(self.IR_LIST.length))
-        print("//[SPILL]store node:")
         self.IR_LIST.print_full_line(store_node)
         self.IR_LIST.insert_before(store_node, node)
-        print("//[SPILL]IR LEN AFTER: " + str(self.IR_LIST.length))
         # self.IR_LIST.print_table(self.IR_LIST)
 
 
@@ -297,6 +282,7 @@ class Lab2:
         print("// PRSTACK: " + str(self.PRStack))
 
         print("// MAX LIVE: " + str(self.max_live))
+        self.reserved_reg = self.k - 1
         if (self.max_live > self.k):
             self.k = self.k - 1
             self.reserved_reg = self.k
@@ -442,15 +428,33 @@ class Lab2:
 
             start = start.next
   
+    def print_allocated_line(self, node):
+        # load or store
+            if (node.opcode == 0 or node.opcode == 1):
+                print(f"//{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}  =>   r{node.arg3.pr}")
+            # loadI
+            elif (node.opcode == 2):
+                print(f"//{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}  =>   r{node.arg3.pr}")
+            # arithop
+            elif (node.opcode >= 3 and node.opcode <= 7):
+                print(f"//{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}, r{node.arg2.pr}  =>   r{node.arg3.pr}")
+            # output
+            elif (node.opcode == 8):
+                print(f"//{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}")
+            # nop
+            elif (node.opcode == 9):
+                print(f"//{self.opcodes_list[node.opcode] : <7}")
+        
 
     def check_maps(self, line):
         print("[CHECK_MAPS]")
         # self.print_renamed_block()
         # self.IR_LIST.print_table(self.IR_LIST)
         self.IR_LIST.print_full_line(line)
-        print(line)
-        print("PR STACK:")
-        print(self.PRStack)
+        # print(line)
+        self.print_allocated_line(line)
+        # print("PR STACK:")
+        # print(self.PRStack)
         # head = self.IR_LIST.head
         # for each pr, p, if vrtopr[prtovr[p]] = p
         # print("VR TO PR:")  # vr is th index, pr is the value
@@ -458,14 +462,14 @@ class Lab2:
         # for each vr, v, if vrtopr[v] is defined, prtovr[vrtopr[v]] = v
         # print("PR TO VR:")  # pr is the index, vr is the value
         # print(self.PRToVR)
-        print("SPILL LOC:")
-        print(self.spill_loc)
-        print("VR TO SPILL LOC: ")
-        print(self.VRToSpillLoc)
-        print("pr_used_in_cur_op")
-        print(self.pr_used_in_cur_op)
-        print("IS SPILLED: ")
-        print(self.is_spilled)
+        # print("SPILL LOC:")
+        # print(self.spill_loc)
+        # print("VR TO SPILL LOC: ")
+        # print(self.VRToSpillLoc)
+        # print("pr_used_in_cur_op")
+        # print(self.pr_used_in_cur_op)
+        # print("IS SPILLED: ")
+        # print(self.is_spilled)
 
         for key, val in self.VRToPR.items():
             if (val in self.PRToVR and self.PRToVR[val] != key):

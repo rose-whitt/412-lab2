@@ -1,0 +1,51 @@
+Autotimer: using Scalability SLOCs blocks
+=======================================================================
+Testing submission from NetID 'comp412', name 'Comp 412'
+Archive name:  comp412.tar		5 trials per block
+
+--- building executable ---
+make: *** No rule to make target 'clean'.  Stop.
+cp script 412alloc
+--- built executable; should be ready to run ---
+
+Testing Scalability:
+
+	T001k.i:  	0.0083 seconds
+	T002k.i:  	0.0107 seconds
+	T004k.i:  	0.0121 seconds
+	T008k.i:  	0.0166 seconds
+	T016k.i:  	0.0314 seconds
+	T032k.i:  	0.0364 seconds
+	T064k.i:  	0.0804 seconds
+	T128k.i:  	0.1946 seconds
+
+Scaling score is 100
+Efficiency score is 100	(c , 0.19460400000000003)
+
+	Anomalous behavior: 1 inputs showed minimal growth
+
+finished timing run on submission comp412.tar
+=======================================================================
+Testing submission from NetID 'rew9', name 'Rose Whitt'
+Archive name:  rew9.tar		5 trials per block
+
+--- built executable; should be ready to run ---
+
+Testing Scalability:
+
+	T001k.i:  	0.2543 seconds
+	T002k.i:  	1.0636 seconds
+	T004k.i:  	2.7242 seconds
+	T008k.i:  	8.1684 seconds
+	T016k.i:  	28.871 seconds
+	T032k.i:  	timed out at 60 seconds.
+	T064k.i:  	timed out at 60 seconds.
+	T128k.i:  	timed out at 60 seconds.
+
+Scaling score is 0
+Efficiency score is 0	(python , 60.005974)
+
+	Anomalous behavior: 5 inputs showed minimal growth
+
+finished timing run on submission rew9.tar
+=======================================================================
