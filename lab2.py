@@ -88,23 +88,37 @@ class Lab2:
         self.stop_running = False
 
         self.is_rematerializable = []   # add loadIs from renaming
+        self.was_remat = [] # add loadIs when removed from  is_rematerializable
+        self.first_use = [] # debugging array to add op when its vr is the first use, therefore where id need to add its loadI
 
         print("//done with lab 2 init")
     
 
 
 
+    """
+    
+    """
     def allocate_use(self, op_num, node, line_num):
-        # print("//allocate use")
+        print("//allocate use")
+        self.IR_LIST.print_full_line(node)
 
-        if op_num == 1:
+        if op_num == 1: # store, called when opcode is load, an arithop, or a store in dif_alloc
             operand_i = node.arg1
-        if op_num == 2:
+        if op_num == 2: # loadi, called when opcode is an arithop in dif_alloc
+            print("CUNT CUNT CUNT: " + str(line_num) + ": " + str(op_num))
             operand_i = node.arg2
-        if op_num == 3:
+        if op_num == 3: # add, called when opcode is store in dif_alloc
             operand_i = node.arg3
         
         virt_reg = operand_i.vr
+        if (op_num == 1):
+            for x in self.is_rematerializable:
+                if (node.arg3.vr == x.arg3.vr and (node.arg1.pr == None or node.arg1.pr == -1)):
+                    print("[ALLOCATE_USE] (line " + str(node.line) + ": " + str(self.opcodes_list[node.opcode]) + ") may be declared in a loadI")
+                    self.first_use.append(node)
+        
+
 
         # not spilled, get pr
         if (virt_reg not in self.is_spilled):
@@ -149,6 +163,13 @@ class Lab2:
             operand_i = node.arg2
         if op_num == 3:
             operand_i = node.arg3
+        
+        # CHECK IF NODE IS REMATERIALIZABLE
+        if (node in self.is_rematerializable):
+            print("✅[RESTORE] node (" + str(node.line) + ": " + str(self.opcodes_list[node.opcode]) + ") is rematerializable!")
+        else:
+            print("[RESTORE] node (" + str(node.line) + ": " + str(self.opcodes_list[node.opcode]) + ") is not rematerializable!")
+
         
         virt_reg = operand_i.vr
 
@@ -270,6 +291,8 @@ class Lab2:
     
     def dif_alloc(self, k):
         print("//START OF DIF_ALLOC")
+
+        # -----------initialization-----------
         self.max_vr_num = self.get_max_vr()
         print("//MAX VR NUM: " + str(self.max_vr_num))
         self.k = k
@@ -297,40 +320,45 @@ class Lab2:
             self.reserved_reg = self.k
         print("// RESERVED REG: " + str(self.reserved_reg))
         print("// k after: " + str(self.k))
+        # -----------end initialization-----------
 
 
         head = self.IR_LIST.head
         line_num = 1
 
         while (head != None and self.stop_running != True):
-            # ----- USES --------
-            # print(head)
-            # print(self.IR_LIST.print_table(self.IR_LIST))
-            # print("VRToPR [")
-            # print(self.VRToPR)
-            # print("]")
-            # print("PRToVR [")
-            # print(self.PRToVR)
-            # print("]")
+            if (head in self.is_rematerializable):
+                print("✅[DIF_ALLOC] node (" + str(head.line) + ": " + str(self.opcodes_list[head.opcode]) + ") is rematerializable!")
+                # self.print_allocated_line(head)
+                # self.IR_LIST.print_full_line(head)
+                # head = head.next
+                # line_num += 1
+                # continue
+            self.print_allocated_line(head)
+            self.IR_LIST.print_full_line(head)
 
+
+
+
+            # ----- USES --------
             if (head.opcode == 0):  # load
-                self.allocate_use(1, head, line_num)
-                self.free_use(1, head)
+                self.allocate_use(1, head, line_num)    # allocate store
+                self.free_use(1, head)  # free store
             if (head.opcode >= 3 and head.opcode <= 7): # arithop
-                self.pr_used_in_cur_op = self.allocate_use(1, head, line_num)
-                self.allocate_use(2, head, line_num)
+                self.pr_used_in_cur_op = self.allocate_use(1, head, line_num)   # allocate store
+                self.allocate_use(2, head, line_num)    # allocate loadI
                 self.pr_used_in_cur_op = -1
-                self.free_use(1, head)
-                self.free_use(2, head)
+                self.free_use(1, head)  # free store
+                self.free_use(2, head)  # free loadi
             if (head.opcode == 1):  # store
-                self.pr_used_in_cur_op = self.allocate_use(1, head, line_num)
-                self.allocate_use(3, head, line_num)
+                self.pr_used_in_cur_op = self.allocate_use(1, head, line_num)   # allocate store
+                self.allocate_use(3, head, line_num)    # allocate add
                 self.pr_used_in_cur_op = -1
-                self.free_use(1, head)
-                self.free_use(3, head)
+                self.free_use(1, head)  # free store
+                self.free_use(3, head)  # free add
             
             # ----- DEFS --------
-            if (head.arg3.sr != None and head.opcode != 1):
+            if (head.arg3.sr != None and head.opcode != 1): # sr is not invalid and opcode is not a store
                 virt_reg = head.arg3.vr
                 # get phys reg
                 if (len(self.PRStack) > 0):
@@ -371,9 +399,9 @@ class Lab2:
 
     """
     def check_remat(self, head):
-        print(str(head.line) + ": " + self.opcodes_list[head.opcode] + " IS SPILLED:")
+        print(str(head.line) + ": opcode: " + self.opcodes_list[head.opcode] + "; IS_SPILLED:")
         print(self.is_spilled)
-        print(str(head.line) + ": " + self.opcodes_list[head.opcode] + " VR TO SPILL LOC:")
+        print(str(head.line) + ": opcode: " + self.opcodes_list[head.opcode] + "; VRTOSPILLLOC:")
         print(self.VRToSpillLoc)
 
    
@@ -675,6 +703,11 @@ def main():
     print()
     print("ALLOCATED TABLE:")
     lab2.IR_LIST.print_table(lab2.IR_LIST)
+    print()
+    print("first use:")
+    for x in lab2.first_use:
+        lab2.IR_LIST.print_full_line(x)
+
 
 
 if __name__ == "__main__":

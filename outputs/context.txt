@@ -123,3 +123,9 @@ alloc registers are wrong but the alloc output is correct
 5_alloc_cc5.i: output of "~comp412/students/lab2/lab2_ref -r 5 ./code_check_2/cc5.i"
 
 
+store checking for arg3.vr = remat vr; ex:
+    loadI  1028 => r0             // rematerialize vr4 => pr0 (RR)
+    store  r1 => r0               // vr5 => Mem[vr4]
+arithop look at arg1.vr = remat vr or arg2.vr = remat vr; ex:
+    loadI  32 => r0               // rematerialize vr6 => pr0
+    mult   r0, r0  => r1          // vr6, vr6 => vr10
