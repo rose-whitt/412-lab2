@@ -87,6 +87,8 @@ class Lab2:
 
         self.stop_running = False
 
+        self.is_rematerializable = []   # add loadIs from renaming
+
         print("//done with lab 2 init")
     
 
@@ -139,8 +141,8 @@ class Lab2:
 
 
     def handle_restore(self, op_num, node):
-        print("// " + str(node.line) + " [HANDLE_RESTORE]: " + self.opcodes_list[node.opcode])
-        self.IR_LIST.print_full_line(node)
+        # print("// " + str(node.line) + " [HANDLE_RESTORE]: " + self.opcodes_list[node.opcode])
+        # self.IR_LIST.print_full_line(node)
         if op_num == 1:
             operand_i = node.arg1
         if op_num == 2:
@@ -163,7 +165,7 @@ class Lab2:
         loadi_node.arg1.sr = self.VRToSpillLoc[virt_reg]
         loadi_node.arg3.pr = phys_reg
         self.IR_LIST.insert_before(loadi_node, node)
-        self.IR_LIST.print_full_line(loadi_node)
+        # self.IR_LIST.print_full_line(loadi_node)
 
 
         # create and add load
@@ -173,7 +175,7 @@ class Lab2:
         load_node.arg3.vr = virt_reg
         load_node.arg3.pr = phys_reg
         self.IR_LIST.insert_before(load_node, node)
-        self.IR_LIST.print_full_line(load_node)
+        # self.IR_LIST.print_full_line(load_node)
 
 
         # update maps
@@ -185,8 +187,8 @@ class Lab2:
         return phys_reg
     
     def handle_spill(self, node):
-        print("// " + str(node.line) + " [HANDLE_SPILL]: " + self.opcodes_list[node.opcode])
-        self.IR_LIST.print_full_line(node)
+        # print("// " + str(node.line) + " [HANDLE_SPILL]: " + self.opcodes_list[node.opcode])
+        # self.IR_LIST.print_full_line(node)
         # print("PRNU: ")
         # print(self.PRNU)
         # TODO: check that register has a next use
@@ -213,7 +215,7 @@ class Lab2:
         # print('[HANDLE SPILL]loadi_node.arg3.pr: ' + str(loadi_node.arg3.pr))
 
         self.IR_LIST.insert_before(loadi_node, node)
-        self.IR_LIST.print_full_line(loadi_node)
+        # self.IR_LIST.print_full_line(loadi_node)
 
         # self.IR_LIST.print_table(self.IR_LIST)
 
@@ -224,7 +226,7 @@ class Lab2:
         store_node.arg1.pr = pr_freed
         store_node.arg3.pr = self.reserved_reg
         self.IR_LIST.insert_before(store_node, node)
-        self.IR_LIST.print_full_line(store_node)
+        # self.IR_LIST.print_full_line(store_node)
 
         # self.IR_LIST.print_table(self.IR_LIST)
 
@@ -345,6 +347,8 @@ class Lab2:
             # if (error == -1):
             #     print("error: " + str(error))
 
+            self.check_remat(head)
+
             # iterate
             head = head.next
             line_num += 1
@@ -361,6 +365,16 @@ class Lab2:
     #🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈helpers🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈
     #🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈
     #🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈
+
+    """
+        Checks things possibly related to rematerialzaion
+
+    """
+    def check_remat(self, head):
+        print(str(head.line) + ": " + self.opcodes_list[head.opcode] + " IS SPILLED:")
+        print(self.is_spilled)
+        print(str(head.line) + ": " + self.opcodes_list[head.opcode] + " VR TO SPILL LOC:")
+        print(self.VRToSpillLoc)
 
    
     def op_defines(self, operand):
@@ -597,6 +611,8 @@ class Lab2:
                 #   OP.arg1 = self.op_defines(OP.arg1)
                 # if (OP.arg2.sr != None and OP.opcode != 0 and OP.opcode != 1 and OP.opcode != 2): # only ARITHOPs populate sr2
                 #   OP.arg2 = self.op_defines(OP.arg2)
+                if (OP.opcode == LOADI_OP):
+                    self.is_rematerializable.append(OP)
 
                 
                 if (OP.arg3.sr != None and OP.opcode != 1):  # all of them populate sr3, store's arg3 is a use, so dont define
@@ -649,210 +665,17 @@ def main():
     # lab2.print_renamed_block()
     # print("--------------")
     lab2.print_allocated_file()
-    # lab2.IR_LIST.print_table(lab2.IR_LIST)
+    print("IS SPILLED:")
+    print(lab2.is_spilled)
+    print("VR TO SPILL LOC:")
+    print(lab2.VRToSpillLoc)
+    print("IS REMATERIALIZABLE:")
+    for node in lab2.is_rematerializable:
+        lab2.IR_LIST.print_full_line(node)
+    print()
+    print("ALLOCATED TABLE:")
+    lab2.IR_LIST.print_table(lab2.IR_LIST)
 
 
 if __name__ == "__main__":
   main()
-
-
-
-
-    # """
-    # Allocation helper that resets the mark in each pr to zero
-    # """
-    # def reset_marks(self):
-    #     for pr in self.PRMark.keys():
-    #         self.PRMark[pr] = 0
-  
-    # """
-    # Allocation helper that gets the uses of the given OPCODE
-    # """
-    # def get_uses(self, line):
-    #     if (line.opcode == LOAD_OP):
-    #         uses = [line.arg1]
-    #         # print("//[get uses] load uses: " + str(line.arg1))
-            
-    #         return uses
-    #     elif (line.opcode == ADD_OP or line.opcode == SUB_OP or line.opcode == MULT_OP or line.opcode == LSHIFT_OP or line.opcode == RSHIFT_OP):
-    #         uses = [line.arg1, line.arg2]
-    #         # print("//[get uses] " + opcodes_list[line.opcode] + " uses: [" + str(line.arg1) + ", " + str(line.arg2) + "]")
-    #         return uses
-    #     elif (line.opcode == OUTPUT_OP):
-    #         uses = []
-    #         # print("//[get uses] output uses: " + str(uses))
-    #         return uses
-    #     elif (line.opcode == NOP_OP):
-    #         uses = []
-    #         # print("//[get uses] nop uses: " + str(uses))
-    #         return uses
-    #     elif (line.opcode == LOADI_OP):
-    #         uses = []
-    #         # print("//[get uses] loadI uses: " + str(uses))
-    #         return uses
-    #     elif (line.opcode == STORE_OP):
-    #         uses = [line.arg1, line.arg3]
-    #         # print("//[get uses] store uses: [" + str(line.arg1) + ", " + str(line.arg3) + "]")
-    #         return uses
-    #     else:
-    #         uses = []
-    #         # print("//[get uses] couldnt find opcode for opcode: " + str(line.opcode))
-    #         return uses
-
-      
-    
-    # """
-    # Allocation helper that gets the defs of the given OPCODE
-    # """
-    # def get_defs(self, line):
-    #     if (line.opcode == LOAD_OP):
-    #         defs = [line.arg3]
-    #         # print("//[get defs] load defs: [" + str(line.arg3) + "]")
-            
-    #         return defs
-    #     elif (line.opcode == ADD_OP or line.opcode == SUB_OP or line.opcode == MULT_OP or line.opcode == LSHIFT_OP or line.opcode == RSHIFT_OP):
-    #         defs = [line.arg3]
-    #         # print("//[get defs] " + opcodes_list[line.opcode] + " defs: [" + str(line.arg3) + "]")
-    #         return defs
-    #     elif (line.opcode == OUTPUT_OP):
-    #         defs = []
-    #         # print("//[get defs] output defs: " + str(defs))
-    #         return defs
-    #     elif (line.opcode == NOP_OP):
-    #         defs = []
-    #         # print("//[get defs] nop defs: " + str(defs))
-    #         return defs
-    #     elif (line.opcode == LOADI_OP):
-    #         defs = [line.arg3]
-    #         # print("//[get defs] loadI defs: [" + str(line.arg3) + "]")
-    #         return defs
-    #     elif (line.opcode == STORE_OP):
-    #         defs = []
-    #         # print("//[get defs] store defs: " + str(defs))
-    #         return defs
-    #     else:
-    #         defs = []
-    #         # print("//[get defs] couldnt find opcode for opcode: " + str(line.opcode))
-    #         return defs
-    
-
-
-
-    # def spill(self):
-    #     print("spill")
-
-  
-  
-    # def get_PR(self, vr, nu):
-    #     print("get_pr")
-    #     x = INVALID
-    #     # if stack is not empty, ie.e. there are free registers available
-    #     if (len(self.PRStack) > 0):
-    #         print("[GET_PR] stack empty, getting free reg")
-    #         x = self.PRStack.pop(0)
-    #     else:
-    #         # pick unmarked 
-    #         print("[GET_PR] stack not marked, picking unmarked to spill")
-    #         self.spill()
-    #     self.VRToPR[vr] = x
-    #     self.PRToVR[x] = nu
-    #     self.PRNU[x] = nu
-    #     return x
-
-  
-    # def restore(self, vr, pr):
-    #     print("restore")
-  
-    # def free_PR(self, pr):
-    #     print("free_pr")
-    #     self.VRToPR[self.PRToVR[pr]] = INVALID
-    #     self.PRToVR[pr] = INVALID
-    #     self.PRNU[pr] = INF
-    #     self.PRStack.insert(0, pr)  # cuz popping from index 0
-
-
-
- # """
-    # Main allocation funciton. Take the IR and allocate k registers to the code.
-
-    # Input:
-    #     - k: maximum number of physical registers on this machine
-
-    # """
-    # def allocate(self, k):
-    #     self.max_vr_num = self.get_max_vr()
-    #     print("MAX VR NUM: " + str(self.max_vr_num))
-    #     # self.VRToPR = {i: None for i in range(self.max_vr_num + 1)}    # vr is the index, pr is the value
-    #     # self.PRToVR = {i: None for i in range(k)}
-    #     # self.PRNU = {i: INF for i in range(k)}
-
-    #     print("in allocate")
-    #     vr = 0
-    #     while (vr < self.max_vr_num):
-    #         self.VRToPR[vr] = INVALID
-    #         self.VRToSpillLoc[vr] = INVALID
-    #         vr += 1
-
-    #     pr = 0
-    #     while (pr < k):
-    #         self.PRToVR[pr] = INVALID
-    #         self.PRNU[pr] = INF
-    #         self.PRMark[pr] = 0
-    #         self.PRStack.insert(0, pr)  # push(pr) in algo
-    #         pr += 1
-
-    #     line = self.IR_LIST.head
-    #     # iterate over block
-    #     while (line != None):
-    #         # clear the mark in each pr
-    #         self.reset_marks()
-            
-
-    #         # print("LINE1")
-    #         # print(line)
-    #         defs = self.get_defs(line)
-    #         uses = self.get_uses(line)
-
-    #         # allocate uses
-    #         for use in uses:
-    #             pr = self.VRToPR[use.vr]
-    #             # print("pr: " + str(pr))
-    #             if (pr == INVALID):
-    #                 print("gettin a pr")
-    #                 use.pr = self.get_PR(use.vr, use.nu)  # TODO: implement func
-    #                 # TODO: implement restore
-    #                 print("pr gotten: " + str(use.pr))
-    #                 self.restore(use.vr, use.pr)  # TODO: implement func
-    #             else:
-    #                 use.pr = pr
-                
-    #             self.PRMark[use.pr] = 1
-
-    #         # check if last use
-    #         for use in uses:
-    #             if (use.nu == INF and not self.PRToVR[use.pr] == INVALID):
-    #                 self.free_PR(use.pr)  # TODO: implement func
-            
-    #         # clear mark in each pr
-    #         self.reset_marks()
-
-    #         # allocate defs
-    #         for d in defs:
-    #             d.pr = self.get_PR(d.vr, d.nu)  # TODO: implement func
-    #             self.PRMark[d.pr] = 1
-            
-    #         # print("LINE2")
-    #         # print(line)
-    #         error = self.check_maps(line) # TODO: implement func
-    #         # if (error == -1):
-    #         #     return
-            
-    #         line = line.next
-
-    #     self.IR_LIST.print_table(self.IR_LIST)
-
-      
-
-      
-
-    

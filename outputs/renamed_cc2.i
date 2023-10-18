@@ -1,4 +1,3 @@
-
 loadI 0 => r30
 loadI 4 => r22
 load r30 => r18

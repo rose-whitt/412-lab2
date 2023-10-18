@@ -101,3 +101,25 @@ block6_alloc_5.i: output of "~comp412/students/lab2/lab2_ref -r 5 /clear/courses
 block6_sim_5.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 -i 1024 0 1 < ./outputs/block6_alloc_5.i -t"
 
 alloc registers are wrong but the alloc output is correct
+
+
+🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆passing all zill412!now trying to implement rematerializing!🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆
+
+5_remat_alloc_cc1.i: output of "~comp412/students/lab2/lab2_ref 5 ./code_check_2/cc1.i"
+5_remat_sim_cc1.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 < ./outputs/5_remat_alloc_cc1.i -t"
+
+5_remat_alloc_cc2.i: output of "~comp412/students/lab2/lab2_ref 5 ./code_check_2/cc2.i"
+5_remat_sim_cc2.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 -i 0 1 2 3 4 5 6 7 8 9 10 < ./outputs/5_remat_alloc_cc2.i -t"
+
+5_remat_alloc_cc3.i: output of "~comp412/students/lab2/lab2_ref 5 ./code_check_2/cc3.i"
+5_alloc_cc3.i: output of "~comp412/students/lab2/lab2_ref -r 5 ./code_check_2/cc3.i"
+
+
+5_remat_alloc_cc4.i: output of "~comp412/students/lab2/lab2_ref 5 ./code_check_2/cc4.i"
+5_alloc_cc4.i: output of "~comp412/students/lab2/lab2_ref -r 5 ./code_check_2/cc4.i"
+
+
+5_remat_alloc_cc5.i: output of "~comp412/students/lab2/lab2_ref 5 ./code_check_2/cc5.i"
+5_alloc_cc5.i: output of "~comp412/students/lab2/lab2_ref -r 5 ./code_check_2/cc5.i"
+
+
