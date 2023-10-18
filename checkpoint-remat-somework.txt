@@ -1,0 +1,53 @@
+
+
+
+wed oct 18 5:46pm
+RUNNING CODE CHECK 2
+
+
+
+
+
+[rew9@borax 412-lab2]$ ./code_check_2/CodeCheck2 ./412alloc
+Allocating and Testing ILOC Files
+in /storage-home/r/rew9/comp412/412-lab2
+ 
+Using allocator = ./412alloc
+for k = 7
+ 
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc1.i'       correctly executed 20 cycles
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc2.i'       correctly executed 67 cycles
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc3.i'       correctly executed 34 cycles
+In program '/clear/courses/comp412/students/lab2/code_check_2/cc4.i', value number 1 differs from the spec (977 vs 1).
+In program '/clear/courses/comp412/students/lab2/code_check_2/cc5.i', value number 1 differs from the spec (183 vs 128).
+In program '/clear/courses/comp412/students/lab2/code_check_2/cc5.i', value number 2 differs from the spec (164 vs 13).
+ 
+for k = 5
+ 
+In program '/clear/courses/comp412/students/lab2/code_check_2/cc1.i', value number 1 differs from the spec (96 vs 0).
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc2.i'       correctly executed 87 cycles
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc3.i'       correctly executed 78 cycles
+In program '/clear/courses/comp412/students/lab2/code_check_2/cc4.i', value number 1 differs from the spec (977 vs 1).
+In program '/clear/courses/comp412/students/lab2/code_check_2/cc5.i', value number 1 differs from the spec (183 vs 128).
+In program '/clear/courses/comp412/students/lab2/code_check_2/cc5.i', value number 2 differs from the spec (164 vs 13).
+ 
+[rew9@borax 412-lab2]$ 
+
+
+
+
+
+
+
+
+
+🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈
+
+
+
+
+
+RUNNING ZILL- 🙃 You passed  tests.
+
+
+

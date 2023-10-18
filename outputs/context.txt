@@ -144,5 +144,17 @@ i think when doing the restore of a remat you use the reserved reg (see: 5_remat
 4_remat_sim_slides.i: : output of "/clear/courses/comp412/students/lab2/sim -r 4 -i 128 1 2 3 < ./outputs/4_remat_alloc_slides.i -t"
 
 4_debug_alloc_slides.i: output of "./412alloc 4 ./test_inputs/slides.i"
-4_debug_sim_slides: output of "/clear/courses/comp412/students/lab2/sim -r 4 -i 128 1 2 3< ./outputs/4_debug_alloc_slides.i -t"
+4_debug_sim_slides: output of "/clear/courses/comp412/students/lab2/sim -r 4 -i 128 1 2 3 < ./outputs/4_debug_alloc_slides.i -t"
 
+--
+commit: #f21fb38, wed oct 18 @ 4pm
+5_debug_remat_alloc_cc3.i: output of "./412alloc 5 ./code_check_2/cc3.i"
+5_debug_remat_sim_cc3.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 -i 0 2 4 <  ./outputs/5_debug_remat_alloc_cc3.i -t"
+
+ran zill412- 412/522 passed
+block7 fail
+5_debug_remat_alloc_block7.i: output of "./412alloc 5 /clear/courses/comp412/students/ILOC/blocks/lab2/block7.i"
+5_debug_remat_sim_block7.i: output of  output of "/clear/courses/comp412/students/lab2/sim -r 5 <  ./outputs/5_debug_remat_alloc_block7.i -t"
+
+5_remat_alloc_block7.i: output of "~comp412/students/lab2/lab2_ref 5 /clear/courses/comp412/students/ILOC/blocks/lab2/block7.i"
+5_remat_sim_block7.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 < ./outputs/5_remat_alloc_block7.i -t"

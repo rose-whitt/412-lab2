@@ -18,7 +18,7 @@ loadI  65540 => r0            // 😎😎😎😎restore  Mem[65540] (vr3) => pr
 load   r0 => r0 
 add    r3, r0  => r0          // vr2, vr3 => vr1
 nop      
-loadI  65536 => r3            // restore  Mem[65536] (vr0) => pr 3
+loadI  65536 => r3            // 😎😎😎😎restore  Mem[65536] (vr0) => pr 3
 load   r3 => r3 
 store  r0 => r3               // vr1 => Mem[vr0]
 output 1024                   // as in the input
