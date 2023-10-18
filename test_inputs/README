@@ -1,3 +1,8 @@
+
+slides.i: from /clear/courses/comp412/students/lab2/; example used in allocator slides
+
+rename_ex.i: example used in rename slides
+----
 COMP 412, Lab 1
 
 This directory contains some small test programs (and T128k.i) 

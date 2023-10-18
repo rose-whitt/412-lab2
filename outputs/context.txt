@@ -122,10 +122,27 @@ alloc registers are wrong but the alloc output is correct
 5_remat_alloc_cc5.i: output of "~comp412/students/lab2/lab2_ref 5 ./code_check_2/cc5.i"
 5_alloc_cc5.i: output of "~comp412/students/lab2/lab2_ref -r 5 ./code_check_2/cc5.i"
 
-
-store checking for arg3.vr = remat vr; ex:
+--note--
+store checking for arg3.vr = remat arg3 vr; ex:
     loadI  1028 => r0             // rematerialize vr4 => pr0 (RR)
     store  r1 => r0               // vr5 => Mem[vr4]
-arithop look at arg1.vr = remat vr or arg2.vr = remat vr; ex:
+arithop look at arg1.vr = remat arg3 vr or arg2.vr = remat arg3 vr; ex:
     loadI  32 => r0               // rematerialize vr6 => pr0
     mult   r0, r0  => r1          // vr6, vr6 => vr10
+load look at arg1.vr = remat arg3 vr; ex:
+    loadI  0 => r0                // rematerialize vr30 => pr0
+    load   r0 => r1               // Mem[vr30] => vr18
+
+should add something to mark which remats have been used
+i think when doing the restore of a remat you use the reserved reg (see: 5_remat_alloc_cc2 lines 13, 18, 23, 28, 33, 38)
+--------
+
+4_alloc_slides.i: output of "~comp412/students/lab2/lab2_ref -r 4 ./test_inputs/slides.i"
+4_sim_slides.i: : output of "/clear/courses/comp412/students/lab2/sim -r 4 -i 128 1 2 3 < ./outputs/4_alloc_slides.i -t"
+
+4_remat_alloc_slides.i: output of "~comp412/students/lab2/lab2_ref 4 ./test_inputs/slides.i"
+4_remat_sim_slides.i: : output of "/clear/courses/comp412/students/lab2/sim -r 4 -i 128 1 2 3 < ./outputs/4_remat_alloc_slides.i -t"
+
+4_debug_alloc_slides.i: output of "./412alloc 4 ./test_inputs/slides.i"
+4_debug_sim_slides: output of "/clear/courses/comp412/students/lab2/sim -r 4 -i 128 1 2 3< ./outputs/4_debug_alloc_slides.i -t"
+

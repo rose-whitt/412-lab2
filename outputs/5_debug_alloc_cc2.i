@@ -72,7 +72,24 @@ loadI   0  =>   r1
 store   r3  =>   r1
 output  0
 
+// IS REMATERIALIZABLE:
+//79       loadI      | 0     -1    -1    inf   | -1    -1    -1    inf   | 0     1     1     31   
+//7        loadI      | 4     -1    -1    inf   | -1    -1    -1    inf   | 1     22    1     3    
+//6        loadI      | 0     -1    -1    inf   | -1    -1    -1    inf   | 0     30    0     2    
 
+// FIRST USE:
+//8        load       | 0     30    0     3     | -1    -1    -1    inf   | 10    18    2     21   
+//9        add        | 0     30    0     inf   | 1     22    1     5     | 0     29    0     4    // adds this one twice (below) bc i dont break out of rematerializable loop when found and this add contains two of the remat values
+//9        add        | 0     30    0     inf   | 1     22    1     5     | 0     29    0     4    // ^
+//11       add        | 0     29    0     inf   | 1     22    1     7     | 0     28    0     6    // shouldnt be here bc the remat VR is defined before (aka on the right side) as well as other reg
+//15       add        | 0     28    0     inf   | 1     22    1     9     | 0     27    0     8    // shouldnt be here bc the remat VR is defined before (aka on the right side) as well as other reg
+//19       add        | 0     27    0     inf   | 1     22    1     11    | 0     26    0     10   
+//23       add        | 0     26    0     inf   | 1     22    1     13    | 0     25    0     12   
+//27       add        | 0     25    0     inf   | 1     22    1     15    | 0     24    0     14   
+//31       add        | 0     24    0     inf   | 1     22    1     17    | 0     23    0     16   
+//35       add        | 0     23    0     inf   | 1     22    1     19    | 0     21    0     18   
+//39       add        | 0     21    0     inf   | 1     22    1     inf   | 0     20    1     20   
+//80       store      | 20    0     3     inf   | -1    -1    -1    inf   | 0     1     1     inf
 
 // after rename:
 //index    line     OPCODE     | SR    VR    PR    NU    | SR    VR    PR    NU    | SR    VR    PR    NU    | NEXT OP         
