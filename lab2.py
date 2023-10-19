@@ -97,7 +97,7 @@ class Lab2:
     
     """
     def allocate_use(self, op_num, node, line_num):
-        self.IR_LIST.print_full_line(node)
+        # self.IR_LIST.print_full_line(node)
 
         if op_num == 1: # store, called when opcode is load, an arithop, or a store in dif_alloc
             operand_i = node.arg1
@@ -242,9 +242,12 @@ class Lab2:
 
         node = self.IR_LIST.head
 
+        ret = ""
+
         while (node != None):
             # load or store
             if (node.opcode == 0 or node.opcode == 1):
+                temp = str()
                 print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}  =>   r{node.arg3.pr}")
             # loadI
             elif (node.opcode == 2):
@@ -290,8 +293,8 @@ class Lab2:
         line_num = 1
 
         while (head != None and self.stop_running != True):
-            self.print_allocated_line(head)
-            self.IR_LIST.print_full_line(head)
+            # self.print_allocated_line(head)
+            # self.IR_LIST.print_full_line(head)
 
 
             # ----- USES --------
