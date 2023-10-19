@@ -141,11 +141,11 @@ class LinkedList:
         # print("new node line num: " + str(new_node.line))
         # print("aft node line num: " + str(aft_node.line))
         # NOTE: this doesnt seem to change the print_allocated_file output, but it does change the actual IR 
-        new_node.line = aft_node.line
-        start = aft_node
-        while (start != None):
-            start.line += 1
-            start = start.next
+        # new_node.line = aft_node.line
+        # start = aft_node
+        # while (start != None):
+        #     start.line += 1
+        #     start = start.next
 
 
         self.length += 1

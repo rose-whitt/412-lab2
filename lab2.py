@@ -580,8 +580,8 @@ class Lab2:
 
 
 def main():
-    pr = cProfile.Profile()
-    pr.enable() 
+    # pr = cProfile.Profile()
+    # pr.enable() 
     lab2 = Lab2()
     # TODO: -h flag
 
@@ -592,12 +592,13 @@ def main():
         # lab2.allocate(int(sys.argv[1]))
         lab2.dif_alloc(int(sys.argv[1]))
         lab2.print_allocated_file()
-    pr.disable()
-    s = StringIO()
-    sortby = 'cumulative'
-    ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
-    ps.print_stats()
-    sys.stdout.write(s.getvalue())
+        # lab2.IR_LIST.print_table(lab2.IR_LIST)
+    # pr.disable()
+    # s = StringIO()
+    # sortby = 'cumulative'
+    # ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+    # ps.print_stats()
+    # sys.stdout.write(s.getvalue())
 
 
 
