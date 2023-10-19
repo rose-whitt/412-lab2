@@ -15,19 +15,19 @@ in /storage-home/r/rew9/comp412/412-lab2
 Using allocator = ./412alloc
 for k = 7
  
-Program '/clear/courses/comp412/students/lab2/code_check_2/cc1.i'       correctly executed 20 cycles
-Program '/clear/courses/comp412/students/lab2/code_check_2/cc2.i'       correctly executed 67 cycles
-Program '/clear/courses/comp412/students/lab2/code_check_2/cc3.i'       correctly executed 34 cycles
-Program '/clear/courses/comp412/students/lab2/code_check_2/cc4.i'       correctly executed 5544 cycles
-Program '/clear/courses/comp412/students/lab2/code_check_2/cc5.i'       correctly executed 160 cycles
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc1.i'       correctly executed 20 cycles    // ref: 20
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc2.i'       correctly executed 67 cycles    // ref: 65
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc3.i'       correctly executed 34 cycles    // ref: 64
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc4.i'       correctly executed 5544 cycles  // ref: 5544
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc5.i'       correctly executed 160 cycles   // ref: 144
  
 for k = 5
  
-Program '/clear/courses/comp412/students/lab2/code_check_2/cc1.i'       correctly executed 21 cycles
-Program '/clear/courses/comp412/students/lab2/code_check_2/cc2.i'       correctly executed 87 cycles
-Program '/clear/courses/comp412/students/lab2/code_check_2/cc3.i'       correctly executed 80 cycles
-Program '/clear/courses/comp412/students/lab2/code_check_2/cc4.i'       correctly executed 6204 cycles
-Program '/clear/courses/comp412/students/lab2/code_check_2/cc5.i'       correctly executed 174 cycles
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc1.i'       correctly executed 21 cycles    // ref: 19
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc2.i'       correctly executed 87 cycles    // ref: 91
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc3.i'       correctly executed 80 cycles    // ref: 87
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc4.i'       correctly executed 6204 cycles  // ref: 6204
+Program '/clear/courses/comp412/students/lab2/code_check_2/cc5.i'       correctly executed 174 cycles   // ref: 156
  
 
 

@@ -3,7 +3,8 @@ from IR_List import *
 import lab1
 import sys
 import math
-
+import cProfile, pstats
+from io import StringIO
 
 
 
@@ -86,10 +87,7 @@ class Lab2:
         self.stop_running = False
 
         self.is_rematerializable = []   # add loadIs from renaming
-        self.was_remat = [] # add loadIs when removed from  is_rematerializable
-        self.first_use = [] # debugging array to add op when its vr is the first use, therefore where id need to add its loadI
         self.remat_VRs = {} # map of just the vr of the rematerializable vrs (loadi defined) to the constant of the loadi
-        self.old_remat_VRs = []
         self.remat_spilled = [] # stores the spilled rematerializable vrs for restoring
     
 
@@ -246,23 +244,33 @@ class Lab2:
 
         while (node != None):
             # load or store
-            if (node.opcode == 0 or node.opcode == 1):
-                temp = str()
-                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}  =>   r{node.arg3.pr}")
+            if (node.opcode == LOAD_OP or node.opcode == STORE_OP):
+                temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1.pr) + "  =>   r" + str(node.arg3.pr) + "\n"
+                ret += temp
+                # print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}  =>   r{node.arg3.pr}")
             # loadI
-            elif (node.opcode == 2):
-                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}  =>   r{node.arg3.pr}")
+            elif (node.opcode == LOADI_OP):
+                temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1.sr) + "  =>   r" + str(node.arg3.pr) + "\n"
+                ret += temp
+                # print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}  =>   r{node.arg3.pr}")
             # arithop
-            elif (node.opcode >= 3 and node.opcode <= 7):
-                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}, r{node.arg2.pr}  =>   r{node.arg3.pr}")
+            elif (node.opcode >= ADD_OP and node.opcode <= RSHIFT_OP):
+                temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1.pr) + ", r" + str(node.arg2.pr) + "  =>   r" + str(node.arg3.pr) + "\n"
+                ret += temp
+                # print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}, r{node.arg2.pr}  =>   r{node.arg3.pr}")
             # output
-            elif (node.opcode == 8):
-                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}")
-            # nop
-            elif (node.opcode == 9):
-                print(f"{self.opcodes_list[node.opcode] : <7}")
+            elif (node.opcode == OUTPUT_OP):
+                temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1.sr) + "\n"
+                ret += temp
+                # print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}")
+            # nop- WONT HAPPEN BC OF MY RENAME BUT JUST IN CASE
+            elif (node.opcode == NOP_OP):
+                temp = self.opcodes_list[node.opcode] + "\n"
+                ret += temp
+                # print(f"{self.opcodes_list[node.opcode] : <7}")
             
             node = node.next
+        print(ret)
     
     def dif_alloc(self, k):
 
@@ -463,11 +471,8 @@ class Lab2:
             self.IR_LIST.print_full_line(x)
         print("REMAT VRS:")
         print(self.remat_VRs)
-        print("OLD REMAT VRS:")
-        print(self.old_remat_VRs)
-        print("FIRST USE:")
-        for x in self.first_use:
-            self.IR_LIST.print_full_line(x)
+
+
 
         print("VR TO PR:")  # vr is th index, pr is the value
         print(self.VRToPR)
@@ -575,16 +580,24 @@ class Lab2:
 
 
 def main():
-  lab2 = Lab2()
-  # TODO: -h flag
+    pr = cProfile.Profile()
+    pr.enable() 
+    lab2 = Lab2()
+    # TODO: -h flag
 
-  lab2.rename()
-  if (sys.argv[1] == '-x'):
-    lab2.print_renamed_block()
-  elif (int(sys.argv[1]) >= 3 and int(sys.argv[1]) <= 64):
-    # lab2.allocate(int(sys.argv[1]))
-    lab2.dif_alloc(int(sys.argv[1]))
-    lab2.print_allocated_file()
+    lab2.rename()
+    if (sys.argv[1] == '-x'):
+        lab2.print_renamed_block()
+    elif (int(sys.argv[1]) >= 3 and int(sys.argv[1]) <= 64):
+        # lab2.allocate(int(sys.argv[1]))
+        lab2.dif_alloc(int(sys.argv[1]))
+        lab2.print_allocated_file()
+    pr.disable()
+    s = StringIO()
+    sortby = 'cumulative'
+    ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+    ps.print_stats()
+    sys.stdout.write(s.getvalue())
 
 
 
