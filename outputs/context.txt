@@ -158,3 +158,5 @@ block7 fail
 
 5_remat_alloc_block7.i: output of "~comp412/students/lab2/lab2_ref 5 /clear/courses/comp412/students/ILOC/blocks/lab2/block7.i"
 5_remat_sim_block7.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 < ./outputs/5_remat_alloc_block7.i -t"
+
+block 10 timed out

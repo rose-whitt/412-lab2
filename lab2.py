@@ -90,7 +90,8 @@ class Lab2:
         self.is_rematerializable = []   # add loadIs from renaming
         self.was_remat = [] # add loadIs when removed from  is_rematerializable
         self.first_use = [] # debugging array to add op when its vr is the first use, therefore where id need to add its loadI
-
+        self.remat_VRs = [] # list of just the vr of the rematerializable vrs
+        self.old_remat_VRs = []
         print("//done with lab 2 init")
     
 
@@ -110,45 +111,41 @@ class Lab2:
         
         virt_reg = operand_i.vr
 
-        # check rematerialization
-        opcode = node.opcode
-        if (opcode == STORE_OP):   
-            for x in self.is_rematerializable:    # allocate_use allocates the arg1 PR for store
-                if (node.arg3.vr == x.arg3.vr):
-                    print("//CUNT")
-                    if (node.arg3.vr == x.arg3.vr and (node.arg1.pr == None or node.arg1.pr == -1)):
-                        print("//[ALLOCATE_USE] (line " + str(node.line) + ": " + str(self.opcodes_list[node.opcode]) + ") may be declared in a loadI")
-                        self.first_use.append(node)
-        if (opcode >= ADD_OP and opcode<= RSHIFT_OP):   # ARITHOP
-            for x in self.is_rematerializable:   # allocate_use allocates the arg1, arg2, and arg3 PRs
-                if ((node.arg1.vr == x.arg3.vr or node.arg2.vr == x.arg3.vr)):
-                    print("//BITCH")
-                    if ((node.arg1.vr == x.arg3.vr or node.arg2.vr == x.arg3.vr) and (node.arg1.pr == None or node.arg1.pr == -1) and (node.arg2.pr == None or node.arg2.pr == -1) and (node.arg3.pr == None or node.arg3.pr == -1)):
-                        which_arg = -1
-                        if (node.arg1.vr == x.arg3.vr):
-                            which_arg = 1
-                        else:
-                            which_arg = 2
-                        print("//[ALLOCATE_USE] (line " + str(node.line) + ": " + str(self.opcodes_list[node.opcode]) + ", arg" + str(which_arg) + ") may be declared in a loadI")
-                        self.first_use.append(node)
-                        break
-        if (opcode == LOAD_OP):
-            for x in self.is_rematerializable: # allocate_use allocates the arg1 and arg3 PRs
-                if ((node.arg1.vr == x.arg3.vr)):
-                    print("//PUSSY")
-                    if ((node.arg1.vr == x.arg3.vr) and (node.arg1.pr == None or node.arg1.pr == -1) and (node.arg3.pr == None or node.arg3.pr == -1)):
-                        print("//[ALLOCATE_USE] (line " + str(node.line) + ": " + str(self.opcodes_list[node.opcode]) + ") may be declared in a loadI")
-                        self.first_use.append(node)
+        # # check rematerialization
+        # opcode = node.opcode
+        # if (opcode == STORE_OP):   
+        #     for x in self.is_rematerializable:    # allocate_use allocates the arg1 PR for store
+        #         if (node.arg3.vr == x.arg3.vr):
+        #             print("//CUNT")
+        #             if (node.arg3.vr == x.arg3.vr and (node.arg1.pr == None or node.arg1.pr == -1)):
+        #                 print("//[ALLOCATE_USE] (line " + str(node.line) + ": " + str(self.opcodes_list[node.opcode]) + ") may be declared in a loadI")
+        #                 self.first_use.append(node)
+        # if (opcode >= ADD_OP and opcode<= RSHIFT_OP):   # ARITHOP
+        #     if (node.arg1.vr in self.remat_VRs):
+        #         if (self.VRToPR[node.arg1.vr] == None or self.VRToPR[node.arg1.vr] == -1):
+        #             print("ARITHOP ARG1 USING REMAT VR FOR FIRST TIME!")
+        #             print("//[ALLOCATE_USE] (line " + str(node.line) + ": " + str(self.opcodes_list[node.opcode]) + ", arg1 may be declared in a loadI")
+        #             self.first_use.append(node)
+        #     if (node.arg2.vr in self.remat_VRs):
+        #         if (self.VRToPR[node.arg2.vr] == None or self.VRToPR[node.arg2.vr] == -1):
+        #             print("ARITHOP ARG2 USING REMAT VR FOR FIRST TIME!")
+        #             print("//[ALLOCATE_USE] (line " + str(node.line) + ": " + str(self.opcodes_list[node.opcode]) + ", arg1 may be declared in a loadI")
+        #             self.first_use.append(node)
+        # if (opcode == LOAD_OP):
+        #     for x in self.is_rematerializable: # allocate_use allocates the arg1 and arg3 PRs
+        #         if ((node.arg1.vr == x.arg3.vr)):
+        #             print("//PUSSY")
+        #             if ((node.arg1.vr == x.arg3.vr) and (node.arg1.pr == None or node.arg1.pr == -1) and (node.arg3.pr == None or node.arg3.pr == -1)):
+        #                 print("//[ALLOCATE_USE] (line " + str(node.line) + ": " + str(self.opcodes_list[node.opcode]) + ") may be declared in a loadI")
+        #                 self.first_use.append(node)
 
 
-        
-
-        
-
+        # if (virt_reg in self.remat_VRs):
+        #     print("[ALLOCATE_USE] VR IN REMAT VRS")
 
         # not spilled, get pr
-        # virt reg comes from node which comes from head in while loop in dif_alloc
-        if (virt_reg not in self.is_spilled):
+        # virt reg comes from node, which comes from head in while loop in dif_alloc
+        if (virt_reg not in self.is_spilled):   # virtual register of cur operation not spilled
             phys_reg = self.VRToPR[virt_reg]
             operand_i.pr = phys_reg
             self.PRNU[phys_reg] = operand_i.nu
@@ -193,6 +190,7 @@ class Lab2:
             operand_i = node.arg2
         if op_num == 3:
             operand_i = node.arg3
+        
         
         # check if node's vr rematerialization
         mark_remat = False
@@ -245,6 +243,8 @@ class Lab2:
         
         if (mark_remat):
             print("//✅✅✅✅[RESTORE] adding original loadI cuz vr is rematerializable! orig loadi is:")
+            cp_orig_loadi = orig_loadi
+
             self.IR_LIST.print_full_line(orig_loadi)
             self.IR_LIST.insert_before(orig_loadi, node)    # insert orig loadI before node
         else:
@@ -429,6 +429,11 @@ class Lab2:
             self.reserved_reg = self.k
         print("// RESERVED REG: " + str(self.reserved_reg))
         print("// k after: " + str(self.k))
+
+        # get remat VRs
+        for x in self.is_rematerializable:
+            self.remat_VRs.append(x.arg3.vr)
+
         # -----------end initialization-----------
 
 
@@ -440,11 +445,56 @@ class Lab2:
                 print("//✅[DIF_ALLOC] node (" + str(head.line) + ": " + str(self.opcodes_list[head.opcode]) + ") is rematerializable!")
                 # self.print_allocated_line(head)
                 # self.IR_LIST.print_full_line(head)
+                # # TODO: should i adjust the list?
                 # head = head.next
+                # continue
                 # line_num += 1
                 # continue
             self.print_allocated_line(head)
             self.IR_LIST.print_full_line(head)
+
+            if (head.opcode == STORE_OP):
+                print("ROSE")
+                print(self.VRToPR)
+                if (head.arg3.vr in self.remat_VRs):
+                    print("VR: " + str(head.arg3.vr))
+                    if (self.VRToPR[head.arg3.vr] == None or self.VRToPR[head.arg3.vr] == -1):
+                        print("STORE ARG3 USING REMAT VR FOR FIRST TIME!")
+                        self.first_use.append(head)
+                        self.remat_VRs.remove(head.arg3.vr)
+                        self.old_remat_VRs.append(head.arg3.vr)
+            elif (head.opcode >= ADD_OP and head.opcode <= RSHIFT_OP):
+                print("HI")
+                print(self.VRToPR)
+                if (head.arg1.vr in self.remat_VRs):
+                    print("VR: " + str(head.arg1.vr))
+                    if (self.VRToPR[head.arg1.vr] == None or self.VRToPR[head.arg1.vr] == -1):
+                        print("ARITHOP ARG1 USING REMAT VR FOR FIRST TIME!")
+                        self.first_use.append(head)
+                        self.remat_VRs.remove(head.arg1.vr)
+                        self.old_remat_VRs.append(head.arg1.vr)
+                if (head.arg2.vr in self.remat_VRs and head.arg2.vr != head.arg1.vr):
+                    print("VR: " + str(head.arg2.vr))
+                    if (self.VRToPR[head.arg2.vr] == None or self.VRToPR[head.arg2.vr] == -1):
+                        print("ARITHOP ARG2 USING REMAT VR FOR FIRST TIME!")
+                        self.first_use.append(head)
+                        self.remat_VRs.remove(head.arg2.vr)
+                        self.old_remat_VRs.append(head.arg2.vr)
+                        self.handle_restore(2, head)
+            elif (head.opcode == LOAD_OP):
+                print("POO")
+                print(self.VRToPR)
+                if (head.arg1.vr in self.remat_VRs):
+                    print("VR: " + str(head.arg1.vr))
+                    if (self.VRToPR[head.arg1.vr] == None or self.VRToPR[head.arg1.vr] == -1):
+                        print("LOAD ARG1 USING REMAT VR FOR FIRST TIME!")
+                        self.first_use.append(head)
+                        self.remat_VRs.remove(head.arg1.vr)
+                        self.old_remat_VRs.append(head.arg1.vr)
+
+                        
+
+
 
             # ----- USES --------
             if (head.opcode == 0):  # load
@@ -477,11 +527,11 @@ class Lab2:
                 self.PRToVR[phys_reg] = virt_reg
                 self.PRNU[phys_reg] = head.arg3.nu
             
-            # error = self.check_maps(head)
-            # if (error == -1):
-            #     print("error: " + str(error))
+            error = self.check_maps(head)
+            if (error == -1):
+                print("error: " + str(error))
 
-            # self.check_remat(head)
+            self.check_remat(head)
 
             # iterate
             head = head.next
@@ -608,15 +658,28 @@ class Lab2:
         self.IR_LIST.print_full_line(line)
         # print(line)
         self.print_allocated_line(line)
-        # print("PR STACK:")
-        # print(self.PRStack)
+
+        print("IS REMATERIALIZABLE:")
+        for x in self.is_rematerializable:
+            self.IR_LIST.print_full_line(x)
+        print("REMAT VRS:")
+        print(self.remat_VRs)
+        print("OLD REMAT VRS:")
+        print(self.old_remat_VRs)
+        print("FIRST USE:")
+        for x in self.first_use:
+            self.IR_LIST.print_full_line(x)
+
+        print("VR TO PR:")  # vr is th index, pr is the value
+        print(self.VRToPR)
+        print("PR STACK:")
+        print(self.PRStack)
         # head = self.IR_LIST.head
         # for each pr, p, if vrtopr[prtovr[p]] = p
-        # print("VR TO PR:")  # vr is th index, pr is the value
-        # print(self.VRToPR)
+        
         # for each vr, v, if vrtopr[v] is defined, prtovr[vrtopr[v]] = v
-        # print("PR TO VR:")  # pr is the index, vr is the value
-        # print(self.PRToVR)
+        print("PR TO VR:")  # pr is the index, vr is the value
+        print(self.PRToVR)
         # print("SPILL LOC:")
         # print(self.spill_loc)
         # print("VR TO SPILL LOC: ")
@@ -812,10 +875,14 @@ def main():
     for node in lab2.is_rematerializable:
         lab2.IR_LIST.print_full_line(node)
     print()
+    print("// remat VRs:")
+    print(lab2.remat_VRs)
     print("//first use:")
     for x in lab2.first_use:
         lab2.IR_LIST.print_full_line(x)
     print("//" + str(lab2.IR_LIST.length))
+    # print("// vr to pr")
+    # print(lab2.VRToPR)
     print("//DONE")
 
 

@@ -47,7 +47,3718 @@ In program '/clear/courses/comp412/students/lab2/code_check_2/cc5.i', value numb
 
 
 
-RUNNING ZILL- 🙃 You passed  tests.
+RUNNING ZILL- 🙃 You passed 364/522 tests.
 
 
+
+Assuming your lab2 executable is at ./412alloc
+Run tests with register: 5
+Running 522 tests...
+❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block7.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+- Your output:
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block12.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 15.28% higher than number of cycles used by the reference.
+Your cycles:	166
+Ref cycles:	144
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block9.i passed!
+❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block8.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2, 110]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block6.i passed!
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block11.i passed!
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block5.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 75.31% lower than number of cycles used by the reference.
+Your cycles:	20
+Ref cycles:	81
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 66.67% lower than number of cycles used by the reference.
+Your cycles:	10
+Ref cycles:	30
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 75.00% lower than number of cycles used by the reference.
+Your cycles:	9
+Ref cycles:	36
+❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[3, 4, 6, 11]
+- Your output:
+[1, 3, 1030, 0]
+❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block10.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/unrelated_stores.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[200, 400, 800]
+- Your output:
+[200, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/TestTiebreaking.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0]
+- Your output:
+[8208, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-4.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 22.22% higher than number of cycles used by the reference.
+Your cycles:	22
+Ref cycles:	18
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/witt-2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/yanxinlu.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/witt-3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 9.52% lower than number of cycles used by the reference.
+Your cycles:	19
+Ref cycles:	21
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.88% lower than number of cycles used by the reference.
+Your cycles:	16
+Ref cycles:	17
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/prasad.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.35% lower than number of cycles used by the reference.
+Your cycles:	22
+Ref cycles:	23
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/simple.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/simple_alternating.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/trickystores.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/jwc.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[8, 4032]
+- Your output:
+[0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 20.00% higher than number of cycles used by the reference.
+Your cycles:	12
+Ref cycles:	10
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/witt-1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s31_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s61_test2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 66.67% lower than number of cycles used by the reference.
+Your cycles:	10
+Ref cycles:	30
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s50_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 32.26% higher than number of cycles used by the reference.
+Your cycles:	41
+Ref cycles:	31
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 15.38% higher than number of cycles used by the reference.
+Your cycles:	15
+Ref cycles:	13
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_integersum.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[210, 210]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_lshift2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_fibonacci.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[6765, 6765]
+- Your output:
+[6765, 1]
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test3.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[5, 1]
+- Your output:
+[0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s41_test1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 28.57% higher than number of cycles used by the reference.
+Your cycles:	45
+Ref cycles:	35
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[32, 48, 48, 0]
+- Your output:
+[0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[512, 516, 520]
+- Your output:
+[0, 524, 528]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 107.69% higher than number of cycles used by the reference.
+Your cycles:	27
+Ref cycles:	13
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s61_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 15.38% lower than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	13
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s31_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 79.17% lower than number of cycles used by the reference.
+Your cycles:	5
+Ref cycles:	24
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_mult3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 14.29% higher than number of cycles used by the reference.
+Your cycles:	24
+Ref cycles:	21
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[5]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2]
+- Your output:
+[1]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s61_test1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1024, 1032, 1036, 2056]
+- Your output:
+[0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 77.78% higher than number of cycles used by the reference.
+Your cycles:	16
+Ref cycles:	9
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_sub5.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 60.00% lower than number of cycles used by the reference.
+Your cycles:	6
+Ref cycles:	15
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block6.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 8.33% lower than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	12
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 52.63% higher than number of cycles used by the reference.
+Your cycles:	29
+Ref cycles:	19
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s38_letters.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 30.77% lower than number of cycles used by the reference.
+Your cycles:	9
+Ref cycles:	13
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s56_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 30.77% lower than number of cycles used by the reference.
+Your cycles:	9
+Ref cycles:	13
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_sum.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_reverse.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test0.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s08_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 79.63% lower than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	54
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_factorial.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_add1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_largeRegTest.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 2112.50% higher than number of cycles used by the reference.
+Your cycles:	177
+Ref cycles:	8
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_block1ZeroTest.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s38_squares.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
+Your cycles:	8
+Ref cycles:	6
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s42_test1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[3, 4, 6, 11]
+- Your output:
+[1, 3, 1030, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block5.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test6.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1032, 8, 1065024, 16]
+- Your output:
+[1032, 8, 1065024, 8]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s41_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 40.00% higher than number of cycles used by the reference.
+Your cycles:	14
+Ref cycles:	10
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s20_test4.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 16.67% higher than number of cycles used by the reference.
+Your cycles:	56
+Ref cycles:	48
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s56_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 13.73% higher than number of cycles used by the reference.
+Your cycles:	58
+Ref cycles:	51
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s20_test2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[15]
+- Your output:
+[9]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s61_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 15.38% lower than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	13
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 9.09% lower than number of cycles used by the reference.
+Your cycles:	20
+Ref cycles:	22
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s20_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 92.86% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	56
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[8, 2, 36, 9, 32, 8, 25]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s38_round.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 4, 8, 12, 16]
+- Your output:
+[0, 0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test2.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.53% higher than number of cycles used by the reference.
+Your cycles:	21
+Ref cycles:	19
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 12.50% higher than number of cycles used by the reference.
+Your cycles:	72
+Ref cycles:	64
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 20]
+- Your output:
+[0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 75.31% lower than number of cycles used by the reference.
+Your cycles:	20
+Ref cycles:	81
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test3.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[45]
+- Your output:
+[21]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 66.67% lower than number of cycles used by the reference.
+Your cycles:	10
+Ref cycles:	30
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 15.28% higher than number of cycles used by the reference.
+Your cycles:	166
+Ref cycles:	144
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 98.44% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	256
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test7.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 14.63% higher than number of cycles used by the reference.
+Your cycles:	47
+Ref cycles:	41
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test5.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s10_test4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4032]
+- Your output:
+[-1889482300]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0]
+- Your output:
+[0, 1024]
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test3.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[3, 4, 6]
+- Your output:
+[1, 3, 1030]
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s20_test3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s39_test2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_allOpsTest.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[8]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test4.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.98% higher than number of cycles used by the reference.
+Your cycles:	91
+Ref cycles:	82
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 83.33% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	24
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+- Your output:
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s56_test2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 64.49% lower than number of cycles used by the reference.
+Your cycles:	49
+Ref cycles:	138
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.26% lower than number of cycles used by the reference.
+Your cycles:	18
+Ref cycles:	19
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s08_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s31_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[5050]
+- Your output:
+[103]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s08_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s39_test5.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_factorial.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[3628800]
+- Your output:
+[-621647104]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 88.24% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	34
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s41_test2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[15]
+- Your output:
+[9]
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test3.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2, 110]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test5.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s08_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_rshift4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_copy.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 73.53% lower than number of cycles used by the reference.
+Your cycles:	9
+Ref cycles:	34
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_Factorial10Test.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[90, 720, 5040, 30240, 151200, 604800, 1814400, 3628800, 3628800]
+- Your output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 35.00% higher than number of cycles used by the reference.
+Your cycles:	27
+Ref cycles:	20
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test1.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_sumarray.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 85.71% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	28
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test3.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1000001, 1100011, 1110111, 1111111, 1110111, 1100011, 1000001]
+- Your output:
+[10]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s62_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s10_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 28.57% higher than number of cycles used by the reference.
+Your cycles:	45
+Ref cycles:	35
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s39_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 69.23% lower than number of cycles used by the reference.
+Your cycles:	12
+Ref cycles:	39
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block0.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 20.83% lower than number of cycles used by the reference.
+Your cycles:	19
+Ref cycles:	24
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 22.22% higher than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	9
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.88% lower than number of cycles used by the reference.
+Your cycles:	16
+Ref cycles:	17
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.00% higher than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	10
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s56_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s10_test3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 37.50% higher than number of cycles used by the reference.
+Your cycles:	22
+Ref cycles:	16
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test2.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.71% higher than number of cycles used by the reference.
+Your cycles:	31
+Ref cycles:	28
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0]
+- Your output:
+[1028, 0, 0, 0, 1065008, 370673920]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s38_large.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s31_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0]
+- Your output:
+[0, 0, 0, 1028, 2052, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test3.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[7, 5, 49, 25, 24]
+- Your output:
+[7, 5, 5, 2, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s10_test2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s39_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s50_multipleStores.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1048, 0, 1024, 0]
+- Your output:
+[0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s51_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s35_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s16_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 29.41% higher than number of cycles used by the reference.
+Your cycles:	22
+Ref cycles:	17
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s61_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s27_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s50_output_store.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 2.56% lower than number of cycles used by the reference.
+Your cycles:	38
+Ref cycles:	39
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s45_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s52_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 2.38% lower than number of cycles used by the reference.
+Your cycles:	41
+Ref cycles:	42
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s56_dependency.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 9.09% lower than number of cycles used by the reference.
+Your cycles:	10
+Ref cycles:	11
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s01_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s53_test.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 20.00% higher than number of cycles used by the reference.
+Your cycles:	30
+Ref cycles:	25
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s29_test.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s16_test2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[21, 84]
+- Your output:
+[21, 42]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s40_test.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 40.00% higher than number of cycles used by the reference.
+Your cycles:	21
+Ref cycles:	15
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s55_test.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s22_test.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[38]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s43_renamed.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s12_test.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 22.22% higher than number of cycles used by the reference.
+Your cycles:	22
+Ref cycles:	18
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s03_the_monster.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s31_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s11_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s07_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s20_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.56% lower than number of cycles used by the reference.
+Your cycles:	17
+Ref cycles:	18
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s04_test.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s17_test.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2, 4, 6, 4, 6, 8, 6, 8, 14, 48]
+- Your output:
+[0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s05_test.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s39_test.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 3, 7, 5]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s49_SumMult.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s25_test.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s06_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s28_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s60_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 57.69% lower than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	26
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s54_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 82.69% lower than number of cycles used by the reference.
+Your cycles:	9
+Ref cycles:	52
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s50_trickyRename.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
+Your cycles:	16
+Ref cycles:	12
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s19_output_order.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s13_testpriorities.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 3.12% lower than number of cycles used by the reference.
+Your cycles:	31
+Ref cycles:	32
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s46_test.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0]
+- Your output:
+[1032, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s38_test.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s14_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s30_test.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s58_test.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s26_vectoradd_hard.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s26_vectoradd_easy.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 22.22% lower than number of cycles used by the reference.
+Your cycles:	14
+Ref cycles:	18
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s02_memory_disambiguation_1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s36_memoryconfusion.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s48_crowdedStore.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s47_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s10_dependency_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s23_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.00% lower than number of cycles used by the reference.
+Your cycles:	19
+Ref cycles:	20
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s44_test.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 25.00% higher than number of cycles used by the reference.
+Your cycles:	20
+Ref cycles:	16
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s15_test.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.00% higher than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	10
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s33_test.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s02_memory_disambiguation_2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 3]
+- Your output:
+[0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s08_test.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 18.18% higher than number of cycles used by the reference.
+Your cycles:	13
+Ref cycles:	11
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cal7.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jjc6.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yp10.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wg7.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 3, 3, 5, 9, 10, 20, 30, 10, -1014, 5]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wan1.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/nbh2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jfj2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[16]
+- Your output:
+[211596]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/my12.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 164]
+- Your output:
+[128, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yd9.squares.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121]
+- Your output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jmn8.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ssh2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 73.91% lower than number of cycles used by the reference.
+Your cycles:	6
+Ref cycles:	23
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yw27.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/xl22.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jl71.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/bw6.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ngr2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/pyw1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[100, 20, 2048000000, 100, 20]
+- Your output:
+[0, 0, 0, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/hz21.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[3628800, 1814400, 0]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yd9.gcd.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wj3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jl98.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 60.00% lower than number of cycles used by the reference.
+Your cycles:	8
+Ref cycles:	20
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ews1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 4028]
+- Your output:
+[0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/hl33.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.00% higher than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	10
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/imh1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kcb5.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wsp1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[362880]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/les6.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/icm2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yl65.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/sm80.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/msp5.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kwa2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[41, 43, 47, 53, 61, 71, 83, 97, 113, 131, 151, 173, 197, 223, 251, 281, 313, 347, 383, 421, 461, 503, 547, 593, 641, 691, 743, 797, 853, 911, 971, 1033, 1097, 1163, 1231, 1301, 1373, 1447, 1523, 1601]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/sjl4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jmg9.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jjo1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[96]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ash4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/fg10.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 12.50% higher than number of cycles used by the reference.
+Your cycles:	9
+Ref cycles:	8
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jps12.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 33.00% higher than number of cycles used by the reference.
+Your cycles:	943
+Ref cycles:	709
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jak6.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cms14.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jdw7.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/veb2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/mcc10.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 83.33% lower than number of cycles used by the reference.
+Your cycles:	5
+Ref cycles:	30
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/zw12.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jdc5.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 3, 6, 10, 15, 21, 28, 36, 45, 55]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/gel1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 11.19% lower than number of cycles used by the reference.
+Your cycles:	119
+Ref cycles:	134
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cz21.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kz12.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cx5.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yn4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[18]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/dtp3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yx14.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kef2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kag8.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/gty1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0]
+- Your output:
+[0, 1000]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/eeb3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cal7.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jjc6.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yp10.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wg7.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wan1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/nbh2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/tbw1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jfj2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/my12.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 84.21% higher than number of cycles used by the reference.
+Your cycles:	105
+Ref cycles:	57
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/tc19.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4, 4, 8, 4]
+- Your output:
+[0, 1036, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/ssh2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 73.91% lower than number of cycles used by the reference.
+Your cycles:	6
+Ref cycles:	23
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.17% lower than number of cycles used by the reference.
+Your cycles:	23
+Ref cycles:	24
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/xl22.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jl71.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/bw6.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/ngr2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/pyw1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 25, 4, 4]
+- Your output:
+[0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/hz21.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wj3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jl98.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 5, 8, 12, 16]
+- Your output:
+[0, 0, 0, 0, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/ews1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1028, 0, 1028, 1056784, 1028]
+- Your output:
+[0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/hl33.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 6.25% lower than number of cycles used by the reference.
+Your cycles:	15
+Ref cycles:	16
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/imh1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wsp1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/les6.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 6.67% lower than number of cycles used by the reference.
+Your cycles:	14
+Ref cycles:	15
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/icm2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 10.34% lower than number of cycles used by the reference.
+Your cycles:	26
+Ref cycles:	29
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/sm80.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/msp5.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/kwa2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/sjl4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[460, 103488, 0]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmg9.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4096, 4096]
+- Your output:
+[0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jjo1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[128626604]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/fg10.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0]
+- Your output:
+[10]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/xl43.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[0, 1024, 0, 0, 0, 0, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jps12.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[16, 100, 324]
+- Your output:
+[0, 0, 1028]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jak6.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 1, 2, 0]
+- Your output:
+[0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cms14.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jdw7.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/veb2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 7.14% lower than number of cycles used by the reference.
+Your cycles:	13
+Ref cycles:	14
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/mcc10.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 74.60% lower than number of cycles used by the reference.
+Your cycles:	16
+Ref cycles:	63
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jdc5.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 4, 16, 185, 355, 526, 698, 871]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/gel1.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cz21.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cx5.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yn4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[6, 3, 7, 11, 3000, 3004]
+- Your output:
+[6, 0, 0, 2004, 3000, 3004]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/dtp3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 86.67% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	30
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jfj2.avg.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[16]
+- Your output:
+[211596]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yx14.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 82.89% lower than number of cycles used by the reference.
+Your cycles:	13
+Ref cycles:	76
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/kag8.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/gty1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 4, 9, 0, 0, 0]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/eeb3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yd9.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 1024, 1032, 1056]
+- Your output:
+[0, 1028]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yg31.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pe4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/tl18.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/fdb1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 20.00% higher than number of cycles used by the reference.
+Your cycles:	12
+Ref cycles:	10
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/bx3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/zkk1.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yw27.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ehs2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[26]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/oky1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 6, 24, 120, 153]
+- Your output:
+[0, 0, 0, 0, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pq2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/mas20.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 86.52% lower than number of cycles used by the reference.
+Your cycles:	12
+Ref cycles:	89
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yd18.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/cav2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/tve1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 76.47% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	17
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/gak2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+- Your output:
+[34, 0, 0, 0, 0, 0, 0, 0, 0, 55, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ac86.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[10304]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jj26.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/asn2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/mww4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xw32.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yz56.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/fgd1.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/am98.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/zc12.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1064, 1064, 4, 10]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ptd3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/dh15.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/wl22.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jnd2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/kh25.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[252]
+- Your output:
+[1]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/med7.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0]
+- Your output:
+[0, 0, 1072]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/mmj4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/lh15.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 57.89% lower than number of cycles used by the reference.
+Your cycles:	8
+Ref cycles:	19
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/cl41.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/kws4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/dw20.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 92.31% lower than number of cycles used by the reference.
+Your cycles:	5
+Ref cycles:	65
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/clf6.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[13, 18]
+- Your output:
+[16, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/meh9.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[122522400, 122522400]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jml13.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0]
+- Your output:
+[1032, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/bsl3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pd22.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pat2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1073676182, -79592]
+- Your output:
+[0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/arb11.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 57.14% lower than number of cycles used by the reference.
+Your cycles:	24
+Ref cycles:	56
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jbk2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xal1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[-1040]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yk26.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/wsb1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[-53328]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/hz30.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/wcr1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ls53.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yz75.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 2048, 4420, 0]
+- Your output:
+[0, 0, 0, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/njm3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jfk2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xc12.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[1036, 0, 1044, 1048, 1052, 1078296, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ish1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 6, 24, 120, 720, 5040, 5913]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/kl33.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/skn2.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 15.81% higher than number of cycles used by the reference.
+Your cycles:	2813
+Ref cycles:	2429
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/lss4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yg31.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4, 8, 12, 20, 32, 0, 0, 0, 0, 0, 0, 32, 20, 12, 32, 0, 0]
+- Your output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pe4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1028, 1024]
+- Your output:
+[4, 1028]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/tl18.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/bx3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/zkk1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 1.14% lower than number of cycles used by the reference.
+Your cycles:	87
+Ref cycles:	88
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yw27.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2048, 2052, 2, 4]
+- Your output:
+[2048, 0, 2048]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ehs2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/oky1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 6, 24, 120, 153]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/mas20.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 18.52% higher than number of cycles used by the reference.
+Your cycles:	32
+Ref cycles:	27
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yd18.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/cav2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/tve1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/gak2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ac86.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 18.75% higher than number of cycles used by the reference.
+Your cycles:	19
+Ref cycles:	16
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jj26.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/asn2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/mww4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 92.31% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	52
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/xw32.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0]
+- Your output:
+[1, 4145]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yz56.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 3.12% lower than number of cycles used by the reference.
+Your cycles:	31
+Ref cycles:	32
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/fgd1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0]
+- Your output:
+[0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/am98.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/zc12.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ptd3.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[0, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/dh15.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[5, 10, 15, 50]
+- Your output:
+[0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wl22.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 8, 4, 32, 40, 40]
+- Your output:
+[0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jnd2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kh25.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2, 6, 20, 70, 252]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/med7.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/lh15.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.00% lower than number of cycles used by the reference.
+Your cycles:	24
+Ref cycles:	25
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kws4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/clf6.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.76% lower than number of cycles used by the reference.
+Your cycles:	20
+Ref cycles:	21
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/meh9.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jml13.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 92.73% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	55
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/bsl3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pd22.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.53% higher than number of cycles used by the reference.
+Your cycles:	21
+Ref cycles:	19
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pat2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4, 2000, 2000]
+- Your output:
+[0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/arb11.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 1.85% lower than number of cycles used by the reference.
+Your cycles:	53
+Ref cycles:	54
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jbk2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 0.06% lower than number of cycles used by the reference.
+Your cycles:	1600
+Ref cycles:	1601
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/xal1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 11.76% lower than number of cycles used by the reference.
+Your cycles:	15
+Ref cycles:	17
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wsb1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/hz30.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4000, 0, 0, 0, 29000, 0]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wcr1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yz75.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[128, 8, 8, 8]
+- Your output:
+[0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/njm3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 52.31% lower than number of cycles used by the reference.
+Your cycles:	124
+Ref cycles:	260
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/xc12.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 87.88% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	33
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ish1.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kl33.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/skn2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[88, 440, 408, 56]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ktr2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[12]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/lss4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 3]
+- Your output:
+[0, 0]
+----------------------------------------------------------------------
+Your aggregrate number of cycles is -3.03% higher than the aggregate number of cycles used by lab2_ref.
+Your number of cycles is on average 1.36% higher than the number of cycles used by lab2_ref.
+
+🙃 You passed 337/522 tests.
+Run tests with register: 7
+Running 522 tests...
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block7.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 16.67% higher than number of cycles used by the reference.
+Your cycles:	91
+Ref cycles:	78
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block12.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.48% higher than number of cycles used by the reference.
+Your cycles:	137
+Ref cycles:	124
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block9.i passed!
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block8.i passed!
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block6.i passed!
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block11.i passed!
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block5.i passed!
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block4.i passed!
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block3.i passed!
+❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[3, 4, 6, 11]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/blocks/lab2/block10.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/blocks/lab2/block1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/unrelated_stores.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[200, 400, 800]
+- Your output:
+[200, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/TestTiebreaking.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.81% higher than number of cycles used by the reference.
+Your cycles:	41
+Ref cycles:	37
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.56% lower than number of cycles used by the reference.
+Your cycles:	17
+Ref cycles:	18
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/witt-2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/yanxinlu.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/witt-3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 9.52% lower than number of cycles used by the reference.
+Your cycles:	19
+Ref cycles:	21
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 13.33% lower than number of cycles used by the reference.
+Your cycles:	13
+Ref cycles:	15
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.88% lower than number of cycles used by the reference.
+Your cycles:	16
+Ref cycles:	17
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/prasad.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 21.74% lower than number of cycles used by the reference.
+Your cycles:	18
+Ref cycles:	23
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/simple.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/simple_alternating.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[7, 15]
+- Your output:
+[0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/trickystores.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/jwc.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.53% higher than number of cycles used by the reference.
+Your cycles:	21
+Ref cycles:	19
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/smith-1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 20.00% higher than number of cycles used by the reference.
+Your cycles:	12
+Ref cycles:	10
+✅ /clear/courses/comp412/students/ILOC/contributed/2012/lab3/witt-1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s31_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s61_test2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2048, 1028, 1032]
+- Your output:
+[0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 11.11% lower than number of cycles used by the reference.
+Your cycles:	16
+Ref cycles:	18
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 71.43% lower than number of cycles used by the reference.
+Your cycles:	6
+Ref cycles:	21
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s50_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 26.09% higher than number of cycles used by the reference.
+Your cycles:	29
+Ref cycles:	23
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 15.38% higher than number of cycles used by the reference.
+Your cycles:	15
+Ref cycles:	13
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_integersum.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[210, 210]
+- Your output:
+[7375, 28170]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_lshift2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_fibonacci.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[6765, 6765]
+- Your output:
+[6765, 1]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s41_test1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 17.14% higher than number of cycles used by the reference.
+Your cycles:	41
+Ref cycles:	35
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 76.92% higher than number of cycles used by the reference.
+Your cycles:	23
+Ref cycles:	13
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s61_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 15.38% lower than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	13
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s31_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_mult3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 7.14% lower than number of cycles used by the reference.
+Your cycles:	26
+Ref cycles:	28
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s61_test1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1024, 1032, 1036, 2056]
+- Your output:
+[0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
+Your cycles:	12
+Ref cycles:	9
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_sub5.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block6.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 8.33% lower than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	12
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 31.58% higher than number of cycles used by the reference.
+Your cycles:	25
+Ref cycles:	19
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s38_letters.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 30.77% lower than number of cycles used by the reference.
+Your cycles:	9
+Ref cycles:	13
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s56_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 30.77% lower than number of cycles used by the reference.
+Your cycles:	9
+Ref cycles:	13
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_sum.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_reverse.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test0.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s08_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s16_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 76.67% lower than number of cycles used by the reference.
+Your cycles:	7
+Ref cycles:	30
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_factorial.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_add1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_largeRegTest.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 2062.50% higher than number of cycles used by the reference.
+Your cycles:	173
+Ref cycles:	8
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_block1ZeroTest.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s40_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s32_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s38_squares.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 33.33% higher than number of cycles used by the reference.
+Your cycles:	8
+Ref cycles:	6
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s42_test1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[3, 4, 6, 11]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block5.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test6.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s33_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s41_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 20.00% higher than number of cycles used by the reference.
+Your cycles:	12
+Ref cycles:	10
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s20_test4.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 19.05% higher than number of cycles used by the reference.
+Your cycles:	50
+Ref cycles:	42
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s56_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 14.29% higher than number of cycles used by the reference.
+Your cycles:	40
+Ref cycles:	35
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.88% lower than number of cycles used by the reference.
+Your cycles:	48
+Ref cycles:	51
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s20_test2.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 18.32% higher than number of cycles used by the reference.
+Your cycles:	155
+Ref cycles:	131
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s61_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 15.38% lower than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	13
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block3.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 9.09% lower than number of cycles used by the reference.
+Your cycles:	20
+Ref cycles:	22
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s20_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 90.91% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	44
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[8, 2, 36, 9, 32, 8, 25]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s43_block4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s38_round.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 4, 8, 12, 16]
+- Your output:
+[0, 0, 0, 0, 16]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s24_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.81% higher than number of cycles used by the reference.
+Your cycles:	41
+Ref cycles:	37
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s12_testblock3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.48% higher than number of cycles used by the reference.
+Your cycles:	137
+Ref cycles:	124
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 98.44% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	256
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test7.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 14.63% higher than number of cycles used by the reference.
+Your cycles:	47
+Ref cycles:	41
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test5.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s10_test4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4032]
+- Your output:
+[1601940214]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test3.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[3, 4, 6]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s20_test3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s63_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s39_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_allOpsTest.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test4.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 16.67% higher than number of cycles used by the reference.
+Your cycles:	91
+Ref cycles:	78
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s56_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 74.36% lower than number of cycles used by the reference.
+Your cycles:	10
+Ref cycles:	39
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s22_test_block2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 57.55% lower than number of cycles used by the reference.
+Your cycles:	45
+Ref cycles:	106
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.26% lower than number of cycles used by the reference.
+Your cycles:	18
+Ref cycles:	19
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s08_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s31_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[5050]
+- Your output:
+[105]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s08_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s15_block4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s39_test5.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s26_factorial.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[3628800]
+- Your output:
+[1800000]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 121.21% higher than number of cycles used by the reference.
+Your cycles:	73
+Ref cycles:	33
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s41_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s30_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s34_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test5.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.88% lower than number of cycles used by the reference.
+Your cycles:	48
+Ref cycles:	51
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s08_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s23_test_rshift4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_copy.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s21_Factorial10Test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 15.00% higher than number of cycles used by the reference.
+Your cycles:	23
+Ref cycles:	20
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s29_test1.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s14_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s05_sumarray.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 80.95% lower than number of cycles used by the reference.
+Your cycles:	4
+Ref cycles:	21
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s09_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s48_test3.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1000001, 1100011, 1110111, 1111111, 1110111, 1100011, 1000001]
+- Your output:
+[1000001, 1100011, 1110111, 1110111, 1110111, 1100011, 1000001]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test4.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s11_test2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s03_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s62_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s10_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 17.14% higher than number of cycles used by the reference.
+Your cycles:	41
+Ref cycles:	35
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s39_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s18_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s28_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block0.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 11.11% higher than number of cycles used by the reference.
+Your cycles:	10
+Ref cycles:	9
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s58_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s52_test4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.88% lower than number of cycles used by the reference.
+Your cycles:	16
+Ref cycles:	17
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s19_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test1.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.00% higher than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	10
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s56_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s10_test3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 12.50% higher than number of cycles used by the reference.
+Your cycles:	18
+Ref cycles:	16
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s55_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s17_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s27_test2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0]
+- Your output:
+[0, 0, 0, 0, 1028, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s01_block2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s13_block4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s25_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s45_block1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s38_large.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s31_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s04_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s35_block1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s53_test3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s44_block1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s36_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0]
+- Your output:
+[0, 1024, 0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s06_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s51_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s57_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s47_test3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s10_test2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s46_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab2/s39_test4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s50_multipleStores.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s51_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s35_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s16_test1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s61_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s27_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s50_output_store.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 12.82% lower than number of cycles used by the reference.
+Your cycles:	34
+Ref cycles:	39
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s45_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s52_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 11.90% lower than number of cycles used by the reference.
+Your cycles:	37
+Ref cycles:	42
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s56_dependency.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 9.09% lower than number of cycles used by the reference.
+Your cycles:	10
+Ref cycles:	11
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s01_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s53_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s29_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s16_test2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s40_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s55_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s22_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s43_renamed.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s12_test.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 11.11% higher than number of cycles used by the reference.
+Your cycles:	20
+Ref cycles:	18
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s03_the_monster.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s31_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s11_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s07_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s20_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.56% lower than number of cycles used by the reference.
+Your cycles:	17
+Ref cycles:	18
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s04_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s17_test.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s05_test.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s39_test.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 3, 7, 5]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s49_SumMult.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 7.69% lower than number of cycles used by the reference.
+Your cycles:	36
+Ref cycles:	39
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s25_test.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0]
+- Your output:
+[0, 0, 1076, 1088]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s06_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s28_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s60_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s54_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s50_trickyRename.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 16.67% higher than number of cycles used by the reference.
+Your cycles:	14
+Ref cycles:	12
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s19_output_order.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s13_testpriorities.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s46_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 8.33% lower than number of cycles used by the reference.
+Your cycles:	22
+Ref cycles:	24
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s38_test.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 1, 1, 1]
+- Your output:
+[1036, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s14_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s30_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s58_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 78.69% lower than number of cycles used by the reference.
+Your cycles:	13
+Ref cycles:	61
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s26_vectoradd_hard.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 17.39% higher than number of cycles used by the reference.
+Your cycles:	27
+Ref cycles:	23
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s26_vectoradd_easy.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s02_memory_disambiguation_1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s36_memoryconfusion.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s48_crowdedStore.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s47_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s10_dependency_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s23_test.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 5.00% lower than number of cycles used by the reference.
+Your cycles:	19
+Ref cycles:	20
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s44_test.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 12.50% higher than number of cycles used by the reference.
+Your cycles:	18
+Ref cycles:	16
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s15_test.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.00% higher than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	10
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s33_test.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s02_memory_disambiguation_2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 3]
+- Your output:
+[0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2013/lab3/s08_test.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cal7.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jjc6.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yp10.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wg7.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 3, 3, 5, 9, 10, 20, 30, 10, -1014, 5]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wan1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.88% lower than number of cycles used by the reference.
+Your cycles:	39
+Ref cycles:	41
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/nbh2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jfj2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[16]
+- Your output:
+[35933]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/my12.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 164]
+- Your output:
+[128, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yd9.squares.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 13.04% higher than number of cycles used by the reference.
+Your cycles:	104
+Ref cycles:	92
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jmn8.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ssh2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yw27.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/xl22.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jl71.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/bw6.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ngr2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/pyw1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 6.38% lower than number of cycles used by the reference.
+Your cycles:	44
+Ref cycles:	47
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/hz21.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yd9.gcd.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wj3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jl98.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ews1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/hl33.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 10.00% higher than number of cycles used by the reference.
+Your cycles:	11
+Ref cycles:	10
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/imh1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kcb5.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[10, 6, 294912]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/wsp1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[362880]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/les6.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/icm2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yl65.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/sm80.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/msp5.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kwa2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/sjl4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jmg9.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jjo1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/ash4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/fg10.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 12.50% higher than number of cycles used by the reference.
+Your cycles:	9
+Ref cycles:	8
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jps12.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 27.22% higher than number of cycles used by the reference.
+Your cycles:	701
+Ref cycles:	551
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jak6.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cms14.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jdw7.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/veb2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/mcc10.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/zw12.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/jdc5.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 18.28% higher than number of cycles used by the reference.
+Your cycles:	110
+Ref cycles:	93
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/gel1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 9.38% lower than number of cycles used by the reference.
+Your cycles:	87
+Ref cycles:	96
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cz21.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1536, 6144, 2048, 6144, 3072, 3072]
+- Your output:
+[0, 0, 0, 0, 0, 1048576]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kz12.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/cx5.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yn4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 6.67% lower than number of cycles used by the reference.
+Your cycles:	14
+Ref cycles:	15
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/dtp3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/yx14.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kef2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/kag8.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[21]
+- Your output:
+[10]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/gty1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 44.26% lower than number of cycles used by the reference.
+Your cycles:	34
+Ref cycles:	61
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab2/eeb3.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 13.74% higher than number of cycles used by the reference.
+Your cycles:	149
+Ref cycles:	131
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cal7.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jjc6.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yp10.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wg7.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wan1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/nbh2.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/tbw1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jfj2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/my12.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/tc19.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/ssh2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.17% lower than number of cycles used by the reference.
+Your cycles:	23
+Ref cycles:	24
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/xl22.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jl71.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/bw6.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/ngr2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/pyw1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 8.33% lower than number of cycles used by the reference.
+Your cycles:	44
+Ref cycles:	48
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/hz21.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wj3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jl98.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/ews1.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 4.17% lower than number of cycles used by the reference.
+Your cycles:	23
+Ref cycles:	24
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/hl33.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 6.25% lower than number of cycles used by the reference.
+Your cycles:	15
+Ref cycles:	16
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/imh1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/wsp1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/les6.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 6.67% lower than number of cycles used by the reference.
+Your cycles:	14
+Ref cycles:	15
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/icm2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 3.70% lower than number of cycles used by the reference.
+Your cycles:	26
+Ref cycles:	27
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/sm80.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/msp5.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/kwa2.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/sjl4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[460, 103488, 0]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmg9.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4096, 4096]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jjo1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[128626604]
+- Your output:
+[0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/fg10.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/xl43.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jps12.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[16, 100, 324]
+- Your output:
+[0, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jak6.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 1, 2, 0]
+- Your output:
+[0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cms14.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jdw7.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 1.96% lower than number of cycles used by the reference.
+Your cycles:	50
+Ref cycles:	51
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/veb2.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 7.14% lower than number of cycles used by the reference.
+Your cycles:	13
+Ref cycles:	14
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/mcc10.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 54.29% lower than number of cycles used by the reference.
+Your cycles:	16
+Ref cycles:	35
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jdc5.i passed!
+🐌 You are less effective on this test case.
+Your number of cycles for this file is 17.89% higher than number of cycles used by the reference.
+Your cycles:	112
+Ref cycles:	95
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/gel1.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cz21.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/cx5.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yn4.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[6, 3, 7, 11, 3000, 3004]
+- Your output:
+[6, 0, 0, 0, 3000, 3004]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/dtp3.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jmn8.1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/jfj2.avg.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[16]
+- Your output:
+[35933]
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yx14.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 84.85% lower than number of cycles used by the reference.
+Your cycles:	10
+Ref cycles:	66
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/kag8.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/gty1.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/eeb3.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2014/lab3/yd9.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 1024, 1032, 1056]
+- Your output:
+[0, 0, 0, 1032, 1056]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yg31.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 2056, 0, 0, 0, 0, 0]
+- Your output:
+[0, 0, 0, 0, 0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pe4.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/tl18.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 20.45% lower than number of cycles used by the reference.
+Your cycles:	35
+Ref cycles:	44
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/fdb1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/bx3.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 1, 2, 5, 14, 42]
+- Your output:
+[0, 0, 0, 1028, 0, 0]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/zkk1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0]
+- Your output:
+[0, 0, 0, 1060]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yw27.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ehs2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[26]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/oky1.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 6, 24, 120, 153]
+- Your output:
+[0, 0, 0, 0, 0, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pq2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/mas20.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 84.42% lower than number of cycles used by the reference.
+Your cycles:	12
+Ref cycles:	77
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yd18.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/cav2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/tve1.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/gak2.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+- Your output:
+[0, 0, 13, 0, 0, 0, 0, 0, 0, 21, 0]
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ac86.i passed!
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jj26.i failed!
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0]
+- Your output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/asn2.i passed!
+✅ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/mww4.i passed!
+🐇 You are more effective on this test case.
+Your number of cycles for this file is 71.11% lower than number of cycles used by the reference.
+Your cycles:	13
+Ref cycles:	45
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xw32.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yz56.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/fgd1.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/am98.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/zc12.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1064, 1064, 4, 10]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ptd3.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/dh15.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/wl22.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jnd2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/kh25.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[252]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/med7.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/mmj4.i failed!
+- Summary:
+	Timed out! Your test took longer than 10s.
+	This limit can be modified in runner.py
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/lh15.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/cl41.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[362880, 45]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/kws4.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1597, 4181, 28657, 514229, 1346269, 24157817, 165580141]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/dw20.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/clf6.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[13, 18]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/meh9.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[122522400, 122522400]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jml13.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/bsl3.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[217966]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pd22.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 6, 24, 120, 720]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/pat2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1073676182, -79592]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/arb11.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jbk2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 0, 1, 0, 5, 0, 61, 0, 1385, 0, 50521, 0, 2702765, 0, 199360981]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xal1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yk26.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 1, 1, 2, 3, 5, 8, 13, 21]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/wsb1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[-53328]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/hz30.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[6060]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/wcr1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ls53.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/yz75.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 2048, 4420, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/njm3.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/jfk2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/xc12.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/ish1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 6, 24, 120, 720, 5040, 5913]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/kl33.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/skn2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2048]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab2/lss4.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 4, 7, 11, 16]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yg31.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4, 8, 12, 20, 32, 0, 0, 0, 0, 0, 0, 32, 20, 12, 32, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pe4.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1028, 1024]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/tl18.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/bx3.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/zkk1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yw27.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2048, 2052, 2, 4]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ehs2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[9, 10]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/oky1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 2, 6, 24, 120, 153]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/mas20.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yd18.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2000, 2004, 2056, 2004]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/cav2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[344, 120, 8, 464, 680, 9, 1392, 1392, 464, 232, 32, 232, 1028, 264]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/tve1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/gak2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4, 3, 2, 1]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ac86.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jj26.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[16]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/asn2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/mww4.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/xw32.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yz56.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/fgd1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/am98.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+['The ILOC simulator was not able to execute your transformed ILOC file :(']
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/zc12.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 2, 12]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ptd3.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/dh15.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[5, 10, 15, 50]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wl22.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 8, 4, 32, 40, 40]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jnd2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kh25.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2, 6, 20, 70, 252]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/med7.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4, 0, 4]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/lh15.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[8, 8, 0, 4]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kws4.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[2]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/clf6.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[24, 28]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/meh9.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jml13.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/bsl3.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[217966, 1103765]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pd22.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1036, 4, 256]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/pat2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4, 2000, 2000]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/arb11.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/jbk2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, 2674440, 9694845, 35357670, 129644790, 477638700, 1767263190]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/xal1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wsb1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[16]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/hz30.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[4000, 0, 0, 0, 29000, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/wcr1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/yz75.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[128, 8, 8, 8]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/njm3.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/xc12.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ish1.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[8, 64]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/kl33.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/skn2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[88, 440, 408, 56]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/ktr2.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[12]
+- Your output:
+[]
+❌ /clear/courses/comp412/students/ILOC/contributed/2015/lab3/lss4.i failed!
+🤨 Your solution took 0 cycles. Something weird is going on...
+- Summary:
+- Simulator input used:Nothing (None found in source file)
+- Reference output:
+[0, 3]
+- Your output:
+[]
+----------------------------------------------------------------------
+Your aggregrate number of cycles is -1.10% higher than the aggregate number of cycles used by lab2_ref.
+Your number of cycles is on average 4.73% higher than the number of cycles used by lab2_ref.
+
+🙃 You passed 364/522 tests.
+
+Consider adding your own tests cases to the repository so the whole class can benefit!
+https://github.com/zawie/zill412
 

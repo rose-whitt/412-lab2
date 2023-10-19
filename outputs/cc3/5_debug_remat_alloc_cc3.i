@@ -1,6 +1,3 @@
-//allocating done
-// MaxLive is 6
-// ALLOCATED FILE: 
 loadI   0  =>   r0
 add     r0, r0  =>   r1
 loadI   4  =>   r2
