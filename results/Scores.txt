@@ -1,3 +1,3 @@
 Name	netID	Corr.	Eff.	Scal.	Date	Days Late
 Comp 412	comp412	100.0	100.0	100	2023-03-29	-2
-Rose Whitt	rew9	100.0	85.547	100	2023-10-18	-1
+no name given	no netid given	100.0	85.547	90	2023-10-19	0
