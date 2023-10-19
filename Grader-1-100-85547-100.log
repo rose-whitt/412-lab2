@@ -26,25 +26,17 @@ report7.i:	{3: 100, 4: 81, 5: 68, 6: 61, 8: 47, 12: 44, 16: 44}
 Quick Scalability Test:
 	(For a more accurate test, run the auto-timer)
 
-	T008k.i:  	0.0233 seconds
-	T016k.i:  	0.0356 seconds
-	T032k.i:  	0.0626 seconds
-	T064k.i:  	0.1164 seconds
-	T128k.i:  	0.2239 seconds
+	T008k.i:  	0.0101 seconds
+	T016k.i:  	0.0148 seconds
+	T032k.i:  	0.0268 seconds
+	T064k.i:  	0.0477 seconds
+	T128k.i:  	0.0921 seconds
  
 
 Finished submission  comp412.tar
 ==================================================
-
-Student name not found in README file.
-Will lose conformance points.
-
-
-Student netid not found in README file.
-Will lose conformance points.
-
-Testing submission from NetID 'no netid given', name 'no name given'
-Archive name:  rew9.tar 		Date From Files:  2023-10-16
+Testing submission from NetID 'rew9', name 'Rose Whitt'
+Archive name:  rew9.tar 		Date From Files:  2023-10-18
 
 ------------------------------------------------------------
 Output from building executable, if necessary
@@ -55,21 +47,21 @@ Output from building executable, if necessary
 
 Result is a set of (k, cycle) pairs for each test block
 
-T001k.i:	{3: 6949, 4: 6534, 5: 6204, 6: 5874, 8: 5214, 12: 3918, 16: 2622}
-report1.i:	{3: 276, 4: 224, 5: 186, 6: 154, 8: 116, 12: 84, 16: 60}
-report2.i:	{3: 298, 4: 140, 5: 124, 6: 116, 8: 104, 12: 80, 16: 56}
+T001k.i:	{3: 6876, 4: 6534, 5: 6204, 6: 5874, 8: 5214, 12: 3918, 16: 2622}
+report1.i:	{3: 223, 4: 169, 5: 133, 6: 103, 8: 73, 12: 59, 16: 55}
+report2.i:	{3: 186, 4: 122, 5: 114, 6: 111, 8: 104, 12: 80, 16: 56}
 report3.i:	{3: 421, 4: 350, 5: 298, 6: 260, 8: 217, 12: 155, 16: 118}
-report4.i:	{3: 277, 4: 264, 5: 252, 6: 240, 8: 216, 12: 168, 16: 120}
-report5.i:	{3: 136, 4: 115, 5: 86, 6: 68, 8: 48, 12: 30, 16: 30}
-report6.i:	{3: 431, 4: 386, 5: 329, 6: 273, 8: 217, 12: 171, 16: 129}
-report7.i:	{3: 200, 4: 156, 5: 129, 6: 112, 8: 77, 12: 55, 16: 44}
+report4.i:	{3: 189, 4: 181, 5: 174, 6: 167, 8: 153, 12: 123, 16: 95}
+report5.i:	{3: 92, 4: 78, 5: 73, 6: 55, 8: 43, 12: 30, 16: 30}
+report6.i:	{3: 290, 4: 292, 5: 244, 6: 197, 8: 174, 12: 148, 16: 124}
+report7.i:	{3: 127, 4: 100, 5: 85, 6: 82, 8: 72, 12: 50, 16: 44}
 
 Quick Scalability Test:
 	(For a more accurate test, run the auto-timer)
 
-	T008k.i:  	8.6366 seconds
-	T016k.i:  	32.606 seconds
-	T032k.i:  	60.007 seconds
+	T008k.i:  	7.0392 seconds
+	T016k.i:  	27.187 seconds
+	T032k.i:  	60.003 seconds
 	T064k.i:  	60.0 seconds
 	T128k.i:  	60.0 seconds
  
@@ -90,9 +82,9 @@ Run the auto_timer to get a more precise estimate.
    Scaling appears to be linear
    Scalability points:     100 
 
-no name given :
+Rose Whitt :
    Correctness points:     100.0
-   Effectiveness points:   61.978
+   Effectiveness points:   85.547
 
 Scalability points are a rough approximation.
 Run the auto_timer to get a more precise estimate.

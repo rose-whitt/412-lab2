@@ -44,6 +44,8 @@ def run_timing_block(block_name):
     path = base_name + timing_dir
 
     command_line = "timeout 60.0s ./412alloc 15 "+path+block_name+" >&/dev/null"
+    # command_line = "timeout 90.0s ./412alloc 15 "+path+block_name+" >&/dev/null"
+
 
     #print("command line: ", command_line)
     
