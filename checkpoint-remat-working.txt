@@ -1,7 +1,39 @@
 
 
 
-thurs oct 19 1:28pm
+thurs oct 19 7:00pm
+
+
+RUNNING GRADER
+
+T008k.i:  	0.3242 seconds
+	T016k.i:  	0.6130 seconds
+	T032k.i:  	1.3105 seconds
+	T064k.i:  	2.5966 seconds
+	T128k.i:  	5.1960 seconds
+
+Correctness points:     100.0
+   Effectiveness points:   85.547
+Scaling appears to be linear
+   Scalability points:     100 
+
+
+
+RUNNNING TIMER
+
+	T001k.i:  	0.0739 seconds
+	T002k.i:  	0.1068 seconds
+	T004k.i:  	0.1748 seconds
+	T008k.i:  	0.3086 seconds
+	T016k.i:  	0.6025 seconds
+	T032k.i:  	1.2590 seconds
+	T064k.i:  	2.5421 seconds
+	T128k.i:  	5.1349 seconds
+
+Scaling score is 100
+Efficiency score is 100	(python , 5.134901)
+
+
 RUNNING CODE CHECK 2
 
 
