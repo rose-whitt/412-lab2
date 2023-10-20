@@ -21,7 +21,7 @@ base_name = "/storage-home/r/rew9/comp412/412-lab2/"
 #base_name = "/clear/courses/comp412/CodeBase/Lab2/2023-L2AG/update/"
 
 # The on-time due date for the assignment
-normal_deadline = date(2023,10,19)    # set annually
+normal_deadline = date(2023,10,20)    # set annually
 
 #
 # Stuff after this point should be set when the lab handout changes or 

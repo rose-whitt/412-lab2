@@ -41,6 +41,11 @@ EOL = 10    # end of current line ("\r\n" or "\n")
 BLANK = 11     # not an opcode, but used to signal blank space or tab
 SCANNER_ERROR = 12
 
+SR_IDX = 0
+VR_IDX = 1
+PR_IDX = 2
+NU_IDX = 3
+
 class Lab2:
     """
     
@@ -104,14 +109,14 @@ class Lab2:
         if op_num == 3: # add, called when opcode is store in dif_alloc
             operand_i = node.arg3
         
-        virt_reg = operand_i.vr
+        virt_reg = operand_i[VR_IDX]
 
         # not spilled, get pr
         # virt reg comes from node, which comes from head in while loop in dif_alloc
         if (virt_reg not in self.is_spilled):   # virtual register of cur operation not spilled
             phys_reg = self.VRToPR[virt_reg]
-            operand_i.pr = phys_reg
-            self.PRNU[phys_reg] = operand_i.nu
+            operand_i[PR_IDX] = phys_reg
+            self.PRNU[phys_reg] = operand_i[NU_IDX]
         # spilled, restore
         else:
             phys_reg = self.handle_restore(op_num, node)
@@ -126,10 +131,10 @@ class Lab2:
         if op_num == 3:
             operand_i = node.arg3
         
-        old_phys_reg = operand_i.pr
+        old_phys_reg = operand_i[PR_IDX]
 
         # check if able to free
-        if (operand_i.nu == INF):
+        if (operand_i[NU_IDX] == INF):
             self.PRStack.append(old_phys_reg)
             # free pr in maps
             old_virt_reg = self.PRToVR[old_phys_reg]
@@ -150,7 +155,7 @@ class Lab2:
             operand_i = node.arg3
         
         
-        virt_reg = operand_i.vr
+        virt_reg = operand_i[VR_IDX]
 
         # get new pr to hold restored vr
         if (len(self.PRStack) > 0):
@@ -163,30 +168,30 @@ class Lab2:
             # create and add load immediate instruction
             loadi_node = Node()
             loadi_node.opcode = 2
-            loadi_node.arg1.sr = self.VRToSpillLoc[virt_reg]
-            loadi_node.arg3.pr = phys_reg
+            loadi_node.arg1[SR_IDX] = self.VRToSpillLoc[virt_reg]
+            loadi_node.arg3[PR_IDX] = phys_reg
             self.IR_LIST.insert_before(loadi_node, node)
             self.remat_spilled.remove(virt_reg)
         else:
             # create and add loadI
             loadi_node = Node()
             loadi_node.opcode = 2
-            loadi_node.arg1.sr = self.VRToSpillLoc[virt_reg]
-            loadi_node.arg3.pr = phys_reg
+            loadi_node.arg1[SR_IDX] = self.VRToSpillLoc[virt_reg]
+            loadi_node.arg3[PR_IDX] = phys_reg
             self.IR_LIST.insert_before(loadi_node, node)
             # create and add load
             load_node = Node()
             load_node.opcode = 0
-            load_node.arg1.pr = phys_reg
-            load_node.arg3.vr = virt_reg
-            load_node.arg3.pr = phys_reg
+            load_node.arg1[PR_IDX] = phys_reg
+            load_node.arg3[VR_IDX] = virt_reg
+            load_node.arg3[PR_IDX] = phys_reg
             self.IR_LIST.insert_before(load_node, node)
 
         # update maps
         self.VRToPR[virt_reg] = phys_reg
         self.PRToVR[phys_reg] = virt_reg
-        self.PRNU[phys_reg] = operand_i.nu
-        operand_i.pr = phys_reg
+        self.PRNU[phys_reg] = operand_i[NU_IDX]
+        operand_i[PR_IDX] = phys_reg
 
         return phys_reg
     
@@ -213,15 +218,15 @@ class Lab2:
             # create and add loadI- put spill location addy into reserved reg; Q: should I still update spil location?
             loadi_node = Node()
             loadi_node.opcode = 2
-            loadi_node.arg1.sr = self.spill_loc
-            loadi_node.arg3.pr = self.reserved_reg
+            loadi_node.arg1[SR_IDX] = self.spill_loc
+            loadi_node.arg3[PR_IDX] = self.reserved_reg
             self.IR_LIST.insert_before(loadi_node, node)
             # create and add store- move spilled value from spill location into its new PR
             store_node = Node()
             store_node.opcode = 1
-            store_node.arg1.vr = vr_to_spill
-            store_node.arg1.pr = pr_freed
-            store_node.arg3.pr = self.reserved_reg
+            store_node.arg1[VR_IDX] = vr_to_spill
+            store_node.arg1[PR_IDX] = pr_freed
+            store_node.arg3[PR_IDX] = self.reserved_reg
             self.IR_LIST.insert_before(store_node, node)
             # update spill location
             self.VRToSpillLoc[vr_to_spill] = self.spill_loc
@@ -246,22 +251,22 @@ class Lab2:
             if (node.opcode == LOAD_OP or node.opcode == STORE_OP):
                 # temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1.pr) + "  =>   r" + str(node.arg3.pr) + "\n"
                 # ret += temp
-                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}  =>   r{node.arg3.pr}")
+                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1[PR_IDX]}  =>   r{node.arg3[PR_IDX]}")
             # loadI
             elif (node.opcode == LOADI_OP):
                 # temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1.sr) + "  =>   r" + str(node.arg3.pr) + "\n"
                 # ret += temp
-                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}  =>   r{node.arg3.pr}")
+                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1[SR_IDX]}  =>   r{node.arg3[PR_IDX]}")
             # arithop
             elif (node.opcode >= ADD_OP and node.opcode <= RSHIFT_OP):
                 # temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1.pr) + ", r" + str(node.arg2.pr) + "  =>   r" + str(node.arg3.pr) + "\n"
                 # ret += temp
-                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}, r{node.arg2.pr}  =>   r{node.arg3.pr}")
+                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1[PR_IDX]}, r{node.arg2[PR_IDX]}  =>   r{node.arg3[PR_IDX]}")
             # output
             elif (node.opcode == OUTPUT_OP):
                 # temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1.sr) + "\n"
                 # ret += temp
-                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}")
+                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1[SR_IDX]}")
             # nop- WONT HAPPEN BC OF MY RENAME BUT JUST IN CASE
             elif (node.opcode == NOP_OP):
                 # temp = self.opcodes_list[node.opcode] + "\n"
@@ -290,7 +295,7 @@ class Lab2:
         # get remat VRs
         for x in self.is_rematerializable:
             # self.remat_VRs.append(x.arg3.vr)
-            self.remat_VRs[x.arg3.vr] = x.arg1.sr
+            self.remat_VRs[x.arg3[VR_IDX]] = x.arg1[SR_IDX]
 
         # -----------end initialization-----------
 
@@ -321,18 +326,18 @@ class Lab2:
                 self.free_use(3, head)  # free add
             
             # ----- DEFS --------
-            if (head.arg3.sr != None and head.opcode != 1): # sr is not invalid and opcode is not a store
-                virt_reg = head.arg3.vr
+            if (head.arg3[SR_IDX] != None and head.opcode != 1): # sr is not invalid and opcode is not a store
+                virt_reg = head.arg3[VR_IDX]
                 # get phys reg
                 if (len(self.PRStack) > 0):
                     phys_reg = self.PRStack.pop()
                 else:
                     phys_reg = self.handle_spill(head)
                 # update maps
-                head.arg3.pr = phys_reg
+                head.arg3[PR_IDX] = phys_reg
                 self.VRToPR[virt_reg] = phys_reg
                 self.PRToVR[phys_reg] = virt_reg
-                self.PRNU[phys_reg] = head.arg3.nu
+                self.PRNU[phys_reg] = head.arg3[NU_IDX]
 
                 # TODO: possibly add to remat_vrs here instead of from renaming?
 
@@ -371,20 +376,20 @@ class Lab2:
         # print("operand: " + str(operand))
         # print("SR_to_VR len: " + str(len(self.SR_to_VR)))
         # print("[op_defines] operand.sr: " + str(operand.sr))
-        if (self.SR_to_VR[operand.sr] == INVALID):  # Unused DEF
-            self.SR_to_VR[operand.sr] = self.VR_name
+        if (self.SR_to_VR[operand[SR_IDX]] == INVALID):  # Unused DEF
+            self.SR_to_VR[operand[SR_IDX]] = self.VR_name
             self.VR_name += 1
-        operand.vr = self.SR_to_VR[operand.sr]
-        operand.nu = self.LU[operand.sr]
-        self.SR_to_VR[operand.sr] = INVALID # kill OP3
-        self.LU[operand.sr] = INF
+        operand[VR_IDX] = self.SR_to_VR[operand[SR_IDX]]
+        operand[NU_IDX] = self.LU[operand[SR_IDX]]
+        self.SR_to_VR[operand[SR_IDX]] = INVALID # kill OP3
+        self.LU[operand[SR_IDX]] = INF
         # update maxlive counter
         self.count_live -= 1
         return operand
   
     def op_uses(self, operand):
-        if (self.SR_to_VR[operand.sr] == INVALID):  # Last use
-            self.SR_to_VR[operand.sr] = self.VR_name
+        if (self.SR_to_VR[operand[SR_IDX]] == INVALID):  # Last use
+            self.SR_to_VR[operand[SR_IDX]] = self.VR_name
             self.VR_name += 1
             # update maxlive counter
             self.count_live += 1
@@ -394,19 +399,19 @@ class Lab2:
                 # if (self.DEBUG):
                 #     print("op_uses: count live greater than max live. assigning count live to max live.")
                 self.max_live = self.count_live
-        operand.vr = self.SR_to_VR[operand.sr]
-        operand.nu = self.LU[operand.sr]
+        operand[VR_IDX] = self.SR_to_VR[operand[SR_IDX]]
+        operand[NU_IDX] = self.LU[operand[SR_IDX]]
 
     def get_max_vr(self):
         start = self.IR_LIST.head
         max = 0
         while (start != None):
-            if (start.arg1.vr != None and start.arg1.vr > max):
-                max = start.arg1.vr
-            if (start.arg2.vr != None and start.arg2.vr > max):
-                max = start.arg2.vr
-            if (start.arg3.vr != None and start.arg3.vr > max):
-                max = start.arg3.vr
+            if (start.arg1[VR_IDX] != None and start.arg1[VR_IDX] > max):
+                max = start.arg1[VR_IDX]
+            if (start.arg2[VR_IDX] != None and start.arg2[VR_IDX] > max):
+                max = start.arg2[VR_IDX]
+            if (start.arg3[VR_IDX] != None and start.arg3[VR_IDX] > max):
+                max = start.arg3[VR_IDX]
             start = start.next
         return max
 
@@ -420,16 +425,16 @@ class Lab2:
             rh = ""
             
             if (start.opcode == 0 or start.opcode == 1): # MEMOP
-                lh = "r" + str(start.arg1.vr)
+                lh = "r" + str(start.arg1[VR_IDX])
             elif (start.opcode == 2): # LOADI
-                lh = str(start.arg1.sr)
+                lh = str(start.arg1[SR_IDX])
             elif (start.opcode >= 3 and start.opcode <= 7):  # ARITHOP
-                lh = "r" + str(start.arg1.vr) + ",r" + str(start.arg2.vr) 
+                lh = "r" + str(start.arg1[VR_IDX]) + ",r" + str(start.arg2[VR_IDX]) 
             elif (start.opcode == 8): # OUTPUT
-                lh = str(start.arg1.sr)
+                lh = str(start.arg1[SR_IDX])
             
             if (start.opcode != 8):
-                rh = "=> r" + str(start.arg3.vr)
+                rh = "=> r" + str(start.arg3[VR_IDX])
 
             opcode = opcodes_list[start.opcode] + " "
 
@@ -441,16 +446,16 @@ class Lab2:
     def print_allocated_line(self, node):
         # load or store
             if (node.opcode == 0 or node.opcode == 1):
-                print(f"//{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}  =>   r{node.arg3.pr}")
+                print(f"//{self.opcodes_list[node.opcode] : <7} r{node.arg1[PR_IDX]}  =>   r{node.arg3[PR_IDX]}")
             # loadI
             elif (node.opcode == 2):
-                print(f"//{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}  =>   r{node.arg3.pr}")
+                print(f"//{self.opcodes_list[node.opcode] : <7} {node.arg1[SR_IDX]}  =>   r{node.arg3[PR_IDX]}")
             # arithop
             elif (node.opcode >= 3 and node.opcode <= 7):
-                print(f"//{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}, r{node.arg2.pr}  =>   r{node.arg3.pr}")
+                print(f"//{self.opcodes_list[node.opcode] : <7} r{node.arg1[PR_IDX]}, r{node.arg2[PR_IDX]}  =>   r{node.arg3[PR_IDX]}")
             # output
             elif (node.opcode == 8):
-                print(f"//{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}")
+                print(f"//{self.opcodes_list[node.opcode] : <7} {node.arg1[SR_IDX]}")
             # nop
             elif (node.opcode == 9):
                 print(f"//{self.opcodes_list[node.opcode] : <7}")
@@ -499,12 +504,12 @@ class Lab2:
             if (val in self.VRToPR and self.VRToPR[val] != key):
                 print(f"ERROR {line.line}: the pair ({key}, {val}) in self.PRToVR does not match the pair ({val}, {self.VRToPR[val]}) in self.VRToPR")
                 return -1
-        if (line.arg1.pr != None):
-            print("ARG1 LINE " + str(line.line) + ": PR: " + str(line.arg1.pr) + " ; PRNU[PR]: " + str(self.PRNU[line.arg1.pr]))
-        if (line.arg2.pr != None):
-            print("ARG2 LINE " + str(line.line) + ": PR: " + str(line.arg2.pr) + " ; PRNU[PR]: " + str(self.PRNU[line.arg2.pr]))
-        if (line.arg3.pr != None):
-            print("ARG3 LINE " + str(line.line) + ": PR: " + str(line.arg3.pr) + " ; PRNU[PR]: " + str(self.PRNU[line.arg3.pr]))
+        if (line.arg1[PR_IDX] != None):
+            print("ARG1 LINE " + str(line.line) + ": PR: " + str(line.arg1[PR_IDX]) + " ; PRNU[PR]: " + str(self.PRNU[line.arg1[PR_IDX]]))
+        if (line.arg2[PR_IDX] != None):
+            print("ARG2 LINE " + str(line.line) + ": PR: " + str(line.arg2[PR_IDX]) + " ; PRNU[PR]: " + str(self.PRNU[line.arg2[PR_IDX]]))
+        if (line.arg3[PR_IDX] != None):
+            print("ARG3 LINE " + str(line.line) + ": PR: " + str(line.arg3[PR_IDX]) + " ; PRNU[PR]: " + str(self.PRNU[line.arg3[PR_IDX]]))
         
         return 0
     
@@ -544,20 +549,20 @@ class Lab2:
                     self.is_rematerializable.append(OP)
 
                 
-                if (OP.arg3.sr != None and OP.opcode != 1):  # all of them populate sr3, store's arg3 is a use, so dont define
+                if (OP.arg3[SR_IDX] != None and OP.opcode != 1):  # all of them populate sr3, store's arg3 is a use, so dont define
                     OP.arg3 = self.op_defines(OP.arg3)
                 #-------------
                 # For each Operand (O) that OPCODE (OP) uses- first and second operand
                 
-                if (OP.arg1.sr != None and OP.opcode != 2): # LOADI stores constant at first sr
+                if (OP.arg1[SR_IDX] != None and OP.opcode != 2): # LOADI stores constant at first sr
                     self.op_uses(OP.arg1)
-                    self.LU[OP.arg1.sr] = index
-                if (OP.arg2.sr != None and OP.opcode != 0 and OP.opcode != 1 and OP.opcode != 2): # only ARITHOPs populate sr2
+                    self.LU[OP.arg1[SR_IDX]] = index
+                if (OP.arg2[SR_IDX] != None and OP.opcode != 0 and OP.opcode != 1 and OP.opcode != 2): # only ARITHOPs populate sr2
                     self.op_uses(OP.arg2)
-                    self.LU[OP.arg2.sr] = index
-                if (OP.arg3.sr != None and OP.opcode == 1): # third operand is a use for store
+                    self.LU[OP.arg2[SR_IDX]] = index
+                if (OP.arg3[SR_IDX] != None and OP.opcode == 1): # third operand is a use for store
                     self.op_uses(OP.arg3)
-                    self.LU[OP.arg3.sr] = index
+                    self.LU[OP.arg3[SR_IDX]] = index
 
             
             index -= 1
@@ -578,8 +583,8 @@ class Lab2:
 
 
 def main():
-    pr = cProfile.Profile()
-    pr.enable() 
+    # pr = cProfile.Profile()
+    # pr.enable() 
     lab2 = Lab2()
     # TODO: -h flag
 
@@ -591,12 +596,12 @@ def main():
         lab2.dif_alloc(int(sys.argv[1]))
         lab2.print_allocated_file()
         # lab2.IR_LIST.print_table(lab2.IR_LIST)
-    pr.disable()
-    s = StringIO()
-    sortby = 'cumulative'
-    ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
-    ps.print_stats()
-    sys.stdout.write(s.getvalue())
+    # pr.disable()
+    # s = StringIO()
+    # sortby = 'cumulative'
+    # ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+    # ps.print_stats()
+    # sys.stdout.write(s.getvalue())
 
 
 

@@ -21,14 +21,14 @@ NU = 3
 opcodes_list = ["load", "store", "loadI", "add", "sub", "mult", "lshift", "rshift", "output", "nop"]
 
 # TODO: classes slow it down so make these not classes later
-class Operand:
-    def __init__(self):
-        self.sr = None
-        self.vr = None
-        self.pr = None
-        self.nu = math.inf
-    def __str__(self):
-        return "[ SR: " + str(self.sr) + " , VR: " + str(self.vr) + " , PR: " + str(self.pr) + " , NU: " + str(self.nu) + " ]"
+# class Operand:
+#     def __init__(self):
+#         self.sr = None
+#         self.vr = None
+#         self.pr = None
+#         self.nu = math.inf
+#     def __str__(self):
+#         return "[ SR: " + str(self.sr) + " , VR: " + str(self.vr) + " , PR: " + str(self.pr) + " , NU: " + str(self.nu) + " ]"
 
 
 
@@ -47,9 +47,12 @@ class Node:
         # self.value = [None, None, Operand(), Operand(), Operand()]
         self.line = None
         self.opcode = None
-        self.arg1 = Operand()
-        self.arg2 = Operand()
-        self.arg3 = Operand()
+        # self.arg1 = Operand()
+        self.arg1 = [None, None, None, -1]
+        # self.arg2 = Operand()
+        self.arg2 = [None, None, None, -1]
+        # self.arg3 = Operand()
+        self.arg3 = [None, None, None, -1]
 
         self.next = None
         self.prev = None

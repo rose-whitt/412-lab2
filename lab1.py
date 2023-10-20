@@ -6,7 +6,10 @@ import sys
 
 COMMENT = "// ILOC Front End \n"
 
-
+SR_IDX = 0
+VR_IDX = 1
+PR_IDX = 2
+NU_IDX = 3
 
 class Lab1:
   def __init__(self):
@@ -54,7 +57,7 @@ class Lab1:
               scan.num_parser_errors += 1
               MEM_OP_FLAG = False
           else:
-              memop_node.arg1.sr = token[1]  # first register
+              memop_node.arg1[SR_IDX] = token[1]  # first register
               if (token[1] > self.max_reg):
                 self.max_reg = token[1]
 
@@ -74,7 +77,7 @@ class Lab1:
                     scan.num_parser_errors += 1
                     MEM_OP_FLAG = False
                 else:
-                    memop_node.arg3.sr = token[1]  # second register
+                    memop_node.arg3[SR_IDX] = token[1]  # second register
                     if (token[1] > self.max_reg):
                       self.max_reg = token[1]
                     token = scan.get_token()
@@ -117,7 +120,7 @@ class Lab1:
               scan.num_parser_errors += 1
               LOADI_FLAG = False
           else:
-              loadi_node.arg1.sr = token[1]  # first constant
+              loadi_node.arg1[SR_IDX] = token[1]  # first constant
               
               # temp_line.append(token)
               token = scan.get_token()
@@ -137,7 +140,7 @@ class Lab1:
                       scan.num_parser_errors += 1
                       LOADI_FLAG = False
                   else:
-                    loadi_node.arg3.sr = token[1]  # second register
+                    loadi_node.arg3[SR_IDX] = token[1]  # second register
                     if (token[1] > self.max_reg):
                       self.max_reg = token[1]
                     # temp_line.append(token)
@@ -192,7 +195,7 @@ class Lab1:
               scan.num_parser_errors += 1
               ARITHOP_FLAG = False
           else:
-              ari_node.arg1.sr = token[1]
+              ari_node.arg1[SR_IDX] = token[1]
               if (token[1] > self.max_reg):
                 self.max_reg = token[1]
               # temp_line.append(token)
@@ -214,7 +217,7 @@ class Lab1:
                     scan.num_parser_errors += 1
                     ARITHOP_FLAG = False
                 else:
-                  ari_node.arg2.sr = token[1]
+                  ari_node.arg2[SR_IDX] = token[1]
                   if (token[1] > self.max_reg):
                     self.max_reg = token[1]
                   # temp_line.append(token)
@@ -235,7 +238,7 @@ class Lab1:
                         scan.num_parser_errors += 1
                         ARITHOP_FLAG = False
                     else:
-                      ari_node.arg3.sr = token[1]
+                      ari_node.arg3[SR_IDX] = token[1]
                       if (token[1] > self.max_reg):
                         self.max_reg = token[1]
                       
@@ -290,7 +293,7 @@ class Lab1:
               OUTPUT_FLAG = False
           else:
             # temp_line.append(token)
-            output_node.arg1.sr = token[1]
+            output_node.arg1[SR_IDX] = token[1]
 
             token = scan.get_token()
             while (token[0] == scan.BLANK):
