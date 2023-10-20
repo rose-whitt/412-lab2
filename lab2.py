@@ -58,9 +58,9 @@ class Lab2:
         self.max_sr_num = self.Lab_1.max_reg
         self.num_srs_filled = self.Lab_1.num_srs
 
-        self.VR_name = 0
-        self.SR_to_VR = []
-        self.LU = []
+        self.VR_name = 0    # renaming
+        self.SR_to_VR = []  # renaming
+        self.LU = []    # renaming
 
 
         # ALLOCATION STUFF
@@ -86,7 +86,7 @@ class Lab2:
 
         self.stop_running = False
 
-        self.is_rematerializable = []   # add loadIs from renaming
+        self.is_rematerializable = []   # add loadIs from renaming, kinda redundant but dont move bc when stopped using the cc5 cycles went up a lot
         self.remat_VRs = {} # map of just the vr of the rematerializable vrs (loadi defined) to the constant of the loadi
         self.remat_spilled = [] # stores the spilled rematerializable vrs for restoring
     
@@ -240,37 +240,35 @@ class Lab2:
 
         node = self.IR_LIST.head
 
-        ret = ""
 
         while (node != None):
             # load or store
             if (node.opcode == LOAD_OP or node.opcode == STORE_OP):
-                temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1.pr) + "  =>   r" + str(node.arg3.pr) + "\n"
-                ret += temp
-                # print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}  =>   r{node.arg3.pr}")
+                # temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1.pr) + "  =>   r" + str(node.arg3.pr) + "\n"
+                # ret += temp
+                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}  =>   r{node.arg3.pr}")
             # loadI
             elif (node.opcode == LOADI_OP):
-                temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1.sr) + "  =>   r" + str(node.arg3.pr) + "\n"
-                ret += temp
-                # print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}  =>   r{node.arg3.pr}")
+                # temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1.sr) + "  =>   r" + str(node.arg3.pr) + "\n"
+                # ret += temp
+                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}  =>   r{node.arg3.pr}")
             # arithop
             elif (node.opcode >= ADD_OP and node.opcode <= RSHIFT_OP):
-                temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1.pr) + ", r" + str(node.arg2.pr) + "  =>   r" + str(node.arg3.pr) + "\n"
-                ret += temp
-                # print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}, r{node.arg2.pr}  =>   r{node.arg3.pr}")
+                # temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1.pr) + ", r" + str(node.arg2.pr) + "  =>   r" + str(node.arg3.pr) + "\n"
+                # ret += temp
+                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1.pr}, r{node.arg2.pr}  =>   r{node.arg3.pr}")
             # output
             elif (node.opcode == OUTPUT_OP):
-                temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1.sr) + "\n"
-                ret += temp
-                # print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}")
+                # temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1.sr) + "\n"
+                # ret += temp
+                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1.sr}")
             # nop- WONT HAPPEN BC OF MY RENAME BUT JUST IN CASE
             elif (node.opcode == NOP_OP):
-                temp = self.opcodes_list[node.opcode] + "\n"
-                ret += temp
-                # print(f"{self.opcodes_list[node.opcode] : <7}")
+                # temp = self.opcodes_list[node.opcode] + "\n"
+                # ret += temp
+                print(f"{self.opcodes_list[node.opcode] : <7}")
             
             node = node.next
-        print(ret)
     
     def dif_alloc(self, k):
 
@@ -580,8 +578,8 @@ class Lab2:
 
 
 def main():
-    # pr = cProfile.Profile()
-    # pr.enable() 
+    pr = cProfile.Profile()
+    pr.enable() 
     lab2 = Lab2()
     # TODO: -h flag
 
@@ -593,12 +591,12 @@ def main():
         lab2.dif_alloc(int(sys.argv[1]))
         lab2.print_allocated_file()
         # lab2.IR_LIST.print_table(lab2.IR_LIST)
-    # pr.disable()
-    # s = StringIO()
-    # sortby = 'cumulative'
-    # ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
-    # ps.print_stats()
-    # sys.stdout.write(s.getvalue())
+    pr.disable()
+    s = StringIO()
+    sortby = 'cumulative'
+    ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+    ps.print_stats()
+    sys.stdout.write(s.getvalue())
 
 
 

@@ -26,16 +26,16 @@ is the quotient of cumtime divided by primitive calls
         1    0.652    0.652    7.006    7.006 lab2.py:236(print_allocated_file)
         2    6.354    3.177    6.354    3.177 {built-in method builtins.print}
         1    0.301    0.301    4.058    4.058 lab2.py:275(dif_alloc)
-        1    0.000    0.000    3.570    3.570 lab2.py:49(__init__)
+        1    0.000    0.000    3.570    3.570 lab2.py:49(__init__)         // where i initialize and run lab1 so makes sense
         1    0.000    0.000    3.570    3.570 /storage-home/r/rew9/comp412/412-lab2/lab1.py:373(main)
         1    0.825    0.825    3.570    3.570 /storage-home/r/rew9/comp412/412-lab2/lab1.py:19(run)
    255992    0.186    0.000    3.514    0.000 lab2.py:97(allocate_use)
    113756    0.327    0.000    3.316    0.000 lab2.py:144(handle_restore)
-   583024    1.459    0.000    2.379    0.000 /storage-home/r/rew9/comp412/412-lab2/IR_List.py:39(__init__)
+   583024    1.459    0.000    2.379    0.000 /storage-home/r/rew9/comp412/412-lab2/IR_List.py:39(__init__) // Node
    113756    0.582    0.000    1.997    0.000 lab2.py:193(handle_spill)
   1603347    1.156    0.000    1.178    0.000 /storage-home/r/rew9/comp412/412-lab2/scanner.py:127(get_token)
    128001    0.744    0.000    1.003    0.000 /storage-home/r/rew9/comp412/412-lab2/scanner.py:89(convert_line_to_ascii_list)
-  1749072    0.920    0.000    0.920    0.000 /storage-home/r/rew9/comp412/412-lab2/IR_List.py:25(__init__)
+  1749072    0.920    0.000    0.920    0.000 /storage-home/r/rew9/comp412/412-lab2/IR_List.py:25(__init__) // Operand
         1    0.200    0.200    0.384    0.384 lab2.py:519(rename)
    113756    0.291    0.000    0.291    0.000 {built-in method builtins.max}
    455024    0.197    0.000    0.197    0.000 /storage-home/r/rew9/comp412/412-lab2/IR_List.py:120(insert_before)

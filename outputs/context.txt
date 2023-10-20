@@ -170,25 +170,7 @@ block 10 timed out
 ./412alloc 5 ./auto_time/timing_blocks/T001k.i
 
 
-
-
-
-
-
-//index    line     OPCODE     | SR    VR    PR    NU    | SR    VR    PR    NU    | SR    VR    PR    NU    | NEXT OP         
-//0        16       loadI      | 1024  -1    -1    inf   | -1    -1    -1    inf   | 0     1     0     12    | 0               
-//1        17       loadI      | 128   -1    -1    inf   | -1    -1    -1    inf   | 1     3     1     11    | 1               
-//2        18       loadI      | 32    -1    -1    inf   | -1    -1    -1    inf   | 2     6     2     4     | 2               
-//3        19       loadI      | 1028  -1    -1    inf   | -1    -1    -1    inf   | 3     4     3     9     | 3               
-//4        20       mult       | 2     6     2     5     | 2     6     2     4     | 4     10    0     5     | 4               
-//5        21       rshift     | 2     6     2     6     | 4     10    0     inf   | 4     9     0     6     | 5               
-//6        22       lshift     | 2     6     2     8     | 4     9     0     7     | 5     8     1     7     | 6               
-//7        23       add        | 5     8     1     inf   | 4     9     0     inf   | 5     7     0     8     | 7               
-//8        24       sub        | 2     6     2     inf   | 5     7     0     inf   | 6     5     0     9     | 8               
-//9        25       store      | 6     5     0     inf   | -1    -1    -1    inf   | 3     4     3     10    | 9               
-//10       26       load       | 3     4     3     inf   | -1    -1    -1    inf   | 6     2     3     11    | 10              
-//11       -1       loadI      | 128   -1    -1    inf   | -1    -1    -1    inf   | -1    -1    0     inf   | 11              
-//12       27       add        | 6     2     3     inf   | 1     3     0     inf   | 7     0     0     12    | 12              
-//13       -1       loadI      | 1024  -1    -1    inf   | -1    -1    -1    inf   | -1    -1    3     inf   | 13              
-//14       29       store      | 7     0     0     inf   | -1    -1    -1    inf   | 0     1     3     inf   | 14              
-//15       30       output     | 1024  -1    -1    inf   | -1    -1    -1    inf   | -1    -1    -1    inf   | 15      
+-----
+reports:
+3_report1.i: output of "./412alloc 5 ./auto_grade/blocks/report7.i"
+3_sim_report1.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 -i 1024 1056 1052 1048 1044 1040 1036 1032 1028 1024 < ./outputs/3_report1.i -t"
