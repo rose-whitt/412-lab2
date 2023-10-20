@@ -80,8 +80,8 @@ class Lab2:
 
         self.PRStack = [] # for spilling- (push and pop in algo)
         # self.PRMark = {}  # make sure you're not reusing a pr in the current line
-        self.pr_used_in_cur_op = -1
-        self.is_spilled = []
+        self.cur_PR = -1
+        self.spilled = []
         self.spill_loc = 32768  # and higher reserved for allocator
         self.reserved_reg = -1
         self.max_live = 0
@@ -97,44 +97,31 @@ class Lab2:
     
 
     """
+        operand: argument to get based on opnum
     
     """
-    def allocate_use(self, op_num, node, line_num):
+    def allocate_use(self, op_num, node, operand):
         # self.IR_LIST.print_full_line(node)
-
-        if op_num == 1: # store, called when opcode is load, an arithop, or a store in dif_alloc
-            operand_i = node.arg1
-        if op_num == 2: # loadi, called when opcode is an arithop in dif_alloc
-            operand_i = node.arg2
-        if op_num == 3: # add, called when opcode is store in dif_alloc
-            operand_i = node.arg3
-        
-        virt_reg = operand_i[VR_IDX]
+        virt_reg = operand[VR_IDX]
 
         # not spilled, get pr
         # virt reg comes from node, which comes from head in while loop in dif_alloc
-        if (virt_reg not in self.is_spilled):   # virtual register of cur operation not spilled
+        if (virt_reg not in self.spilled):   # virtual register of cur operation not spilled
             phys_reg = self.VRToPR[virt_reg]
-            operand_i[PR_IDX] = phys_reg
-            self.PRNU[phys_reg] = operand_i[NU_IDX]
+            operand[PR_IDX] = phys_reg
+            self.PRNU[phys_reg] = operand[NU_IDX]
         # spilled, restore
         else:
-            phys_reg = self.handle_restore(op_num, node)
-            self.is_spilled.remove(virt_reg)
+            phys_reg = self.restore(node, operand)
+            self.spilled.remove(virt_reg)
         return phys_reg
     
-    def free_use(self, op_num, node):
-        if op_num == 1:
-            operand_i = node.arg1
-        if op_num == 2:
-            operand_i = node.arg2
-        if op_num == 3:
-            operand_i = node.arg3
+    def free_use(self, op_num, node, operand):
         
-        old_phys_reg = operand_i[PR_IDX]
+        old_phys_reg = operand[PR_IDX]
 
         # check if able to free
-        if (operand_i[NU_IDX] == INF):
+        if (operand[NU_IDX] == INF):
             self.PRStack.append(old_phys_reg)
             # free pr in maps
             old_virt_reg = self.PRToVR[old_phys_reg]
@@ -146,97 +133,90 @@ class Lab2:
         Called in allocate_use if value of node has been spilled
 
     """
-    def handle_restore(self, op_num, node):
-        if op_num == 1:
-            operand_i = node.arg1
-        if op_num == 2:
-            operand_i = node.arg2
-        if op_num == 3:
-            operand_i = node.arg3
+    def restore(self, node, operand):
         
-        
-        virt_reg = operand_i[VR_IDX]
+        VR = operand[VR_IDX]
 
         # get new pr to hold restored vr
         if (len(self.PRStack) > 0):
-            phys_reg = self.PRStack.pop()
+            PR = self.PRStack.pop()
         else:
-            phys_reg = self.handle_spill(node)
+            PR = self.spill(node)
    
         # what kind of restore we gonna do
-        if (virt_reg in self.remat_spilled):    # just restore the loadi
+        if (VR in self.remat_spilled):    # just restore the loadi
             # create and add load immediate instruction
             loadi_node = Node()
             loadi_node.opcode = 2
-            loadi_node.arg1[SR_IDX] = self.VRToSpillLoc[virt_reg]
-            loadi_node.arg3[PR_IDX] = phys_reg
+            loadi_node.arg1[SR_IDX] = self.VRToSpillLoc[VR]
+            loadi_node.arg3[PR_IDX] = PR
             self.IR_LIST.insert_before(loadi_node, node)
-            self.remat_spilled.remove(virt_reg)
+            self.remat_spilled.remove(VR)
         else:
             # create and add loadI
             loadi_node = Node()
-            loadi_node.opcode = 2
-            loadi_node.arg1[SR_IDX] = self.VRToSpillLoc[virt_reg]
-            loadi_node.arg3[PR_IDX] = phys_reg
+            loadi_node.opcode = LOADI_OP
+            loadi_node.arg1[SR_IDX] = self.VRToSpillLoc[VR]
+            loadi_node.arg3[PR_IDX] = PR
             self.IR_LIST.insert_before(loadi_node, node)
             # create and add load
             load_node = Node()
-            load_node.opcode = 0
-            load_node.arg1[PR_IDX] = phys_reg
-            load_node.arg3[VR_IDX] = virt_reg
-            load_node.arg3[PR_IDX] = phys_reg
+            load_node.opcode = LOAD_OP
+            load_node.arg1[PR_IDX] = PR
+            load_node.arg3[VR_IDX] = VR
+            load_node.arg3[PR_IDX] = PR
             self.IR_LIST.insert_before(load_node, node)
 
         # update maps
-        self.VRToPR[virt_reg] = phys_reg
-        self.PRToVR[phys_reg] = virt_reg
-        self.PRNU[phys_reg] = operand_i[NU_IDX]
-        operand_i[PR_IDX] = phys_reg
+        self.VRToPR[VR] = PR
+        self.PRToVR[PR] = VR
+        self.PRNU[PR] = operand[NU_IDX]
+        operand[PR_IDX] = PR
 
-        return phys_reg
+        return PR
     
-    def handle_spill(self, node):
-        # TODO: check that register has a next use
+    def spill(self, node):
         
-        pr_freed = max(self.PRNU, key=self.PRNU.get)
-        if (pr_freed == self.pr_used_in_cur_op):
-            prnu_copy = self.PRNU.copy()
-            prnu_copy.pop(pr_freed)
-            pr_freed = max(prnu_copy, key=prnu_copy.get)
+        # get PR to free
+        free_PR = max(self.PRNU, key=self.PRNU.get)
+        if (free_PR == self.cur_PR):
+            PRNU_copy = self.PRNU.copy()
+            PRNU_copy.pop(free_PR)
+            free_PR = max(PRNU_copy, key=PRNU_copy.get)
         
-        vr_to_spill = self.PRToVR[pr_freed]
-        self.VRToPR[vr_to_spill] = None
+        spill_VR = self.PRToVR[free_PR]
+        self.VRToPR[spill_VR] = None
         
         # dont spill twice
-        if (vr_to_spill in self.is_spilled):
-            return pr_freed
+        if (spill_VR in self.spilled):
+            return free_PR
         
-        if (vr_to_spill in self.remat_VRs):
-            self.remat_spilled.append(vr_to_spill)
-            self.VRToSpillLoc[vr_to_spill] = self.remat_VRs[vr_to_spill]    # spill location (the loadi constant) is this loadI's constant, so dont need to increment
+        if (spill_VR in self.remat_VRs):
+            self.remat_spilled.append(spill_VR)
+            self.VRToSpillLoc[spill_VR] = self.remat_VRs[spill_VR]    # spill location (the loadi constant) is this loadI's constant, so dont need to increment
         else:
             # create and add loadI- put spill location addy into reserved reg; Q: should I still update spil location?
             loadi_node = Node()
-            loadi_node.opcode = 2
+            loadi_node.opcode = LOADI_OP
             loadi_node.arg1[SR_IDX] = self.spill_loc
             loadi_node.arg3[PR_IDX] = self.reserved_reg
             self.IR_LIST.insert_before(loadi_node, node)
             # create and add store- move spilled value from spill location into its new PR
             store_node = Node()
-            store_node.opcode = 1
-            store_node.arg1[VR_IDX] = vr_to_spill
-            store_node.arg1[PR_IDX] = pr_freed
+            store_node.opcode = STORE_OP
+            store_node.arg1[VR_IDX] = spill_VR
+            store_node.arg1[PR_IDX] = free_PR
             store_node.arg3[PR_IDX] = self.reserved_reg
             self.IR_LIST.insert_before(store_node, node)
             # update spill location
-            self.VRToSpillLoc[vr_to_spill] = self.spill_loc
+            self.VRToSpillLoc[spill_VR] = self.spill_loc
             self.spill_loc += 4
 
         # add to spilled array whether remat or not
-        self.is_spilled.append(vr_to_spill)
+        self.spilled.append(spill_VR)
 
 
-        return pr_freed
+        return free_PR
     
     def print_allocated_file(self):
         """
@@ -245,35 +225,33 @@ class Lab2:
 
         node = self.IR_LIST.head
 
+        ret = ""
 
         while (node != None):
             # load or store
             if (node.opcode == LOAD_OP or node.opcode == STORE_OP):
-                # temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1.pr) + "  =>   r" + str(node.arg3.pr) + "\n"
-                # ret += temp
-                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1[PR_IDX]}  =>   r{node.arg3[PR_IDX]}")
+                temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1[PR_IDX]) + "  =>   r" + str(node.arg3[PR_IDX]) + "\n"
+                ret += temp
             # loadI
             elif (node.opcode == LOADI_OP):
-                # temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1.sr) + "  =>   r" + str(node.arg3.pr) + "\n"
-                # ret += temp
-                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1[SR_IDX]}  =>   r{node.arg3[PR_IDX]}")
+                temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1[SR_IDX]) + "  =>   r" + str(node.arg3[PR_IDX]) + "\n"
+                ret += temp
             # arithop
             elif (node.opcode >= ADD_OP and node.opcode <= RSHIFT_OP):
-                # temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1.pr) + ", r" + str(node.arg2.pr) + "  =>   r" + str(node.arg3.pr) + "\n"
-                # ret += temp
-                print(f"{self.opcodes_list[node.opcode] : <7} r{node.arg1[PR_IDX]}, r{node.arg2[PR_IDX]}  =>   r{node.arg3[PR_IDX]}")
+                temp = self.opcodes_list[node.opcode] + "  r" + str(node.arg1[PR_IDX]) + ", r" + str(node.arg2[PR_IDX]) + "  =>   r" + str(node.arg3[PR_IDX]) + "\n"
+                ret += temp
             # output
             elif (node.opcode == OUTPUT_OP):
-                # temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1.sr) + "\n"
-                # ret += temp
-                print(f"{self.opcodes_list[node.opcode] : <7} {node.arg1[SR_IDX]}")
+                temp = self.opcodes_list[node.opcode] + "  " + str(node.arg1[SR_IDX]) + "\n"
+                ret += temp
             # nop- WONT HAPPEN BC OF MY RENAME BUT JUST IN CASE
             elif (node.opcode == NOP_OP):
-                # temp = self.opcodes_list[node.opcode] + "\n"
-                # ret += temp
-                print(f"{self.opcodes_list[node.opcode] : <7}")
+                temp = self.opcodes_list[node.opcode] + "\n"
+                ret += temp
+                # print(f"{self.opcodes_list[node.opcode] : <7}")
             
             node = node.next
+        print(ret)
     
     def dif_alloc(self, k):
 
@@ -285,17 +263,23 @@ class Lab2:
         self.VRToSpillLoc = {}
         self.PRNU = {i: INF for i in range(self.k - 1)}
         self.PRStack = []
-        for i in range(0, self.k - 1):
-            self.PRStack.append(i)
+        # for i in range(0, self.k - 1):
+        #     self.PRStack.append(i)
+        self.PRStack = [i for i in range(0, self.k - 1)]    # list comprehension is faster
+
         self.PRStack.reverse()
         self.reserved_reg = self.k - 1
         if (self.max_live > self.k):
             self.k = self.k - 1
             self.reserved_reg = self.k
         # get remat VRs
-        for x in self.is_rematerializable:
-            # self.remat_VRs.append(x.arg3.vr)
-            self.remat_VRs[x.arg3[VR_IDX]] = x.arg1[SR_IDX]
+        # for x in self.is_rematerializable:
+        #     # self.remat_VRs.append(x.arg3.vr)
+        #     self.remat_VRs[x.arg3[VR_IDX]] = x.arg1[SR_IDX]
+        # list comprehension faster
+        self.remat_VRs = {x.arg3[VR_IDX]: x.arg1[SR_IDX] for x in self.is_rematerializable}
+        
+        # print("REMAT VRS: " + str(self.remat_VRs))
 
         # -----------end initialization-----------
 
@@ -309,39 +293,35 @@ class Lab2:
 
 
             # ----- USES --------
-            if (head.opcode == 0):  # load
-                self.allocate_use(1, head, line_num)    # allocate store
-                self.free_use(1, head)  # free store
-            if (head.opcode >= 3 and head.opcode <= 7): # arithop
-                self.pr_used_in_cur_op = self.allocate_use(1, head, line_num)   # allocate store
-                self.allocate_use(2, head, line_num)    # allocate loadI
-                self.pr_used_in_cur_op = -1
-                self.free_use(1, head)  # free store
-                self.free_use(2, head)  # free loadi
-            if (head.opcode == 1):  # store
-                self.pr_used_in_cur_op = self.allocate_use(1, head, line_num)   # allocate store
-                self.allocate_use(3, head, line_num)    # allocate add
-                self.pr_used_in_cur_op = -1
-                self.free_use(1, head)  # free store
-                self.free_use(3, head)  # free add
+            if (head.opcode == LOAD_OP):  # load
+                self.allocate_use(STORE_OP, head, head.arg1)    # allocate store
+                self.free_use(STORE_OP, head, head.arg1)  # free store
+            if (head.opcode >= ADD_OP and head.opcode <= RSHIFT_OP): # arithop
+                self.cur_PR = self.allocate_use(STORE_OP, head, head.arg1)   # allocate store
+                self.allocate_use(LOADI_OP, head, head.arg2)    # allocate loadI
+                self.cur_PR = -1
+                self.free_use(STORE_OP, head, head.arg1)  # free store
+                self.free_use(LOADI_OP, head, head.arg2)  # free loadi
+            if (head.opcode == STORE_OP):  # store
+                self.cur_PR = self.allocate_use(STORE_OP, head, head.arg1)   # allocate store
+                self.allocate_use(ADD_OP, head, head.arg3)    # allocate add
+                self.cur_PR = -1
+                self.free_use(STORE_OP, head, head.arg1)  # free store
+                self.free_use(ADD_OP, head, head.arg3)  # free add
             
             # ----- DEFS --------
             if (head.arg3[SR_IDX] != None and head.opcode != 1): # sr is not invalid and opcode is not a store
-                virt_reg = head.arg3[VR_IDX]
+                VR = head.arg3[VR_IDX]
                 # get phys reg
                 if (len(self.PRStack) > 0):
-                    phys_reg = self.PRStack.pop()
+                    PR = self.PRStack.pop()
                 else:
-                    phys_reg = self.handle_spill(head)
+                    PR = self.spill(head)
                 # update maps
-                head.arg3[PR_IDX] = phys_reg
-                self.VRToPR[virt_reg] = phys_reg
-                self.PRToVR[phys_reg] = virt_reg
-                self.PRNU[phys_reg] = head.arg3[NU_IDX]
-
-                # TODO: possibly add to remat_vrs here instead of from renaming?
-
-                # TODO: possibly free 3 here?
+                head.arg3[PR_IDX] = PR
+                self.VRToPR[VR] = PR
+                self.PRToVR[PR] = VR
+                self.PRNU[PR] = head.arg3[NU_IDX]
             
 
             # error = self.check_maps(head)
@@ -367,7 +347,7 @@ class Lab2:
     """
     def check_remat(self, head):
         print(str(head.line) + ": opcode: " + self.opcodes_list[head.opcode] + "; IS_SPILLED:")
-        print(self.is_spilled)
+        print(self.spilled)
         print(str(head.line) + ": opcode: " + self.opcodes_list[head.opcode] + "; VRTOSPILLLOC:")
         print(self.VRToSpillLoc)
 
@@ -481,20 +461,10 @@ class Lab2:
         print(self.VRToPR)
         print("PR STACK:")
         print(self.PRStack)
-        # head = self.IR_LIST.head
-        # for each pr, p, if vrtopr[prtovr[p]] = p
-        
+
         # for each vr, v, if vrtopr[v] is defined, prtovr[vrtopr[v]] = v
         print("PR TO VR:")  # pr is the index, vr is the value
         print(self.PRToVR)
-        # print("SPILL LOC:")
-        # print(self.spill_loc)
-        # print("VR TO SPILL LOC: ")
-        # print(self.VRToSpillLoc)
-        # print("pr_used_in_cur_op")
-        # print(self.pr_used_in_cur_op)
-        # print("IS SPILLED: ")
-        # print(self.is_spilled)
 
         for key, val in self.VRToPR.items():
             if (val in self.PRToVR and self.PRToVR[val] != key):
@@ -586,10 +556,27 @@ def main():
     # pr = cProfile.Profile()
     # pr.enable() 
     lab2 = Lab2()
-    # TODO: -h flag
 
     lab2.rename()
-    if (sys.argv[1] == '-x'):
+    if (sys.argv[1] == '-h'):
+        print("\n")
+        print("Command Syntax:")
+        print("     ./412alloc [flag or number of registers] <filename>")
+        print("\n")
+        print("Required arguments:")
+        print("     filename is the pathname (absolute or relative) to the input file. When the flag is '-h', no filename should be specified and nothing after the flag is processed.")
+        print("\n")
+        print("Optional flags:")
+        print("     -h      prints this message")
+        print("\n")
+        print("At most one of the following three flags:")
+        print("     -x      Performs scanning, parsing, renaming on the file and then prints the renamed block to the stdout.")
+        print("     [k]       Where k is the number of registers available to the allocator (3<=k<=64).")
+        print("                     Scan, parse, rename, and allocate code in the input block given in filename so that it uses")
+        print("                     only registers r0 to rk-1 and prints the resulting code in the stdout.")
+
+
+    elif (sys.argv[1] == '-x'):
         lab2.print_renamed_block()
     elif (int(sys.argv[1]) >= 3 and int(sys.argv[1]) <= 64):
         # lab2.allocate(int(sys.argv[1]))

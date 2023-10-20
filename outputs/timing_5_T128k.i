@@ -16,6 +16,60 @@ percall
 is the quotient of cumtime divided by primitive calls
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
+3.
+
+10103524 function calls in 13.087 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.643    0.643    6.449    6.449 lab2.py:234(print_allocated_file)
+        2    5.806    2.903    5.806    2.903 {built-in method builtins.print}
+        1    0.000    0.000    3.300    3.300 lab2.py:54(__init__)
+        1    0.000    0.000    3.300    3.300 /storage-home/r/rew9/comp412/412-lab2/lab1.py:376(main)
+        1    0.812    0.812    3.300    3.300 /storage-home/r/rew9/comp412/412-lab2/lab1.py:22(run)
+        1    0.320    0.320    2.943    2.943 lab2.py:273(dif_alloc)
+   255992    0.142    0.000    2.382    0.000 lab2.py:103(allocate_use)
+   113756    0.302    0.000    2.228    0.000 lab2.py:142(handle_restore)
+   113756    0.318    0.000    1.669    0.000 lab2.py:191(handle_spill)
+  1603347    1.166    0.000    1.190    0.000 /storage-home/r/rew9/comp412/412-lab2/scanner.py:127(get_token)
+   128001    0.875    0.000    1.131    0.000 /storage-home/r/rew9/comp412/412-lab2/scanner.py:89(convert_line_to_ascii_list)
+   113756    1.097    0.000    1.097    0.000 {built-in method builtins.max}
+        1    0.204    0.204    0.395    0.395 lab2.py:517(rename)
+   583024    0.386    0.000    0.386    0.000 /storage-home/r/rew9/comp412/412-lab2/IR_List.py:39(__init__)
+   455024    0.189    0.000    0.189    0.000 /storage-home/r/rew9/comp412/412-lab2/IR_List.py:123(insert_before)
+  2863097    0.166    0.000    0.166    0.000 {method 'append' of 'list' objects}
+   255992    0.119    0.000    0.134    0.000 lab2.py:119(free_use)
+   255992    0.122    0.000    0.122    0.000 lab2.py:385(op_uses)
+  2365335    0.113    0.000    0.113    0.000 {built-in method builtins.ord}
+   127998    0.069    0.000    0.069    0.000 lab2.py:370(op_defines)
+        1    0.067    0.067    0.067    0.067 lab2.py:400(get_max_vr)
+   128000    0.056    0.000    0.056    0.000 /storage-home/r/rew9/comp412/412-lab2/IR_List.py:113(append)
+   128001    0.030    0.000    0.031    0.000 {method 'readline' of '_io.TextIOWrapper' objects}
+   128000    0.024    0.000    0.024    0.000 {method 'index' of 'list' objects}
+   241756    0.017    0.000    0.017    0.000 {built-in method builtins.len}
+   127998    0.016    0.000    0.016    0.000 {method 'pop' of 'list' objects}
+        1    0.014    0.014    0.014    0.014 lab2.py:278(<dictcomp>)
+   113756    0.012    0.000    0.012    0.000 {method 'remove' of 'list' objects}
+      306    0.000    0.000    0.001    0.000 /usr/lib64/python3.6/codecs.py:318(decode)
+      306    0.001    0.000    0.001    0.000 {built-in method _codecs.utf_8_decode}
+        1    0.000    0.000    0.000    0.000 {built-in method io.open}
+      306    0.000    0.000    0.000    0.000 /usr/lib64/python3.6/codecs.py:330(getstate)
+        1    0.000    0.000    0.000    0.000 {method 'close' of '_io.TextIOWrapper' objects}
+        1    0.000    0.000    0.000    0.000 /storage-home/r/rew9/comp412/412-lab2/scanner.py:53(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python3.6/_bootlocale.py:23(getpreferredencoding)
+        1    0.000    0.000    0.000    0.000 /storage-home/r/rew9/comp412/412-lab2/lab1.py:15(__init__)
+        1    0.000    0.000    0.000    0.000 /storage-home/r/rew9/comp412/412-lab2/IR_List.py:106(__init__)
+        1    0.000    0.000    0.000    0.000 {built-in method _locale.nl_langinfo}
+        1    0.000    0.000    0.000    0.000 lab2.py:519(<listcomp>)
+        1    0.000    0.000    0.000    0.000 lab2.py:520(<listcomp>)
+        1    0.000    0.000    0.000    0.000 lab2.py:279(<dictcomp>)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python3.6/codecs.py:259(__init__)
+        1    0.000    0.000    0.000    0.000 /usr/lib64/python3.6/codecs.py:308(__init__)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 lab2.py:281(<dictcomp>)
+        1    0.000    0.000    0.000    0.000 {method 'reverse' of 'list' objects}
+
 2. removed while loop from inside insert_before (77.15% improvement)
 
 11852596 function calls in 15.017 seconds

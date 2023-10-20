@@ -1,0 +1,94 @@
+==================================================
+Testing submission from NetID 'comp412', name 'Comp 412'
+Archive name:  comp412.tar 		Date From Files:  2023-03-29
+
+------------------------------------------------------------
+Output from building executable, if necessary
+--- building executable ---
+make: *** No rule to make target 'clean'.  Stop.
+cp script 412alloc
+--- built executable; should be ready to run ---
+
+-----------------------------------------------------------
+
+
+Result is a set of (k, cycle) pairs for each test block
+
+T001k.i:	{3: 6876, 4: 6534, 5: 6204, 6: 5874, 8: 5214, 12: 3918, 16: 2622}
+report1.i:	{3: 201, 4: 153, 5: 118, 6: 93, 8: 61, 12: 54, 16: 54}
+report2.i:	{3: 136, 4: 122, 5: 105, 6: 99, 8: 87, 12: 68, 16: 56}
+report3.i:	{3: 404, 4: 343, 5: 298, 6: 260, 8: 217, 12: 155, 16: 118}
+report4.i:	{3: 168, 4: 161, 5: 155, 6: 149, 8: 137, 12: 114, 16: 90}
+report5.i:	{3: 56, 4: 46, 5: 38, 6: 36, 8: 30, 12: 30, 16: 30}
+report6.i:	{3: 287, 4: 247, 5: 199, 6: 187, 8: 166, 12: 142, 16: 120}
+report7.i:	{3: 100, 4: 81, 5: 68, 6: 61, 8: 47, 12: 44, 16: 44}
+
+Quick Scalability Test:
+	(For a more accurate test, run the auto-timer)
+
+	T008k.i:  	0.0096 seconds
+	T016k.i:  	0.0146 seconds
+	T032k.i:  	0.0261 seconds
+	T064k.i:  	0.0492 seconds
+	T128k.i:  	0.0878 seconds
+ 
+
+Finished submission  comp412.tar
+==================================================
+Testing submission from NetID 'rew9', name 'Rose Whitt'
+Archive name:  rew9.tar 		Date From Files:  2023-10-19
+
+------------------------------------------------------------
+Output from building executable, if necessary
+--- built executable; should be ready to run ---
+
+-----------------------------------------------------------
+
+
+Result is a set of (k, cycle) pairs for each test block
+
+T001k.i:	{3: 6876, 4: 6534, 5: 6204, 6: 5874, 8: 5214, 12: 3918, 16: 2622}
+report1.i:	{3: 223, 4: 169, 5: 133, 6: 103, 8: 73, 12: 59, 16: 55}
+report2.i:	{3: 186, 4: 122, 5: 114, 6: 111, 8: 104, 12: 80, 16: 56}
+report3.i:	{3: 421, 4: 350, 5: 298, 6: 260, 8: 217, 12: 155, 16: 118}
+report4.i:	{3: 189, 4: 181, 5: 174, 6: 167, 8: 153, 12: 123, 16: 95}
+report5.i:	{3: 92, 4: 78, 5: 73, 6: 55, 8: 43, 12: 30, 16: 30}
+report6.i:	{3: 290, 4: 292, 5: 244, 6: 197, 8: 174, 12: 148, 16: 124}
+report7.i:	{3: 127, 4: 100, 5: 85, 6: 82, 8: 72, 12: 50, 16: 44}
+
+Quick Scalability Test:
+	(For a more accurate test, run the auto-timer)
+
+	T008k.i:  	0.3064 seconds
+	T016k.i:  	0.5684 seconds
+	T032k.i:  	1.1326 seconds
+	T064k.i:  	2.2318 seconds
+	T128k.i:  	4.6365 seconds
+ 
+
+Finished submission  rew9.tar
+==================================================
+Running lab2_ref to establish effectiveness baselines
+==================================================
+Concise results (% of points in each category)
+
+Comp 412 :
+   Correctness points:     100.0
+   Effectiveness points:   100.0
+
+Scalability points are a rough approximation.
+Run the auto_timer to get a more precise estimate.
+
+   Scaling appears to be linear
+   Scalability points:     100 
+
+Rose Whitt :
+   Correctness points:     100.0
+   Effectiveness points:   85.547
+
+Scalability points are a rough approximation.
+Run the auto_timer to get a more precise estimate.
+
+   Scaling appears to be linear
+   Scalability points:     100 
+

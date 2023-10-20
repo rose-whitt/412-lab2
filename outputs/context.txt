@@ -172,5 +172,5 @@ block 10 timed out
 
 -----
 reports:
-3_report1.i: output of "./412alloc 5 ./auto_grade/blocks/report7.i"
-3_sim_report1.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 -i 1024 1056 1052 1048 1044 1040 1036 1032 1028 1024 < ./outputs/3_report1.i -t"
+3_report1.i: output of "./412alloc 5 ./auto_grade/blocks/report6.i"
+3_sim_report1.i: output of "/clear/courses/comp412/students/lab2/sim -r 5 -i 2048 0 1 2 3 4 5 6 7 8 9 < ./outputs/3_report1.i -t"
